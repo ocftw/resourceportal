@@ -18,6 +18,11 @@ a {
 	padding: 0 20px;
 }
 
+.material-icons {
+  font-size: inherit;  /* Preferred icon size */
+}
+
+
 /* header */
 header {
 	background-color: #fff;
@@ -77,11 +82,14 @@ header {
 	min-height: 400px;
 }
 
+/* main_sec*/
 .main_sec {
 	background-color: #F1F1F1;
-	padding: 50px 0;
+	padding-top: 50px;
 }
-
+.main_btns {
+	margin-bottom: 50px;
+}
 .main_btns > button {
 	width: 25%;
 	position: relative;
@@ -90,6 +98,9 @@ header {
 }
 .main_btns > button.active {
 	width: calc(50% - 12px);
+}
+.main_btns > button:active {
+	box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1) inset;
 }
 
 #find_btn {background-color: #56B8CF;}
@@ -115,4 +126,69 @@ header {
 	height: 100%;
 	width: auto;
 	margin: auto;
+}
+
+/* main_conts */
+.main_conts > div{
+	padding: 50px 0 100px;
+	background-color: #ccc;
+	display: none;
+}
+.main_conts > div.active{
+	display: block;
+}
+
+.main_conts > div .container {
+	max-width: 1000px;
+}
+
+#find_cont {background-color: #56B8CF;}
+#wizard_cont {background-color: #8CC11F;}
+#library_cont {background-color: #EB9F00;}
+
+
+/* find cont */
+.wrap {
+  position: relative;
+  height: 60px;
+  padding: 0;
+  width: 100%;
+}
+input[type="text"] {
+  height: 60px;
+  font-size: 2rem;
+  display: inline-block;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-right: 60px;
+  width: calc(100% - 60px);
+  background: none;
+}
+
+#search_submit {
+	height: 67px;
+  width: 63px;
+  float: right;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+label[for="search_submit"] {
+  color: #fff;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity .4s ease;
+  font-size: 3rem;
+}
+#search_submit:hover + label {
+  opacity: 0.7;
 }

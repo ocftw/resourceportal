@@ -6,6 +6,8 @@
 
 	<title>Resource Portal</title>
 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
 	<link href="css/reset.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 
@@ -14,7 +16,7 @@
 	<header>
 		<nav class="menu container">
 			<h1 class="logo">
-				<a><img src="img/logo.svg"></a>
+				<a><img src="img/logo_s.svg"></a>
 			</h1>
 			<ul>
 				<li><a>about</a></li>
@@ -36,10 +38,24 @@
 				<button id="wizard_btn" class="active"><h3>Wizard</h3><img src="img/btns-02.svg"></button>
 				<button id="library_btn"><h3>Library</h3><img src="img/btns-03.svg"></button>
 			</div>
-			<div>
-				<div id="find_cont"></div>
-				<div id="wizard_cont"></div>
-				<div id="library_cont"></div>
+			<div class="main_conts">
+				<div id="find_cont" class="active">
+					<div class="container">
+						<div class="wrap">
+						  <form action="" autocomplete="on">
+						  	<input id="search" name="search" type="text" placeholder="What're you looking for ?">
+						  	<input id="search_submit" value="" type="submit">
+						  	<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
+						  </form>
+						</div>
+					</div>
+				</div>
+				<div id="wizard_cont">
+					<div class="container"></div>
+				</div>
+				<div id="library_cont">
+					<div class="container"></div>
+				</div>
 			</div>
 		</section>
 	</main>
