@@ -26,9 +26,7 @@ header {
 	top: 0;
 	width: 100%;
 	z-index: 50;
-	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-	color: #B2B2B2;
-	font-size: 1rem;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
 	line-height: 60px;
 }
 
@@ -60,6 +58,8 @@ header {
 .menu ul li a {
 	padding: 5px 10px;
 	margin-left: 15px;
+	color: #B2B2B2;
+	font-size: 1rem;
 }
 .menu ul li:last-of-type {
 	margin-right: -5px;
@@ -85,9 +85,34 @@ header {
 .main_btns > button {
 	width: 25%;
 	position: relative;
-	padding-top: 23%;
+	padding: 25% 0 0;
+	border: none;
 }
-
 .main_btns > button.active {
 	width: calc(50% - 12px);
+}
+
+#find_btn {background-color: #56B8CF;}
+#wizard_btn {background-color: #8CC11F;}
+#library_btn {background-color: #EB9F00;}
+
+.main_btns h3 {
+	color: #fff;
+	font-size: 1.8rem;
+	font-weight: 600;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 20px 0;
+}
+
+.main_btns > button img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: auto;
+	margin: auto;
 }
