@@ -1,0 +1,74 @@
+html {
+	overflow-x: hidden;
+	height: 100%;
+} 
+body {
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.container {
+	width: 100%;
+	max-width: 1060px;
+	margin: 0 auto;
+}
+
+/* header */
+header {
+	background-color: #fff;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 50;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+	color: #B2B2B2;
+	font-size: 1rem;
+	line-height: 60px;
+}
+
+.menu {
+	
+}
+
+.menu .logo {
+	display: inline-block;
+	position: absolute;
+	height: 80%;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: -1;
+	margin-left: 5px;
+}
+
+.logo img {
+	height: 100%;
+	width: auto;
+}
+
+.menu ul {
+	text-align: right;
+	float: right;
+}
+.menu ul li {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.menu ul li a {
+	padding: 5px 10px;
+	margin-left: 15px;
+}
+.menu ul li:last-of-type {
+	margin-right: -10px;
+}
+
+.menu ul li:hover a, .menu ul li a.active {
+	color: #717071;
+}
+
