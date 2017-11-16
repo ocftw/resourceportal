@@ -13,8 +13,9 @@ a {
 
 .container {
 	width: 100%;
-	max-width: 1060px;
+	max-width: 1100px;
 	margin: 0 auto;
+	padding: 0 20px;
 }
 
 /* header */
@@ -29,10 +30,6 @@ header {
 	color: #B2B2B2;
 	font-size: 1rem;
 	line-height: 60px;
-}
-
-.menu {
-	
 }
 
 .menu .logo {
@@ -65,10 +62,32 @@ header {
 	margin-left: 15px;
 }
 .menu ul li:last-of-type {
-	margin-right: -10px;
+	margin-right: -5px;
 }
 
 .menu ul li:hover a, .menu ul li a.active {
 	color: #717071;
 }
 
+
+/* main */
+
+/* top_banner */
+.top_sec {
+	min-height: 400px;
+}
+
+.main_sec {
+	background-color: #F1F1F1;
+	padding: 50px 0;
+}
+
+.main_btns > button {
+	width: 25%;
+	position: relative;
+	padding-top: 23%;
+}
+
+.main_btns > button.active {
+	width: calc(50% - 12px);
+}
