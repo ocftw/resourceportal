@@ -39,19 +39,37 @@
 				<button id="library_btn"><h3>Library</h3><img src="img/btns-03.svg"></button>
 			</div>
 			<div class="main_conts">
-				<div id="find_cont" class="active">
+				<div id="find_cont">
 					<div class="container">
-						<div class="wrap">
-						  <form action="" autocomplete="on">
-						  	<input id="search" name="search" type="text" placeholder="What're you looking for ?">
-						  	<input id="search_submit" value="" type="submit">
-						  	<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
-						  </form>
-						</div>
+					  <form action="" autocomplete="on">
+					  	<input id="search" name="search" type="text" placeholder="What're you looking for ?">
+					  	<input id="search_submit" value="" type="submit">
+					  	<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
+					  </form>
 					</div>
 				</div>
-				<div id="wizard_cont">
-					<div class="container"></div>
+				<div id="wizard_cont" class="active">
+					<div class="container">
+						<form class="wizard">
+							<p>Description</p>
+							<p>Q1. Where are you from ?</p>
+							<select name="country">
+							  <option value="Taiwan">Taiwan</option>
+							</select>
+							<p>Q2. What are you ... ?</p>
+							<input type="checkbox" name="platform" id="Windows" value="Windows">
+							<label for="Windows">Windows</label>
+							<input type="checkbox" name="platform" id="MacOS" value="MacOS">
+							<label for="MacOS">MacOS</label>
+							<input type="checkbox" name="platform" id="iOS" value="iOS">
+							<label for="iOS">iOS</label>
+							<input type="checkbox" name="platform" id="Android" value="Android">
+							<label for="Android">Android</label>
+							<div>
+								<input type="submit">
+							</div>
+						</form>
+					</div>
 				</div>
 				<div id="library_cont">
 					<div class="container"></div>
