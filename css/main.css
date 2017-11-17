@@ -317,6 +317,88 @@ label[for="search_submit"] {
   opacity: 0.7;
 }
 
+/* result list */
+.result {
+	margin-top: 15px;
+}
+.result > p {
+	text-align: center;
+	margin-bottom: 15px;
+}
+.result > li {
+	display: block;
+	background-color: #fff;
+	color: #989898;
+	padding: 18px 0;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+.result > li > a > span {
+	display: inline-block;
+	vertical-align: top;
+}
+.rs_img {
+	height: 130px;
+	width: 130px;
+	margin: 0 18px;
+	overflow: hidden;
+	background-color: #ccc;
+} 
+.rs_info {
+	height: 130px;
+	width: 120px;
+	margin: 0 18px;
+	overflow: hidden;
+}
+.rs_title {
+	width: calc(100% - 331px);
+	height: 100%;
+}
+.rs_title h4 {
+	color: #333;
+	font-size: 1.2rem;
+	line-height: 1.4;
+	margin-bottom: 10px;
+}
+.rs_title p {
+	color: #989898;
+}
+.rs_info .stars {
+	font-size: 1.4rem;
+	letter-spacing: 5px;
+	margin-bottom: 10px;
+}
+.rs_info {
+	color: #b2b2b2;
+	font-size: 0.9em;
+}
+.tabs li {
+	display: inline-block;
+	border: 1px solid #cbcbcb;
+	padding: 4px 6px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.tabs::after {
+	content: "…";
+	font-size: 18px;
+	vertical-align: top;
+}
+.rs_info .from {
+	text-align: right;
+	position: absolute;
+	right: 28px;
+	bottom: 18px;
+}
+
+.result > li:hover {
+	background-color: #f1f1f1;
+}
+
+.result > li:hover .rs_title h4 {
+	color: #e95513;
+}
 
 /* wizard content */
 .wizard p {
@@ -342,7 +424,7 @@ label[for="search_submit"] {
 .wizard label[for]{
 	cursor: pointer;
 	position: relative;
-	padding: 12px 1em;
+	padding: 8px 1em;
 	display: inline-block;
 	line-height: 1.8;
 	background-color: #fff;
@@ -572,6 +654,7 @@ footer section > div {
 }
 footer section > div:first-of-type {
 	width: 30%;
+	margin-right: 3%;
 }
 footer section > div:first-of-type br {
 	margin-bottom: 15px;

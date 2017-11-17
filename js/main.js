@@ -1,3 +1,5 @@
+/* main section switch */
+
 $('.main_btns').children('button').each(function () {
 	$(this).click(function(){
 		$(this).parent().find('.active').removeClass('active');
@@ -10,6 +12,7 @@ $('.main_btns').children('button').each(function () {
 
 
 /*
+--select custom style--
 Reference: http://jsfiddle.net/BB3JK/47/
 */
 
