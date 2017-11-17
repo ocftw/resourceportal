@@ -270,6 +270,10 @@ label[for="search_submit"] {
 	color: #fff;
 	font-size: 1.2rem;
 }
+.lib_thead .lib_tr > span {
+	vertical-align: bottom;
+}
+
 .lib_tbody .lib_tr:first-child > span {
 	border-top: 15px solid transparent;
 }
@@ -295,7 +299,7 @@ label[for="search_submit"] {
   position: relative;
   color: #e6e6e6;
 }
-.stars:after {  
+.stars::after {  
   content: '\2606\2606\2606\2606\2606';
 }
 .difficulty {
@@ -306,7 +310,7 @@ label[for="search_submit"] {
   z-index: 1;
   width: 0;
 }
-.difficulty:after {
+.difficulty::after {
 	content: '\2605\2605\2605\2605\2605';
   color: #ffc03b;    
 }
@@ -330,4 +334,61 @@ label[for="search_submit"] {
 }
 .material-icons[data-icon="video"]:after {
 	content: "play_circle_outline";
+}
+
+
+/* footer */
+footer {
+	background-color: #4d4d4d;
+	color: #fff;
+	line-height: 1.4;
+	font-size: 0.9rem;
+	padding: 50px 0 80px;
+}
+
+footer section > div {
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+}
+footer section > div:first-of-type {
+	width: 30%;
+}
+footer section > div:first-of-type br {
+	margin-bottom: 15px;
+}
+footer section > div:first-of-type .logo {
+	margin-bottom: 20px;
+}
+footer .material-icons {
+	padding: 0 4px 4px 0;
+	vertical-align: middle;
+}
+footer address {
+	text-indent: -0.6em;
+	margin-left: 1.2em;
+}
+
+footer a[href="https://ocf.tw/"] {
+	margin-right: 30px;
+}
+
+footer a {
+	color: #fff;
+	transition: opacity 0.2s ease;
+}
+footer a:hover {
+	opacity: 0.7;
+}
+footer h5 {
+	color: #cbcbcb;
+}
+
+footer .logo {
+	display: block;
+	margin-bottom: 10px;
+}
+
+footer p {
+	margin-top: 11px;
 }
