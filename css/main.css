@@ -35,7 +35,9 @@ header {
 	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
 	line-height: 60px;
 }
-
+.menu {
+	position: initial;
+}
 .menu .logo {
 	display: inline-block;
 	position: absolute;
@@ -325,6 +327,7 @@ label[for="search_submit"] {
 .wizard p:first-of-type {
 	margin-top: 0;
 }
+
 .wizard input[type="checkbox"], 
 .wizard input[type="radio"] {
 	display: inline-block;
@@ -346,6 +349,7 @@ label[for="search_submit"] {
 	color: #8cc11f;
 	border-radius: 7px;
 	margin-right: 10px;
+	margin-bottom: 15px;
 }
 
 .wizard label[for]:hover, 
@@ -358,6 +362,101 @@ label[for="search_submit"] {
 	color: #fff;
 	background: #45981A; 
 } 
+
+.wizard .red_btn {
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.tcenter {
+	text-align: center;
+}
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: #8CC11F;
+  width: 220px;
+  height: 40px;
+}
+
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 8px 15px;
+  -moz-transition: background-color 0.2s ease-in;
+  -o-transition: background-color 0.2s ease-in;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+  line-height: 26px;
+  border-radius: 7px;
+}
+.select-styled:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-color: #8CC11F transparent transparent transparent;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+}
+.select-styled:hover {
+  background-color: #fff;
+}
+.select-styled:active, .select-styled.active {
+  background-color: #fff;
+  border-bottom-right-radius: 0; 
+  border-bottom-left-radius: 0;
+}
+.select-styled:active:after, .select-styled.active:after {
+  top: 9px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+}
+.select-options li {
+  margin: 0;
+  padding: 12px 0;
+  text-indent: 15px;
+  border-top: 1px solid #c1e271;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+
+.select-options li:hover {
+  color: #fff;
+  background: #45981a;
+}
+.select-options li[rel="hide"] {
+  display: none;
+}
+
+
 
 
 /* Library content */

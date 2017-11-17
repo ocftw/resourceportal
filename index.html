@@ -16,7 +16,7 @@
 	<header>
 		<nav class="menu container">
 			<h1 class="logo">
-				<a><img src="img/logo_s.svg"></a>
+				<a href="/"><img src="img/logo_s.svg"></a>
 			</h1>
 			<ul>
 				<li><a>about</a></li>
@@ -86,8 +86,11 @@
 							<p>Description</p>
 							<p>Q1. Where are you from ?</p>
 							<select name="country">
+								<option value="hide">-- Country --</option>
+							  <option value="Taiwan">Taiwan</option>
 							  <option value="Taiwan">Taiwan</option>
 							</select>
+							
 							<p>Q2. What are you ... ?</p>
 							<input type="checkbox" name="platform" id="Windows" value="Windows">
 							<label for="Windows">Windows</label>
@@ -97,7 +100,7 @@
 							<label for="iOS">iOS</label>
 							<input type="checkbox" name="platform" id="Android" value="Android">
 							<label for="Android">Android</label>
-							<div>
+							<div class="row tcenter">
 								<input class="btn red_btn" type="submit" value="Submit">
 							</div>
 						</form>
