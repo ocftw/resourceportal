@@ -192,13 +192,13 @@ header {
 	font-size: 1em;
 	padding: 7px 25px;
 }
-button {
+button, .btn {
 	cursor: pointer;
 }
-button:hover {
+button:hover, .btn:hover {
 	box-shadow: 0 7px 15px rgba(255	, 255, 255, 0.15) inset;
 }
-button:active {
+button:active, .btn:active {
 	box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1) inset;
 }
 
