@@ -417,10 +417,13 @@ label[for="search_submit"] {
 }
 
 /* wizard content */
+.wizard {
+	font-size: 1.2rem;
+}
 .wizard p {
 	line-height: 1.8;
-	margin-top: 20px;
-	font-size: 1.2rem;
+	margin-top: 30px;
+	font-size: 1.8rem;
 }
 .wizard p:first-of-type {
 	margin-top: 0;
@@ -463,7 +466,10 @@ label[for="search_submit"] {
 
 .wizard .red_btn {
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 30px;
+	padding: 12px 25px;
+	border-radius: 25px;
+	width: 160px;
 }
 .tcenter {
 	text-align: center;
@@ -479,7 +485,6 @@ label[for="search_submit"] {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  font-size: 16px;
   color: #8CC11F;
   width: 220px;
   height: 40px;
