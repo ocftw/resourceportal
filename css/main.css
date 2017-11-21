@@ -4,6 +4,7 @@ html {
 } 
 body {
 	overflow-x: hidden;
+	font-family: arial;
 }
 
 a {
@@ -179,10 +180,11 @@ header {
 
 .crt_body button {
 	position: absolute;
-	bottom: 30px;
-	right: 0;
-	left: 0;
-	margin: auto;
+	width: 120px;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .red_btn {
@@ -254,7 +256,7 @@ button:active, .btn:active {
 .main_conts {
 	color: #fff;
 }
-.main_conts > div{
+.main_conts > div {
 	padding: 50px 0 100px;
 	background-color: #ccc;
 	display: none;
@@ -317,6 +319,18 @@ label[for="search_submit"] {
   opacity: 0.7;
 }
 
+.main_conts > div ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff;
+}
+.main_conts > div :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+.main_conts > div ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+.main_conts > div :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff;
+}
 /* result list */
 .result {
 	margin-top: 15px;
@@ -324,12 +338,12 @@ label[for="search_submit"] {
 .result > p {
 	text-align: center;
 	margin-bottom: 15px;
+	font-size: 1.2em;
 }
 .result > li {
 	display: block;
 	background-color: #fff;
 	color: #989898;
-	padding: 18px 0;
 	position: relative;
 	cursor: pointer;
 	margin-bottom: 20px;
@@ -341,19 +355,20 @@ label[for="search_submit"] {
 .rs_img {
 	height: 130px;
 	width: 130px;
-	margin: 0 18px;
+	margin: 18px 18px;
 	overflow: hidden;
-	background-color: #ccc;
+	background-color: rgba(0, 0, 0, 0.3);
 } 
 .rs_info {
 	height: 130px;
 	width: 120px;
-	margin: 0 18px;
+	margin: 18px 18px;
 	overflow: hidden;
 }
 .rs_title {
 	width: calc(100% - 331px);
 	height: 100%;
+	margin: 18px 0;
 }
 .rs_title h4 {
 	color: #333;
@@ -362,7 +377,7 @@ label[for="search_submit"] {
 	margin-bottom: 10px;
 }
 .rs_title p {
-	color: #989898;
+	color: #cbcbcb;
 }
 .rs_info .stars {
 	font-size: 1.4rem;
@@ -370,7 +385,7 @@ label[for="search_submit"] {
 	margin-bottom: 10px;
 }
 .rs_info {
-	color: #b2b2b2;
+	color: #cbcbcb;
 	font-size: 0.9em;
 }
 .tabs li {
@@ -393,11 +408,12 @@ label[for="search_submit"] {
 }
 
 .result > li:hover {
-	background-color: #f1f1f1;
+	background-color: transparent;
+	box-shadow: 0px 0px 1px #fff;
 }
 
 .result > li:hover .rs_title h4 {
-	color: #e95513;
+	color: #fff;
 }
 
 /* wizard content */
