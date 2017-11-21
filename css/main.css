@@ -583,6 +583,10 @@ label[for="search_submit"] {
 .lib_table .lib_tr {
 	display: table-row;
 }
+
+.lib_table .lib_tr:nth-of-type(2n + 2){
+	background-color: #f1f1f1;
+}
 .lib_table .lib_tr > span {
 	display: table-cell;
 	border: 10px solid transparent;
@@ -645,8 +649,10 @@ label[for="search_submit"] {
 
 
 .material-icons[data-icon]:after {
-	vertical-align: middle;
-	padding: 0 4px 4px 0;
+  padding: 0 4px 0px 0;
+  vertical-align: top;
+  top: 2px;
+  position: relative;
 }
 .material-icons[data-icon="article"]:after {
 	content: "description";
