@@ -612,6 +612,13 @@ label[for="search_submit"] {
 .lib_tr > span:last-child {
 	border-right-width: 20px;
 }
+.lib_tr > span:nth-of-type(3) {
+	font-size: 0.6rem;
+}
+
+.lib_tbody .lib_tr > span:nth-of-type(3) {
+    font-size: 0.8em;
+}
 .lib_tbody .lib_tr > span:first-child {
 	color: #333;
 }
@@ -619,12 +626,15 @@ label[for="search_submit"] {
 	background-color: #ffefbf;
 }
 
-
+/* rank & difficulty */
 .difficulty, .rank {
   display: inline-block;  
   position: relative;
   color: #e6e6e6;
   font-family: 'Material Icons';
+}
+.difficulty {
+	letter-spacing: -3px;
 }
 .difficulty::after {  
   content: 'flash_onflash_onflash_onflash_onflash_on';
@@ -655,6 +665,11 @@ label[for="search_submit"] {
 .difficulty .stars[data-diff="4"], .rank .stars[data-rank="4"] { width: 80%; }
 .difficulty .stars[data-diff="5"], .rank .stars[data-rank="5"] { width: 100%; }
 
+.difficulty .stars[data-diff="1"]::after{ color: #8cc11f; }
+.difficulty .stars[data-diff="2"]::after{ color: #b5c11f; }
+.difficulty .stars[data-diff="3"]::after{ color: #ffc03b; }
+.difficulty .stars[data-diff="4"]::after{ color: #eb9f00; }
+.difficulty .stars[data-diff="5"]::after{ color: #e95513; }
 
 .material-icons[data-icon]:after {
   padding: 0 4px 0px 0;
