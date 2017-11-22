@@ -1,6 +1,7 @@
 var db = elasticlunr();
 var keys = [];
 
+/*
 $.getJSON("https://spreadsheets.google.com/feeds/list/132YgRM71k6R00rForD-uQuGL3j7pE5mqayQzvdynY3M/od6/public/values?alt=json", function(data) {
 	keys = Object.keys(data.feed.entry[0]);
 	keys.forEach(function (k) {
@@ -15,7 +16,21 @@ $.getJSON("https://spreadsheets.google.com/feeds/list/132YgRM71k6R00rForD-uQuGL3
 		db.addDoc(newdoc);
 	});
 });
+*/
 
+/*
+$.getJSON('data/materials.json', function(data) {
+	console.log(data);
+});*/
+
+keys = Object.keys(materials[0]);
+keys.forEach(function (k) {
+	db.addField(k);
+});
+materials.forEach(function(row, index, arr) {
+	row['id'] = index;
+	db.addDoc(row);
+});
 var searchresults = new Vue({
 	el: '#find_cont',
 	data: {
@@ -23,7 +38,7 @@ var searchresults = new Vue({
 	},
 	computed: {
 		searchresults: function () {
-			return db.search(this.searchterm);
+			return db.search(this.searchterm, {expand: true});
 		}
 	}
 });

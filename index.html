@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js" defer></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+	<script type="text/javascript" src="data/materials.js" defer></script>
 	<script type="text/javascript" src="js/search.js" defer></script>
 	<script type="text/javascript" src="js/main.js" defer></script>
 </head>
@@ -86,13 +87,13 @@
 						<ul class="result">
 							<p>{{searchresults.length}} results</p>
 							<li v-for="result in searchresults">
-							<a href="" target="_blank">
+							<a v-bind:href="result.doc.link" target="_blank">
 								<span class="rs_img">
 									<img src="">
 								</span>
 								<span class="rs_title">
-									<h4>{{ result.doc.gsx$series }} - {{ result.doc.gsx$originaltitle }}</h4>
-									<p>{{ result.ref }}</p>
+									<h4>{{ result.doc.series }} - {{ result.doc.title }}</h4>
+									<p>{{ result.doc.tagline }}</p>
 								</span>
 								<span class="rs_info">
 									<span class="rank"><span class="stars" data-rank="3"></span></span>
@@ -100,7 +101,7 @@
 										<li>tab1 test</li>
 										<li>tab2</li>
 									</ul>
-									<p class="from">fromtheweb.com</p>
+									<p class="from">{{result.doc.link}}</p>
 								</span>
 							</a>
 							</li>
