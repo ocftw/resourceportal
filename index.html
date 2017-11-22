@@ -13,6 +13,7 @@
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js" defer></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue" defer></script>
 	<script type="text/javascript" src="js/search.js" defer></script>
 	<script type="text/javascript" src="js/main.js" defer></script>
 </head>
@@ -76,52 +77,33 @@
 
 				<div id="find_cont">
 					<div class="container">
-					  <form action="" autocomplete="on">
-					  	<input id="search" name="search" type="text" placeholder="What're you looking for ?">
-					  	<input id="search_submit" value="" type="submit">
-					  	<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
-					  </form>
-						
-					  <ul class="result">
-					  	<p>4 results</p>
-					  	<li>
-					  		<a href="" target="_blank">
-						  		<span class="rs_img">
-						  			<img src="">
-						  		</span>
-						  		<span class="rs_title">
-						  			<h4>Privacy International Explainers - What is privacy?</h4>
-						  			<p>description</p>
-						  		</span>
-						  		<span class="rs_info">
-						  			<span class="stars"><span class="difficulty" data-diff="3"></span></span>
-					  				<ul class="tabs">
-					  					<li>tab1 test</li>
-					  					<li>tab2</li>
-					  				</ul>
-						  			<p class="from">fromtheweb.com</p>
-						  		</span>
-					  		</a>
-					  	</li>
-					  	<li>
-					  		<a href="" target="_blank">
-						  		<span class="rs_img">
-						  			<img src="">
-						  		</span>
-						  		<span class="rs_title">
-						  			<h4>Privacy International Explainers - What is privacy?</h4>
-						  			<p>description</p>
-						  		</span>
-						  		<span class="rs_info">
-						  			<span class="stars"><span class="difficulty" data-diff="3"></span></span>
-					  				<ul class="tabs">
-					  					<li>tab1 test</li>
-					  					<li>tab2</li>
-					  				</ul>
-						  			<p class="from">fromtheweb.com</p>
-						  		</span>
-					  		</a>
-					  	</li>
+						<form action="" autocomplete="on">
+							<input v-model="searchterm" name="search" type="text" placeholder="What are you looking for?">
+							<input id="search_submit" value="" type="submit">
+							<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
+						</form>
+
+						<ul class="result">
+							<p>{{searchresults.length}} results</p>
+							<li v-for="result in searchresults">
+							<a href="" target="_blank">
+								<span class="rs_img">
+									<img src="">
+								</span>
+								<span class="rs_title">
+									<h4>{{ result.doc.gsx$series }} - {{ result.doc.gsx$originaltitle }}</h4>
+									<p>{{ result.ref }}</p>
+								</span>
+								<span class="rs_info">
+									<span class="stars"><span class="difficulty" data-diff="3"></span></span>
+									<ul class="tabs">
+										<li>tab1 test</li>
+										<li>tab2</li>
+									</ul>
+									<p class="from">fromtheweb.com</p>
+								</span>
+							</a>
+							</li>
 					  </ul>
 					</div>
 				</div>
