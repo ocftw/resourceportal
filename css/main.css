@@ -379,10 +379,10 @@ label[for="search_submit"] {
 .rs_title p {
 	color: #cbcbcb;
 }
-.rs_info .stars {
+.rs_info .rank {
 	font-size: 1.4rem;
-	letter-spacing: 5px;
 	margin-bottom: 10px;
+	letter-spacing: 5px;
 }
 .rs_info {
 	color: #cbcbcb;
@@ -620,15 +620,19 @@ label[for="search_submit"] {
 }
 
 
-.stars {
+.difficulty, .rank {
   display: inline-block;  
   position: relative;
   color: #e6e6e6;
+  font-family: 'Material Icons';
 }
-.stars::after {  
-  content: '\2606\2606\2606\2606\2606';
+.difficulty::after {  
+  content: 'flash_onflash_onflash_onflash_onflash_on';
 }
-.difficulty {
+.rank::after {
+	content: '\2605\2605\2605\2605\2605';
+}
+.difficulty .stars, .rank .stars{
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -636,16 +640,20 @@ label[for="search_submit"] {
   z-index: 1;
   width: 0;
 }
-.difficulty::after {
+.difficulty .stars::after {
+	content: 'flash_onflash_onflash_onflash_onflash_on';
+  color: #ffc03b;    
+}
+.rank .stars::after {
 	content: '\2605\2605\2605\2605\2605';
   color: #ffc03b;    
 }
 
-.difficulty[data-diff="1"] { width: 20%; }
-.difficulty[data-diff="2"] { width: 40%; }
-.difficulty[data-diff="3"] { width: 60%; }
-.difficulty[data-diff="4"] { width: 80%; }
-.difficulty[data-diff="5"] { width: 100%; }
+.difficulty .stars[data-diff="1"], .rank .stars[data-rank="1"] { width: 20%; }
+.difficulty .stars[data-diff="2"], .rank .stars[data-rank="2"] { width: 40%; }
+.difficulty .stars[data-diff="3"], .rank .stars[data-rank="3"] { width: 60%; }
+.difficulty .stars[data-diff="4"], .rank .stars[data-rank="4"] { width: 80%; }
+.difficulty .stars[data-diff="5"], .rank .stars[data-rank="5"] { width: 100%; }
 
 
 .material-icons[data-icon]:after {
