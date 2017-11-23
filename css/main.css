@@ -465,6 +465,10 @@ label[for="search_submit"] {
 /* wizard content */
 .wizard {
 	font-size: 1.2rem;
+	display: none;
+}
+.wizard.active {
+	display: block;
 }
 .wizard p {
 	line-height: 1.8;
@@ -598,8 +602,30 @@ label[for="search_submit"] {
 	display: none;
 }
 
-
-
+#wizard_result {
+	display: none;
+}
+#wizard_result.active {
+	display: block;
+}
+#wizard_result .row {
+	border-bottom: 1px solid #fff;
+	padding-bottom: 10px;
+	font-size: 1.2rem;
+}
+#wizard_result .row h3 {
+	font-weight: 600;
+}
+.back {
+	position: absolute;
+	left: 10px;
+	top: -9px;
+	vertical-align: bottom;
+	padding: 10px;
+}
+#wizard_result .row a:hover {
+	opacity: 0.7;
+}
 
 /* Library content */
 .lib_table {

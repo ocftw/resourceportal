@@ -6,7 +6,7 @@ $('.main_btns').children('button').each(function () {
 		$(this).parent().find('.active').removeClass('active');
 		$(this).addClass('active');
 		var now = "#" + $(this).attr('id').slice(0,-4) + "_cont";
-		$(now).parent().find('.active').removeClass('active');
+		$(now).parent().children('.active').removeClass('active');
 		$(now).addClass('active');
 	})
 })
@@ -98,9 +98,11 @@ function click_result(e) {
 	$('#popup_feedback').find('h4:first').html(name);
 };
 
-$('#summon_btn').click(function(){
-	$('#popup_wrap').addClass('active');
-	$('#popup_summon').addClass('active');
+$('.summon_btn').each(function (){
+	$(this).click(function(){
+		$('#popup_wrap').addClass('active');
+		$('#popup_summon').addClass('active');
+	})
 })
 
 /* answer */
@@ -111,3 +113,31 @@ $('.answer').each(function (){
 		$('html').stop().animate({scrollTop: top}, 600, 'swing');
 	})
 })
+
+/* wizard result */
+$('#wizard_form').submit(function(){
+	$(this).removeClass('active');
+	$('#wizard_result').addClass('active');
+})
+$('#wizard_result').find('a.back:first').click(function(){
+	$('#wizard_result').removeClass('active');
+	$('#wizard_form').addClass('active');
+})
+
+$( document ).ready(function() {
+    $("form").submit(function(e) {
+        e.preventDefault(); // prevent page refresh
+
+        $.ajax({
+            type: "POST",
+            url: "index.html",
+            data: $(this).serialize(), // serialize form data
+            success: function(data) {
+                // Success ...
+            },
+            error: function() {
+                // Error ...
+            }
+        });
+    });
+});
