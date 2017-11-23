@@ -2,6 +2,7 @@
 
 $('.main_btns').children('button').each(function () {
 	$(this).click(function(){
+		$('.main_conts:first').addClass('active');
 		$(this).parent().find('.active').removeClass('active');
 		$(this).addClass('active');
 		var now = "#" + $(this).attr('id').slice(0,-4) + "_cont";
@@ -100,4 +101,13 @@ function click_result(e) {
 $('#summon_btn').click(function(){
 	$('#popup_wrap').addClass('active');
 	$('#popup_summon').addClass('active');
+})
+
+/* answer */
+$('.answer').each(function (){
+	$(this).click(function(){
+		$('#find_btn').click();
+		var top = $('#find_cont').offset().top;
+		$('html').stop().animate({scrollTop: top}, 600, 'swing');
+	})
 })

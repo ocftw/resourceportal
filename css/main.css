@@ -214,7 +214,7 @@ button:active, .btn:active {
 	padding-top: 50px;
 }
 .main_btns {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 .main_btns > button {
 	width: 25%;
@@ -258,6 +258,13 @@ button:active, .btn:active {
 /* main_conts */
 .main_conts {
 	color: #fff;
+	max-height: 0;
+	transition: max-height 2s ease-in-out;
+	overflow: hidden;
+	padding-top: 30px;
+}
+.main_conts.active {
+	max-height: 9999px;
 }
 .main_conts > div {
 	padding: 50px 0 100px;
@@ -266,15 +273,15 @@ button:active, .btn:active {
 	position: relative;
 }
 .main_conts > div::before {
-		content: "";
-		position: absolute;
-		top: -60px;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		border: 30px solid transparent;
-		border-bottom-color: #CCC;
-		width: 0;
+	content: "";
+	position: absolute;
+	top: -60px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	border: 30px solid transparent;
+	border-bottom-color: #CCC;
+	width: 0;
 }
 .main_conts > div.active{
 	display: block;
