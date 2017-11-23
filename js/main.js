@@ -61,3 +61,36 @@ $('select').each(function(){
     });
 
 });
+
+/* rank */
+$('.rank_enable').each(function (){
+	$(this).mousemove(function (){
+		var x = event.pageX;
+		var left = $(this).offset().left;
+		var width = $(this).width();
+	    var rank = Math.round( 5 * (x - left) / width )*20;
+	    $(this).next('input[type=range]').val(rank/20);
+	    $(this).children('.stars').css('width', rank + '%');
+	});
+});
+
+/* result click pop */
+function click_result() {
+	console.log("hi2");
+	$('#popup_wrap').addClass('active');
+	$('#popup_feedback').addClass('active');
+}
+
+/* popup */
+$('#popup_wrap').click(function(){
+	if ($(this).find('.popup_close').is(":hover")){
+		$(this).find('.active').removeClass('active');
+		$(this).removeClass('active');
+	}else if ($(this).find('.active').is(":hover")) {
+
+	}else {
+		$(this).find('.active').removeClass('active');
+		$(this).removeClass('active');
+	}
+});
+
