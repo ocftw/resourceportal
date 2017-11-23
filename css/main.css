@@ -216,6 +216,7 @@ button:active, .btn:active {
 .crt_dots {
 	position: absolute;
 	bottom: -105px;
+	left: 10px;
 }
 .crt_dots li {
 	display: inline-block;
