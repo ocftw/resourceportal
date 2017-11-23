@@ -106,7 +106,7 @@
 								</a>
 							</li>
 							<p class="big">Not what you are looking for?</p>
-							<button id="summon_btn" class="btn red_btn">Summon elfs</button>
+							<button id="summon_btn" class="btn red_btn">Summon Elfs</button>
 						</ul>
 					</div>
 				</div>
@@ -192,7 +192,7 @@
 			</div>
 		</section>
 
-		<section id="popup_wrap" class="">
+		<section id="popup_wrap" class="active">
 			<div id="popup_feedback" class="popup feedback">
 				<div class="popup_head">
 					<h5>Feedback</h5>
@@ -209,10 +209,25 @@
 				</div>
 				<div class="popup_foot"></div>
 			</div>
-			<div id="popup_summon" class="popup summon">
-				<div class="popup_head"></div>
-				<div class="popup_body"></div>
-				<div class="popup_foot emergency"></div>
+			<div id="popup_summon" class="popup summon active">
+				<div class="popup_head">
+					<h5>Summon Elfs</h5>
+					<a class="popup_close"><i class="material-icons">close</i></a>
+				</div>
+				<div class="popup_body">
+					<form action="">
+						<label>Question</label>
+						<textarea name="question" id="question" placeholder="Your Question" rows="4"></textarea>
+						<label>Email</label>
+						<input type="text" name="email" id="se_email" placeholder="Your Email">
+						<input class="btn red_btn" type="submit" value="Submit">
+					</form>
+				</div>
+				<div class="popup_foot emergency">
+					<h6><i class="material-icons">error_outline</i>Emergency</h6>
+					<h5>Contact us Info</h5>
+					<p>Description</p>
+				</div>
 			</div>
 		</section>
 	</main>

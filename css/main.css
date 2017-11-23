@@ -22,6 +22,7 @@ a {
 
 .material-icons {
 	font-size: inherit;	/* Preferred icon size */
+	vertical-align: inherit;
 }
 
 
@@ -314,7 +315,7 @@ button:active, .btn:active {
 		height: 60px;
 		width: 100%;
 }
-input[type="text"] {
+#find_cont input[type="text"] {
 		height: 60px;
 		font-size: 1.8rem;
 		display: inline-block;
@@ -761,15 +762,10 @@ label[for="search_submit"] {
 .feedback .popup_head {
 	background-color: #8cc11f;
 }
-.popup_foot {
-	min-height: 10px;
-	background-color: #fff;
-	padding: 10px 30px;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-	position: relative;
-	text-align: center;
+.summon .popup_head {
+	background-color: #e95513;
 }
+
 .popup_head a:hover {
 	opacity: 0.7;
 }
@@ -785,6 +781,9 @@ label[for="search_submit"] {
 	text-align: center;
 	font-size: 1.2em;
 }
+.summon .popup_body{
+	text-align: left;
+}
 .popup_body h4 {
 	color: #666;
 	line-height: 1.5;
@@ -792,6 +791,7 @@ label[for="search_submit"] {
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	margin: 20px auto;
 }
+
 .popup_body .rank {
 	font-size: 2.6rem;
 	letter-spacing: 5px;
@@ -801,6 +801,48 @@ label[for="search_submit"] {
 }
 input[name="rank"] {
 	display: none;
+}
+
+.popup_foot {
+	min-height: 10px;
+	background-color: #fff;
+	padding: 15px 30px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	position: relative;
+	text-align: left;
+}
+.popup_foot.emergency {
+	background-color: #FBDDD0;
+}
+.emergency h6 {
+	color: #873633;
+	vertical-align: bottom;
+	margin-bottom: 10px;
+}
+.emergency h6 i {
+	margin-right: 5px;
+}
+.emergency h5 {
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+.emergency p {
+	color: #666;
+}
+.summon label {
+	display: block;
+	margin-bottom: 10px;
+}
+.summon textarea, .summon input[type="text"] {
+	width: 100%;
+	border-radius: 7px;
+	border: 1px solid #b2b2b2;
+	padding: 10px 15px;
+}
+.summon textarea {
+	margin-bottom: 15px;
+	resize: none;
 }
 
 /* footer */
