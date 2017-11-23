@@ -398,6 +398,9 @@ label[for="search_submit"] {
 	display: inline-block;
 	vertical-align: top;
 }
+.result > li > a {
+	display: inline-block;
+} 
 .rs_img {
 	height: 130px;
 	width: 130px;

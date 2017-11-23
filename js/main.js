@@ -111,6 +111,8 @@ $('.answer').each(function (){
 		$('#find_btn').click();
 		var top = $('#find_cont').offset().top;
 		$('html').stop().animate({scrollTop: top}, 600, 'swing');
+		var question = $(this).prev('h4').text();
+		$('#find_cont').find('input[name="search"]').val(question);
 	})
 })
 
@@ -130,7 +132,7 @@ $( document ).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "index.html",
+            url: "",
             data: $(this).serialize(), // serialize form data
             success: function(data) {
                 // Success ...
