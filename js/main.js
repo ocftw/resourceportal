@@ -75,10 +75,11 @@ $('.rank_enable').each(function (){
 });
 
 /* result click pop */
-function click_result() {
-	console.log("hi2");
+function click_result(e) {
 	$('#popup_wrap').addClass('active');
 	$('#popup_feedback').addClass('active');
+	var name = $(e).find('h4:first').text();
+	$('#popup_feedback').find('h4:first').html(name);
 }
 
 /* popup */

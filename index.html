@@ -87,7 +87,7 @@
 						<ul class="result">
 							<p>{{searchresults.length}} results</p>
 							<li v-for="result in searchresults">
-								<a v-bind:href="result.doc.link" target="_blank" onclick="click_result()">
+								<a v-bind:href="result.doc.link" target="_blank" onclick="click_result(this)">
 									<span class="rs_img">
 										<img src="">
 									</span>
@@ -106,7 +106,7 @@
 								</a>
 							</li>
 							<p class="big">Not what you are looking for?</p>
-							<button class="btn red_btn">Summon elfs</button>
+							<button id="summon_btn" class="btn red_btn">Summon elfs</button>
 						</ul>
 					</div>
 				</div>
@@ -192,7 +192,7 @@
 			</div>
 		</section>
 
-		<section id="popup_wrap">
+		<section id="popup_wrap" class="">
 			<div id="popup_feedback" class="popup feedback">
 				<div class="popup_head">
 					<h5>Feedback</h5>
@@ -209,7 +209,7 @@
 				</div>
 				<div class="popup_foot"></div>
 			</div>
-			<div class="popup summon">
+			<div id="popup_summon" class="popup summon">
 				<div class="popup_head"></div>
 				<div class="popup_body"></div>
 				<div class="popup_foot emergency"></div>
