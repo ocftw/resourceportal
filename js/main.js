@@ -77,8 +77,8 @@ $('.rank_enable').each(function (){
 
 /* popup close */
 $('#popup_wrap').click(function(){
-	if ($(this).children('.popup.active').is(":hover")) {
-		if ($(this).children('.popup.active').find('.popup_close').is(":hover")){
+	if ($(this).children('.popup.active').is(':hover')) {
+		if ($(this).children('.popup.active').find('.popup_close').is(':hover')){
 			$(this).find('.active').removeClass('active');
 			$(this).removeClass('active');
 		}else{
@@ -105,6 +105,38 @@ $('.summon_btn').each(function (){
 	})
 })
 
+/* curated question */
+$('#crt_dots').find('li').each(function(){
+	$(this).click(function(){
+		var num = $(this).index();
+		$(this).parent('ul').find('.active').removeClass('active');
+		$(this).children('a').addClass('active');
+		$('#crt_body').find('.active').removeClass('active');
+		$('#crt_body').children('div').eq(num).addClass('active');
+	})
+})
+$('#crt_head').click(function(){
+	if($('#crt_head').children('.crt_prev:first').is(':hover')){
+		var num = $('#crt_body').find('.active').index();
+		if (num > 0 ) {
+			$('#crt_dots').find('.active').removeClass('active');
+			$('#crt_body').find('.active').removeClass('active');
+			$('#crt_body').children('div').eq(num-1).addClass('active');
+			$('#crt_dots').children('li').eq(num-1).children('a').addClass('active');
+		}
+	}else if($('#crt_head').children('.crt_next:first').is(':hover')){
+		var num = $('#crt_body').find('.active').index();
+		if (num < $('#crt_body').children('div').length) {
+			$('#crt_dots').find('.active').removeClass('active');
+			$('#crt_body').find('.active').removeClass('active');
+			$('#crt_body').children('div').eq(num+1).addClass('active');
+			$('#crt_dots').children('li').eq(num+1).children('a').addClass('active');
+		}
+	}else{
+
+	}
+})
+
 /* answer */
 $('.answer').each(function (){
 	$(this).click(function(){
@@ -126,6 +158,7 @@ $('#wizard_result').find('a.back:first').click(function(){
 	$('#wizard_form').addClass('active');
 })
 
+/* form ajax */
 $( document ).ready(function() {
     $("form").submit(function(e) {
         e.preventDefault(); // prevent page refresh

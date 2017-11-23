@@ -9,14 +9,14 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<link href="css/reset.css" rel="stylesheet">
-	<link href="css/main.css?v=20171123" rel="stylesheet">
+	<link href="css/main.css?v=20171123-1" rel="stylesheet">
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js" defer></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue" defer></script>
 	<script type="text/javascript" src="data/materials.js" defer></script>
 	<script type="text/javascript" src="js/search.js" defer></script>
-	<script type="text/javascript" src="js/main.js?v=20171123" defer></script>
+	<script type="text/javascript" src="js/main.js?v=20171123-1" defer></script>
 </head>
 <body>
 	<header>
@@ -46,23 +46,39 @@
 				</div>
 
 				<div class="curated">
-					<div class="crt_head">
+					<div id="crt_head" class="crt_head">
 						<a class="crt_prev"></a>
 						<a class="crt_next"></a>
 					</div>
-					<div class="crt_body">
-						<div>
+					<div id="crt_body" class="crt_body">
+						<div class="active">
 							<h4>How do I know if my phone is being tapped?</h4>
 							<button class="red_btn answer">Answer</button>
 						</div>
+						<div>
+							<h4>question2</h4>
+							<button class="red_btn answer">Answer</button>
+						</div>
+						<div>
+							<h4>question3</h4>
+							<button class="red_btn answer">Answer</button>
+						</div>
+						<div>
+							<h4>question4</h4>
+							<button class="red_btn answer">Answer</button>
+						</div>
+						<div>
+							<h4>question5</h4>
+							<button class="red_btn answer">Answer</button>
+						</div>
 					</div>
-					<div class="crt_dots">
-						<a class="crt_dot active"></a>
-						<a class="crt_dot"></a>
-						<a class="crt_dot"></a>
-						<a class="crt_dot"></a>
-						<a class="crt_dot"></a>
-					</div>
+					<ul id="crt_dots" class="crt_dots">
+						<li><a class="active"></a></li>
+						<li><a></a></li>
+						<li><a></a></li>
+						<li><a></a></li>
+						<li><a></a></li>
+					</ul>
 				</div>
 			</div>
 		</section>

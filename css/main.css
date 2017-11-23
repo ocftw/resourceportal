@@ -171,6 +171,12 @@ header {
 	padding: 20px 30px;
 	background-color: #fff;
 }
+.crt_body > div {
+	display: none;
+}
+.crt_body > div.active {
+	display: block;
+}
 .crt_body h4 {
 	color: #56b8cf;
 	font-weight: 600;
@@ -207,7 +213,25 @@ button:hover, .btn:hover {
 button:active, .btn:active {
 	box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1) inset;
 }
-
+.crt_dots {
+	position: absolute;
+	bottom: -105px;
+}
+.crt_dots li {
+	display: inline-block;
+	margin-right: 15px;
+}
+.crt_dots li a {
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: #b2b2b2;
+	display: inline-block;
+}
+.crt_dots li a.active {
+	background-color: #56b8cf;
+	cursor: default;
+}
 /* main_sec*/
 .main_sec {
 	background-color: #F1F1F1;
