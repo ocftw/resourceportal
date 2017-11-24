@@ -32,7 +32,7 @@ materials.forEach(function(row, index, arr) {
 	db.addDoc(row);
 });
 var searchresults = new Vue({
-	el: '#find_cont',
+	el: 'main',
 	data: {
 		searchterm: ''
 	},
