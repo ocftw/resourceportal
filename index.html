@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js" defer></script>
 	<script type="text/javascript" src="data/materials.js" defer></script>
+	<script type="text/javascript" src="data/questions.js" defer></script>
 	<script type="text/javascript" src="js/search.js" defer></script>
 	<script type="text/javascript" src="js/main.js?v=20171123-2" defer></script>
 </head>
@@ -47,37 +48,17 @@
 
 				<div class="curated">
 					<div class="crt_head">
-						<a id="crt_prev" class="crt_prev"></a>
-						<a id="crt_next" class="crt_next"></a>
+						<a id="crt_prev" class="crt_prev" @click="active_question = (active_question - 1) % questions.length"></a>
+						<a id="crt_next" class="crt_next" @click="active_question = (active_question + 1) % questions.length"></a>
 					</div>
 					<div id="crt_body" class="crt_body">
-						<div class="active">
-							<h4>How do I know if my phone is being tapped?</h4>
-							<button @click="showanswer" class="red_btn answer">Answer</button>
-						</div>
-						<div>
-							<h4>question2</h4>
-							<button class="red_btn answer">Answer</button>
-						</div>
-						<div>
-							<h4>question3</h4>
-							<button class="red_btn answer">Answer</button>
-						</div>
-						<div>
-							<h4>question4</h4>
-							<button class="red_btn answer">Answer</button>
-						</div>
-						<div>
-							<h4>question5</h4>
-							<button class="red_btn answer">Answer</button>
+						<div v-for="(question,index) in questions" :class="{ 'active': index === active_question }">
+							<h4>{{question.question}}</h4>
+							<button @click="showanswer(question.question)" class="red_btn answer">Answer</button>
 						</div>
 					</div>
 					<ul id="crt_dots" class="crt_dots">
-						<li><a class="active"></a></li>
-						<li><a></a></li>
-						<li><a></a></li>
-						<li><a></a></li>
-						<li><a></a></li>
+						<li v-for="(question,index) in questions" @click="active_question = index"><a :class="{ 'active': index === active_question }"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -125,7 +106,7 @@
 							<button class="btn red_btn summon_btn">Summon Elfs</button>
 						</ul>
 						<ul v-show="search_isanswer" class="result">
-							<p>Answer of the question</p>
+							<p v-html="questions[active_question].answer">Answer of the question</p>
 							<li v-for="result in searchresults">
 								<a v-bind:href="result.doc.link" target="_blank" onclick="click_result(this)">
 									<span class="rs_img">

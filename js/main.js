@@ -105,37 +105,6 @@ $('.summon_btn').each(function (){
 	})
 })
 
-/* curated question */
-$('#crt_dots').find('li').each(function(){
-	$(this).click(function(){
-		var num = $(this).index();
-		$(this).parent('ul').find('.active').removeClass('active');
-		$(this).children('a').addClass('active');
-		$('#crt_body').find('.active').removeClass('active');
-		$('#crt_body').children('div').eq(num).addClass('active');
-	})
-})
-$('#crt_prev').click(function(){
-	var num = $('#crt_body').find('.active').index();
-	if (num > 0 ) {
-		$('#crt_dots').find('.active').removeClass('active');
-		$('#crt_body').find('.active').removeClass('active');
-		$('#crt_body').children('div').eq(num-1).addClass('active');
-		$('#crt_dots').children('li').eq(num-1).children('a').addClass('active');
-	}
-})
-
-$('#crt_next').click(function(){
-	var num = $('#crt_body').find('.active').index();
-	if (num < ($('#crt_body').children('div').length - 1)) {
-		$('#crt_dots').find('.active').removeClass('active');
-		$('#crt_body').find('.active').removeClass('active');
-		$('#crt_body').children('div').eq(num+1).addClass('active');
-		$('#crt_dots').children('li').eq(num+1).children('a').addClass('active');
-	}
-})
-
-
 /* wizard result */
 $('#wizard_form').submit(function(){
 	$(this).removeClass('active');

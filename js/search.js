@@ -35,7 +35,9 @@ var vm = new Vue({
 	el: 'main',
 	data: {
 		searchterm: '',
-		search_isanswer: false
+		search_isanswer: false,
+		questions: questions,
+		active_question: 0,
 	},
 	computed: {
 		searchresults: function () {
@@ -43,9 +45,9 @@ var vm = new Vue({
 		}
 	},
 	methods: {
-		showanswer: function() {
+		showanswer: function(question, answer) {
 			this.search_isanswer = true;
-			this.searchterm = 'blabla';
+			this.searchterm = question;
 			$('#find_btn').click();
 			var top = $('#find_cont').offset().top;
 			$('html').stop().animate({scrollTop: top}, 600, 'swing');
