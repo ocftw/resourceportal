@@ -135,16 +135,6 @@ $('#crt_next').click(function(){
 	}
 })
 
-/* answer */
-$('.answer').each(function (){
-	$(this).click(function(){
-		$('#find_btn').click();
-		var top = $('#find_cont').offset().top;
-		$('html').stop().animate({scrollTop: top}, 600, 'swing');
-		var question = $(this).prev('h4').text();
-		$('#find_cont').find('input[name="search"]').val(question);
-	})
-})
 
 /* wizard result */
 $('#wizard_form').submit(function(){

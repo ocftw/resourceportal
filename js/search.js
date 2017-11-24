@@ -31,14 +31,24 @@ materials.forEach(function(row, index, arr) {
 	row['id'] = index;
 	db.addDoc(row);
 });
-var searchresults = new Vue({
+var vm = new Vue({
 	el: 'main',
 	data: {
-		searchterm: ''
+		searchterm: '',
+		search_isanswer: false
 	},
 	computed: {
 		searchresults: function () {
 			return db.search(this.searchterm, {expand: true});
+		}
+	},
+	methods: {
+		showanswer: function() {
+			this.search_isanswer = true;
+			this.searchterm = 'blabla';
+			$('#find_btn').click();
+			var top = $('#find_cont').offset().top;
+			$('html').stop().animate({scrollTop: top}, 600, 'swing');
 		}
 	}
 });

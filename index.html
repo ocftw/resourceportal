@@ -53,7 +53,7 @@
 					<div id="crt_body" class="crt_body">
 						<div class="active">
 							<h4>How do I know if my phone is being tapped?</h4>
-							<button class="red_btn answer">Answer</button>
+							<button @click="showanswer" class="red_btn answer">Answer</button>
 						</div>
 						<div>
 							<h4>question2</h4>
@@ -100,8 +100,32 @@
 							<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
 						</form>
 
-						<ul class="result">
+						<ul v-show="!search_isanswer" class="result">
 							<p>{{searchresults.length}} results</p>
+							<li v-for="result in searchresults">
+								<a v-bind:href="result.doc.link" target="_blank" onclick="click_result(this)">
+									<span class="rs_img">
+										<img src="">
+									</span>
+									<span class="rs_title">
+										<h4>{{ result.doc.series }} - {{ result.doc.title }}</h4>
+										<p>{{ result.doc.tagline }}</p>
+									</span>
+									<span class="rs_info">
+										<span class="rank"><span class="stars" data-rank="3"></span></span>
+										<ul class="tabs">
+											<li>tab1 test</li>
+											<li>tab2</li>
+										</ul>
+										<p class="from">{{result.doc.link}}</p>
+									</span>
+								</a>
+							</li>
+							<p class="big">Not what you are looking for?</p>
+							<button class="btn red_btn summon_btn">Summon Elfs</button>
+						</ul>
+						<ul v-show="search_isanswer" class="result">
+							<p>Answer of the question</p>
 							<li v-for="result in searchresults">
 								<a v-bind:href="result.doc.link" target="_blank" onclick="click_result(this)">
 									<span class="rs_img">
