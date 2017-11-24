@@ -424,7 +424,7 @@ label[for="search_submit"] {
 	vertical-align: top;
 }
 .result > li > a {
-	display: inline-block;
+	display: block;
 } 
 .rs_img {
 	height: 130px;
