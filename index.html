@@ -95,14 +95,13 @@
 									<span class="rs_info">
 										<span class="rank"><span class="stars" data-rank="3"></span></span>
 										<ul class="tabs">
-											<li>tab1 test</li>
-											<li>tab2</li>
+											<li v-for="tag in result.doc.tags.split(',')" v-if="tag">{{tag}}</li>
 										</ul>
 										<p class="from">{{result.doc.link}}</p>
 									</span>
 								</a>
 							</li>
-							<p class="big" v-show="searchterm != ''">Not what you are looking for?</p>
+							<p class="big" v-show="searchterm != ''">Can't find what you're looking for?</p>
 							<button class="btn red_btn summon_btn" v-show="searchterm != ''">Summon Elfs</button>
 						</ul>
 						<ul v-show="search_isanswer" class="result">
