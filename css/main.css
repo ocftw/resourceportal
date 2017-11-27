@@ -353,7 +353,6 @@ button:active, .btn:active {
 	outline: none;
 	color: #fff;
 	border-bottom: 1px solid #fff;
-	padding-right: 60px;
 	width: calc(100% - 60px);
 	background: none;
 }
