@@ -106,7 +106,7 @@
 							<button class="btn red_btn summon_btn">Summon Elfs</button>
 						</ul>
 						<ul v-show="search_isanswer" class="result">
-							<p v-html="questions[active_question].answer">Answer of the question</p>
+							<p class="answer" v-html="questions[active_question].answer"></p><!-- 這裡的內容會被選定的問題的答案取代 -->
 							<li v-for="result in searchresults">
 								<a v-bind:href="result.doc.link" target="_blank" onclick="click_result(this)">
 									<span class="rs_img">
