@@ -447,6 +447,9 @@ label[for="search_submit"] {
 	overflow: hidden;
 	background-color: rgba(0, 0, 0, 0.3);
 } 
+.rs_img img {
+	width: 100%;
+}
 .rs_info {
 	height: 130px;
 	width: 120px;

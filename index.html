@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Resource Portal</title>
+	<title>Resource Portal - Civil Society Cyber Shield</title>
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
@@ -42,7 +42,7 @@
 						<i class="cs_red">D</i>efend for <i class="cs_green">D</i>efenders
 					</h2>
 					<p>
-						Here is some description about this web in 10~20 words.
+					Easy access to reliable digital security resources for activists
 					</p>
 				</div>
 
@@ -86,7 +86,7 @@
 							<li v-for="result in searchresults">
 								<a v-bind:href="result.doc.link" target="_blank" onclick="click_result(this)">
 									<span class="rs_img">
-										<img src="">
+										<img v-bind:src="result.doc.image" />
 									</span>
 									<span class="rs_title">
 										<h4>{{ result.doc.series }} - {{ result.doc.title }}</h4>
@@ -102,8 +102,8 @@
 									</span>
 								</a>
 							</li>
-							<p class="big">Not what you are looking for?</p>
-							<button class="btn red_btn summon_btn">Summon Elfs</button>
+							<p class="big" v-show="searchterm != ''">Not what you are looking for?</p>
+							<button class="btn red_btn summon_btn" v-show="searchterm != ''">Summon Elfs</button>
 						</ul>
 						<ul v-show="search_isanswer" class="result">
 							<p class="answer" v-html="questions[active_question].answer"></p><!-- 這裡的內容會被選定的問題的答案取代 -->
@@ -305,7 +305,7 @@
 				<a class="logo" target="_blank"><img src="img/logos/logo_TFD.png"></a>
 			</div>
 			<div>
-				<h5>Tagline for resource portal</h5>
+				<h5>About this site</h5>
 				<p>CSCS Resource Portal is an aggregator for Digital Security training materials that is categorized according to topic, form and difficulty, to allow activists to easily search for materials that suit their needs.</p>
 			</div>
 		</section>
