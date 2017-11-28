@@ -38,6 +38,7 @@ var vm = new Vue({
 		search_isanswer: false,
 		questions: questions,
 		active_question: 0,
+		active_module: ''
 	},
 	computed: {
 		searchresults: function () {

@@ -1,5 +1,5 @@
 /* main section switch */
-
+/*
 $('.main_btns').children('button').each(function () {
 	$(this).click(function(){
 		$('.main_conts:first').addClass('active');
@@ -10,7 +10,7 @@ $('.main_btns').children('button').each(function () {
 		$(now).addClass('active');
 	})
 })
-
+*/
 
 /*
 --select custom style--

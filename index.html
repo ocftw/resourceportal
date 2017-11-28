@@ -66,14 +66,14 @@
 
 		<section class="main_sec">
 			<div class="main_btns container">
-				<button id="find_btn"><h3>Find</h3><img src="img/btns-01.svg"></button>
-				<button id="wizard_btn" class="active"><h3>Wizard</h3><img src="img/btns-02.svg"></button>
-				<button id="library_btn"><h3>Library</h3><img src="img/btns-03.svg"></button>
+				<button id="find_btn" :class="{ 'active': active_module === 'find' }" @click="active_module = 'find'; $refs.main_conts.scrollIntoView({behavior: 'smooth'});"><h3>Find</h3><img src="img/btns-01.svg"></button>
+				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard' || active_module === '' }" @click="active_module = 'wizard'; $refs.main_conts.scrollIntoView({behavior: 'smooth'})"><h3>Wizard</h3><img src="img/btns-02.svg"></button>
+				<button id="library_btn" :class="{ 'active': active_module === 'library' }" @click="active_module = 'library'; $refs.main_conts.scrollIntoView({behavior: 'smooth'})"><h3>Library</h3><img src="img/btns-03.svg"></button>
 			</div>
 			<!-- contents -->
-			<div class="main_conts">
+			<div ref="main_conts" class="main_conts" :class="{ 'active': active_module !== '' }">
 
-				<div id="find_cont">
+				<div id="find_cont" :class="{ 'active': active_module === 'find' }">
 					<div class="container">
 						<form action="" autocomplete="on">
 							<input v-model="searchterm" name="search" type="text" placeholder="What are you looking for?">
@@ -131,7 +131,7 @@
 					</div>
 				</div>
 
-				<div id="wizard_cont">
+				<div id="wizard_cont" :class="{ 'active': active_module === 'wizard' }">
 					<div class="container">
 						<form class="wizard active" id="wizard_form">
 							<p>Description</p>
@@ -187,7 +187,7 @@
 					</div>
 				</div>
 
-				<div id="library_cont">
+				<div id="library_cont" :class="{ 'active': active_module === 'library' }">
 					<div class="container">
 						<div class="lib_table">
 							<div class="lib_thead">
@@ -289,8 +289,6 @@
 				<a href="https://ocf.tw/" class="logo" target="_blank"><img src="img/logos/logo_OCF.png"></a>
 				<a href="https://ocf.tw/" target="_blank"><i class="material-icons">&#xE88A;</i>ocf.tw</a>
 				<a href="mailto:hi@ocf.tw"><i class="material-icons">email</i>hi@ocf.tw</a>
-				<br>
-				<address><i class="material-icons">&#xE0BE;</i>(10058) 4F., No.94, Sec. 1, Bade Rd., Zhongzheng Dist., Taipei City 100, Taiwan</address>
 			</div>
 			<div>
 				<h5>Partners</h5>
