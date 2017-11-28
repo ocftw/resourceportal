@@ -93,7 +93,7 @@
 										<p>{{ result.doc.tagline }}</p>
 									</span>
 									<span class="rs_info">
-										<span class="rank"><span class="stars" data-rank="3"></span></span>
+										<span class="rank"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
 										<ul class="tabs">
 											<li v-for="tag in result.doc.tags.split(',')" v-if="tag">{{tag}}</li>
 										</ul>
