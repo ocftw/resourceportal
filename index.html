@@ -193,47 +193,17 @@
 							<div class="lib_thead">
 								<span class="lib_tr">
 									<span>Title</span>
-									<span>Main spaneme</span>
+									<span>Main Theme</span>
 									<span>Format</span>
 									<span>Difficulty</span>
 								</span>
 							</div>
 							<div class="lib_tbody">
-								<a class="lib_tr">
-									<span>Protect your device from malware and hackers</span>
-									<span>Device</span>
-									<span><i class="material-icons" data-icon="article"></i>Article</span>
-									<span><span class="difficulty"><span class="stars" data-diff="1"></span></span></span>
-								</a>
-								<a class="lib_tr">
-									<span>Protect your information from physical threats</span>
-									<span>Physical Security</span>
-									<span><i class="material-icons" data-icon="article"></i>Article</span>
-									<span><span class="difficulty"><span class="stars" data-diff="2"></span></span></span>
-								</a>
-								<a class="lib_tr">
-									<span>Create and maintain secure passwords</span>
-									<span>Passwords</span>
-									<span><i class="material-icons" data-icon="article"></i>Article</span>
-									<span><span class="difficulty"><span class="stars" data-diff="3"></span></span></span>
-								</a>
-								<a class="lib_tr">
-									<span>Protect the sensitive files on your computer</span>
-									<span>Data Safekeeping</span>
-									<span><i class="material-icons" data-icon="article"></i>Article</span>
-									<span><span class="difficulty"><span class="stars" data-diff="4"></span></span></span>
-								</a>
-								<a class="lib_tr">
-									<span>Tor Browser for Windows - Online anonymity and censorship circumvention</span>
-									<span>Browsing</span>
-									<span><i class="material-icons" data-icon="pic"></i>Articles with pictures</span>
-									<span><span class="difficulty"><span class="stars" data-diff="5"></span></span></span>
-								</a>
-								<a class="lib_tr">
-									<span>What is Privacy?</span>
-									<span>Privacy</span>
-									<span><i class="material-icons" data-icon="video"></i>video</span>
-									<span><span class="difficulty"><span class="stars" data-diff="1"></span></span></span>
+								<a v-for="material in materials.filter(material => material.title != '' && material.link != '')" class="lib_tr" v-bind:href="material.link" target="_blank">
+									<span>{{material.series}} - {{material.title}}</span>
+									<span>{{material.theme}}</span>
+									<span><i class="material-icons" v-bind:data-icon="format_icon(material.format)"></i>{{material.format}}</span>
+									<span><span class="difficulty"><span class="stars" v-bind:data-diff="material.difficulty"></span></span></span>
 								</a>
 							</div>
 						</div>

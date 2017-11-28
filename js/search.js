@@ -38,7 +38,8 @@ var vm = new Vue({
 		search_isanswer: false,
 		questions: questions,
 		active_question: 0,
-		active_module: ''
+		active_module: '',
+		materials: materials
 	},
 	computed: {
 		searchresults: function () {
@@ -55,6 +56,14 @@ var vm = new Vue({
 		clearsearch: function() {
 			this.searchterm = '';
 			this.search_isanswer = false;
+		},
+		format_icon: function(format_str) {
+			var iconstr = {
+				"Article": 'article',
+				"Article with pictures": 'pic',
+				"Video": 'video'
+			}
+			return iconstr[format_str] || 'article';
 		}
 	}
 });
