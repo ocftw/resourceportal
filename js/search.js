@@ -50,8 +50,11 @@ var vm = new Vue({
 			this.search_isanswer = true;
 			this.searchterm = question;
 			$('#find_btn').click();
-			var top = $('#find_cont').offset().top;
-			$('html').stop().animate({scrollTop: top}, 600, 'swing');
+			this.$refs.main_conts.scrollIntoView({behavior: 'smooth'})
+		},
+		clearsearch: function() {
+			this.searchterm = '';
+			this.search_isanswer = false;
 		}
 	}
 });
