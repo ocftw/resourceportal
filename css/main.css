@@ -484,7 +484,7 @@ label[for="search_submit"] {
 	display: inline-block;
 	border: 1px solid #b2b2b2;
 	padding: 4px 6px;
-	margin-right: 5px;
+	margin-right: 5px;+
 	margin-bottom: 10px;
 }
 .tabs::after {
@@ -500,7 +500,7 @@ label[for="search_submit"] {
 }
 
 .result > li:hover {
-	box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.25);
 	-ms-transform: scale(1.02,1.02); /* IE 9 */
     -webkit-transform: scale(1.02,1.02); /* Chrome, Safari, Opera */
     transform: scale(1.02,1.02);
@@ -695,6 +695,7 @@ label[for="search_submit"] {
 
 .lib_table .lib_tr {
 	display: table-row;
+	color: #b2b2b2;
 }
 
 .lib_table .lib_tr:nth-of-type(2n + 2){
