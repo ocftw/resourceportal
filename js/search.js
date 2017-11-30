@@ -54,8 +54,10 @@ var vm = new Vue({
 			this.$refs.main_conts.scrollIntoView({behavior: 'smooth'})
 		},
 		clearsearch: function() {
-			this.searchterm = '';
-			this.search_isanswer = false;
+			if ( this.search_isanswer ) {
+				this.searchterm = '';
+				this.search_isanswer = false;
+			}
 		},
 		format_icon: function(format_str) {
 			var iconstr = {
