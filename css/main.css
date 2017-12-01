@@ -89,8 +89,8 @@ header.active {
 
 /* top sec */
 .top_sec {
-	min-height: 440px;
-	padding-top: 70px;
+	min-height: 425px;
+    padding-top: 37px;
 }
 
 .top_banner {
