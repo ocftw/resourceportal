@@ -39,7 +39,8 @@ var vm = new Vue({
 		questions: questions,
 		active_question: 0,
 		active_module: '',
-		materials: materials
+		materials: materials,
+		question_submitted: false
 	},
 	computed: {
 		searchresults: function () {
@@ -66,6 +67,9 @@ var vm = new Vue({
 				"Video": 'video'
 			}
 			return iconstr[format_str] || 'article';
+		},
+		question_submit: function() {
+			this.question_submitted = true;
 		}
 	}
 });

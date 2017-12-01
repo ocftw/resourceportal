@@ -116,6 +116,7 @@ $('#wizard_result').find('a.back:first').click(function(){
 })
 
 /* form ajax */
+/*
 $( document ).ready(function() {
     $("form").submit(function(e) {
         e.preventDefault(); // prevent page refresh
@@ -132,7 +133,7 @@ $( document ).ready(function() {
             }
         });
     });
-});
+});*/
 
 /* scroll menu */
 window.addEventListener('scroll', function(e) {

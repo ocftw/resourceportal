@@ -252,12 +252,12 @@
 					<a class="popup_close"><i class="material-icons">close</i></a>
 				</div>
 				<div class="popup_body">
-					<form action="">
+					<form v-on:submit.prevent="question_submit()">
 						<label>Question</label>
 						<textarea name="question" id="question" placeholder="Your Question" rows="4"></textarea>
 						<label>Email</label>
 						<input type="text" name="email" id="se_email" placeholder="Your Email">
-						<input class="btn red_btn" type="submit" value="Submit">
+						<input class="btn red_btn" type="submit" v-bind:value="question_submitted ? 'We\'ve got your question!' : 'Submit'" :disabled="question_submitted">
 					</form>
 				</div>
 				<div class="popup_foot emergency">

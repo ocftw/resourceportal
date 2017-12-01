@@ -211,6 +211,10 @@ header.active {
 	display: block;
 	margin: 30px auto 0;
 }
+
+.red_btn:disabled {
+	background-color: #333;
+}
 button, .btn {
 	cursor: pointer;
 }
