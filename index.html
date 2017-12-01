@@ -136,14 +136,25 @@
 				<div id="wizard_cont" :class="{ 'active': active_module === 'wizard' }">
 					<div class="container">
 						<form class="wizard active" id="wizard_form">
-							<p>Description</p>
-							<p>Q1. Where are you from ?</p>
-							<select name="country">
-								<option value="hide">-- Country --</option>
-								<option value="Taiwan">Taiwan</option>
-								<option value="Taiwan">Taiwan</option>
-							</select>
-							<p>Q2. What are you ... ?</p>
+							<p>Choose your path...</p>
+							<p>What is your concern about digital security?</p>
+							<input type="checkbox" name="theme" id="Communications" value="Communications">
+							<label for="Communications">Communications (chat, emails, calls)</label>
+							<input type="checkbox" name="theme" id="Surveillance" value="Surveillance">
+							<label for="Surveillance">Surveillance</label>
+							<input type="checkbox" name="theme" id="Data" value="Data">
+							<label for="Data">Data</label>
+							<input type="checkbox" name="theme" id="Privacy" value="Privacy">
+							<label for="Privacy">Privacy</label>
+							<input type="checkbox" name="theme" id="Device" value="Device">
+							<label for="Device">Device</label>
+							<input type="checkbox" name="theme" id="Account" value="Account">
+							<label for="Account">Account</label>
+							<input type="checkbox" name="theme" id="Physical Security" value="Physical Security">
+							<label for="Physical Security">Physical Security</label>
+							<input type="checkbox" name="theme" id="Security Strategy" value="Security Strategy">
+							<label for="Security Strategy">Security Strategy</label>
+							<p>What platform(s) are you using?</p>
 							<input type="checkbox" name="platform" id="Windows" value="Windows">
 							<label for="Windows">Windows</label>
 							<input type="checkbox" name="platform" id="MacOS" value="MacOS">
@@ -152,6 +163,8 @@
 							<label for="iOS">iOS</label>
 							<input type="checkbox" name="platform" id="Android" value="Android">
 							<label for="Android">Android</label>
+							<input type="checkbox" name="platform" id="Linux" value="Linux">
+							<label for="Linux">Linux</label>
 
 							<input class="btn red_btn" type="submit" value="Submit">
 						</form>
