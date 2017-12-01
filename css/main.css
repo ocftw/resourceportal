@@ -735,30 +735,32 @@ label[for="search_submit"] {
 	color: #989898;
 	background-color: #fff;
 	text-align: left;
-	display: table;
+	display: block;
 }
 
 .lib_thead {
-	display:table-header-group;
+	display: none;
 }
 
 .lib_tbody {
-	display:table-row-group;
+	display: block;
 	line-height: 1.4;
 }
 
 .lib_table .lib_tr {
-	display: table-row;
+	display: block;
 	color: #b2b2b2;
+	padding: 15px 20px 5px;
 }
 
 .lib_table .lib_tr:nth-of-type(2n + 2){
 	background-color: #f1f1f1;
 }
 .lib_table .lib_tr > span {
-	display: table-cell;
-	border: 10px solid transparent;
+	display: inline-block;
+	margin-bottom: 10px;
 }
+
 .lib_thead .lib_tr {
 	background-color: #EB9F00;
 	color: #fff;
@@ -768,21 +770,19 @@ label[for="search_submit"] {
 	vertical-align: bottom;
 }
 
-.lib_tbody .lib_tr:first-child > span {
-	border-top: 15px solid transparent;
-}
-.lib_tbody .lib_tr:last-child > span {
-	border-bottom: 15px solid transparent;
-}
 .lib_tr > span:first-child {
-	border-left-width: 20px;
+	width: 100%;
 }
-.lib_tr > span:last-child {
-	border-right-width: 20px;
-}
-
-.lib_tbody .lib_tr > span:nth-of-type(3) {
+.lib_tbody .lib_tr > span:nth-of-type(2) {
+	margin-right: 15px;
 	font-size: 0.8em;
+}
+.lib_tbody .lib_tr > span:nth-of-type(3) {
+	margin-right: 10px;
+	font-size: 0.8em;
+}
+.lib_tbody .lib_tr > span:nth-of-type(4) {
+	margin-top: 2px;
 }
 .lib_tbody .lib_tr > span:first-child {
 	color: #333;
@@ -801,6 +801,7 @@ label[for="search_submit"] {
 }
 .difficulty {
 	letter-spacing: -3px;
+	vertical-align: top;
 }
 .difficulty::after {	
 	content: 'flash_onflash_onflash_onflash_onflash_on';
