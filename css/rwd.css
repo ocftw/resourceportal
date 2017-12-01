@@ -33,6 +33,58 @@
 	.main_conts > div::before {
 		content: "";
 	}
+	.result > li > a > span {
+		display: inline-block;
+	}
+	.result .rs_img {
+		width: 130px;
+		margin: 18px 18px;
+		display: inline-block;
+		display: -webkit-inline-flex;
+		display:         inline-flex;
+		background-color: rgba(0, 0, 0, 0);
+	}
+	.rs_title {
+		width: calc(100% - 331px);
+		padding: 0;
+	}
+	.rs_img::after {
+		display: none;
+	}
+	.rs_info {
+		height: 130px;
+		width: 138px;
+		color: #b2b2b2;
+		position: inherit;
+	    top: 0px;
+	    overflow: hidden;
+	}
+	.rs_info .from {
+		top: auto;
+		bottom: 18px;
+		color: inherit;
+	}
+	.result .tabs {
+	    top: auto;
+	    left: auto;
+	    position: relative;
+	}
+	.tabs li {
+		border: 1px solid #b2b2b2;
+		background-color: rgba(0, 0, 0, 0);
+		color: inherit;
+		white-space: nowrap;
+	}
+	.result .tabs li:nth-of-type(3)::after {
+	    content: "...";
+	    display: block;
+	    width: 100%;
+	    position: absolute;
+	    background: #fff;
+	    left: 0;
+	    top: 56px;
+	    height: 60px;
+	}
 }
 @media screen and (min-width: 960px) {
 	.top_banner {
@@ -59,8 +111,5 @@
 	footer section > div:first-of-type {
 		width: 30%;
 		margin-right: 3%;
-	}
-	footer a[href="https://ocf.tw/"] {
-		margin-right: 30px;
 	}
 }

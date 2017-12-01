@@ -439,9 +439,10 @@ label[for="search_submit"] {
 	cursor: pointer;
 	margin-bottom: 20px;
 	transition: all 0.2s ease-in-out;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .result > li > a > span {
-	display: inline-block;
+	display: block;
 	vertical-align: top;
 }
 .result > li > a {
@@ -449,16 +450,16 @@ label[for="search_submit"] {
 } 
 .result .rs_img {
 	height: 130px;
-	width: 130px;
-	margin: 18px 18px;
 	overflow: hidden;
-	background-color: rgba(0, 0, 0, 0);
-	display: -webkit-inline-flex;
-	display:         inline-flex;
-	-webkit-align-items: center;
+	background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: -webkit-flex;
+	display:         flex;
+    -webkit-align-items: center;
 			align-items: center;
 	-webkit-justify-content: center;
 			justify-content: center;
+	position: relative;
 }
 .rs_img img {
 	width: 100%;
@@ -478,16 +479,29 @@ label[for="search_submit"] {
 .rs_img img[src=""] + h5 {
 	display: block;
 }
+.rs_img::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.15) 28%,rgba(0,0,0,0) 45%);
+}
 .rs_info {
-	height: 130px;
-	width: 120px;
-	margin: 18px 18px;
-	overflow: hidden;
+	margin: 18px 0 18px 18px;;
+	color: #b2b2b2;
+	font-size: 0.9em;
+	position: absolute;
+    top: 80px;
+    height: 70px;
+    width: 100%;
 }
 .rs_title {
-	width: calc(100% - 331px);
+	width: 100%;
 	height: 100%;
 	margin: 18px 0;
+	padding: 0 20px 20px;
+	min-height: 80px;
 }
 .rs_title h4 {
 	color: #333;
@@ -504,19 +518,20 @@ label[for="search_submit"] {
 	letter-spacing: -2px;
     text-indent: -3px;
 }
-.rs_info {
-	color: #b2b2b2;
-	font-size: 0.9em;
+.result .tabs {
+    position: absolute;
+    top: -98px;
+    left: -18px;
 }
 .tabs li {
 	display: inline-block;
-	border: 1px solid #b2b2b2;
 	padding: 4px 6px;
-	margin-right: 5px;+
-	margin-bottom: 10px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
 }
 .tabs::after {
-	content: "…";
 	font-size: 18px;
 	vertical-align: top;
 }
@@ -524,7 +539,8 @@ label[for="search_submit"] {
 	text-align: right;
 	position: absolute;
 	right: 28px;
-	bottom: 18px;
+	top: 8px;
+    color: #fff;
 }
 
 .result > li:hover {
@@ -1002,6 +1018,12 @@ footer a {
 }
 footer a:hover {
 	opacity: 0.7;
+}
+footer a[href="https://ocf.tw/"] {
+	margin-right: 30px;
+}
+footer a.logo[href="https://ocf.tw/"] {
+	margin-right: 0;
 }
 footer h5 {
 	color: #cbcbcb;
