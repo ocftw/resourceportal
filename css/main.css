@@ -221,6 +221,9 @@ button, .btn {
 button:hover, .btn:hover {
 	box-shadow: 0 7px 15px rgba(255	, 255, 255, 0.15) inset;
 }
+button:disabled:hover, .btn:disabled:hover {
+	box-shadow: none;
+}
 button:active, .btn:active {
 	box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1) inset;
 }
