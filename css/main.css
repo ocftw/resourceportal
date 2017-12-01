@@ -243,16 +243,20 @@ button:active, .btn:active {
 }
 .main_btns {
 	margin-bottom: 20px;
+	padding: 0;
 }
 .main_btns > button {
-	width: 25%;
 	position: relative;
-	padding: 25% 0 0;
 	border: none;
-	transition: width 0.4s ease-in-out;
+	width: 100%;
+	text-align: left;
+    padding: 0 20px;
+    transition: width 0.4s ease-in-out;
 }
 .main_btns > button.active {
-	width: calc(50% - 12px);
+	position: absolute;
+    bottom: -80px;
+    left: 0;
 }
 .main_btns > button:active {
 	box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1) inset;
@@ -266,21 +270,20 @@ button:active, .btn:active {
 	color: #fff;
 	font-size: 1.8rem;
 	font-weight: 600;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	padding: 20px 0;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	vertical-align: -webkit-baseline-middle;
 }
 
 .main_btns > button img {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
+	position: relative;
+	height: 80px;
 	width: auto;
-	margin: auto;
+	display: inline-block;
+	vertical-align: middle;
+	top: -5px;
+	margin-right: 20px;
 }
 
 /* main_conts */
@@ -289,7 +292,7 @@ button:active, .btn:active {
 	max-height: 0;
 	transition: max-height 2s ease-in-out;
 	overflow: hidden;
-	padding-top: 30px;
+	padding-top: 50px;
 }
 .main_conts.active {
 	max-height: 9999px;
@@ -301,7 +304,6 @@ button:active, .btn:active {
 	position: relative;
 }
 .main_conts > div::before {
-	content: "";
 	position: absolute;
 	top: -60px;
 	left: 0;

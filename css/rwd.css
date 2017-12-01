@@ -1,3 +1,39 @@
+@media screen and (min-width: 768px) {
+	.main_btns {
+		padding: 0 20px;
+	}
+	.main_btns > button {
+		width: 25%;
+		padding: 25% 0 0;
+		text-align: center;
+	}
+	.main_btns > button.active {
+		width: calc(50% - 12px);
+		bottom: auto;
+		position: relative;
+	}
+	.main_btns h3 {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		padding: 20px 0;
+		display: block;
+	}
+
+	.main_btns > button img {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		display: block;
+		margin: auto;
+	}
+	.main_conts > div::before {
+		content: "";
+	}
+}
 @media screen and (min-width: 960px) {
 	.top_banner {
 		max-width: 400px;
@@ -15,4 +51,3 @@
 		left: 12px;
 		top: 307px;
 	}
-}
