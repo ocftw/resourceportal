@@ -51,7 +51,7 @@ var vm = new Vue({
 			this.search_isanswer = true;
 			this.searchterm = question;
 			$('#find_btn').click();
-			this.$refs.main_conts.scrollIntoView({behavior: 'smooth'})
+			this.$refs.main_conts.scrollIntoView({block:'nearest',behavior: 'smooth'})
 		},
 		clearsearch: function() {
 			if ( this.search_isanswer ) {

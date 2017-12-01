@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js" defer></script>
 	<script type="text/javascript" src="data/materials.js" defer></script>
 	<script type="text/javascript" src="data/questions.js" defer></script>
-	<script type="text/javascript" src="js/search.js" defer></script>
+	<script type="text/javascript" src="js/search.js?v=20171201" defer></script>
 	<script type="text/javascript" src="js/main.js?v=20171201" defer></script>
 </head>
 <body>
@@ -67,9 +67,9 @@
 
 		<section class="main_sec">
 			<div class="main_btns container">
-				<button id="find_btn" :class="{ 'active': active_module === 'find' }" @click="active_module = 'find'; $refs.main_conts.scrollIntoView({behavior: 'smooth'});"><img src="img/btns-01.svg"><h3>Find</h3></button>
-				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard' || active_module === '' }" @click="active_module = 'wizard'; $refs.main_conts.scrollIntoView({behavior: 'smooth'})"><img src="img/btns-02.svg"><h3>Wizard</h3></button>
-				<button id="library_btn" :class="{ 'active': active_module === 'library' }" @click="active_module = 'library'; $refs.main_conts.scrollIntoView({behavior: 'smooth'})"><img src="img/btns-03.svg"><h3>Library</h3></button>
+				<button id="find_btn" :class="{ 'active': active_module === 'find' }" @click="active_module = 'find'; $refs.main_conts.scrollIntoView({block:'nearest',behavior: 'smooth'});"><img src="img/btns-01.svg"><h3>Find</h3></button>
+				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard' || active_module === '' }" @click="active_module = 'wizard'; $refs.main_conts.scrollIntoView({block:'nearest',behavior: 'smooth'})"><img src="img/btns-02.svg"><h3>Wizard</h3></button>
+				<button id="library_btn" :class="{ 'active': active_module === 'library' }" @click="active_module = 'library'; $refs.main_conts.scrollIntoView({block:'nearest',behavior: 'smooth'})"><img src="img/btns-03.svg"><h3>Library</h3></button>
 			</div>
 			<!-- contents -->
 			<div ref="main_conts" class="main_conts" :class="{ 'active': active_module !== '' }">

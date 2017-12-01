@@ -33,6 +33,8 @@
 	.main_conts > div::before {
 		content: "";
 	}
+
+	/* result */
 	.result > li > a > span {
 		display: inline-block;
 	}
@@ -88,6 +90,8 @@
 	.rs_img h5 {
 		font-size: inherit;
 	}
+
+	/* Library */
 	.lib_table {
 		display: table;
 	}
