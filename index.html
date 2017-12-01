@@ -87,6 +87,7 @@
 								<a v-bind:href="result.doc.link" target="_blank" onclick="click_result(this)">
 									<span class="rs_img">
 										<img v-bind:src="result.doc.image" />
+										<h5>{{result.doc.link.split("/")[2]}}</h5>
 									</span>
 									<span class="rs_title">
 										<h4>{{ result.doc.series }} - {{ result.doc.title }}</h4>
@@ -97,7 +98,7 @@
 										<ul class="tabs">
 											<li v-for="tag in result.doc.tags.split(',')" v-if="tag">{{tag}}</li>
 										</ul>
-										<p class="from">{{result.doc.link}}</p>
+										<p class="from">{{result.doc.link.split("/")[2]}}</p>
 									</span>
 								</a>
 							</li>
@@ -110,6 +111,7 @@
 								<a v-bind:href="result.doc.link" target="_blank" onclick="click_result(this)">
 									<span class="rs_img">
 										<img v-bind:src="result.doc.image" />
+										<h5>{{result.doc.link.split("/",3)[2]}}</h5>
 									</span>
 									<span class="rs_title">
 										<h4>{{ result.doc.series }} - {{ result.doc.title }}</h4>
@@ -120,7 +122,7 @@
 										<ul class="tabs">
 											<li v-for="tag in result.doc.tags.split(',')" v-if="tag">{{tag}}</li>
 										</ul>
-										<p class="from">{{result.doc.link}}</p>
+										<p class="from">{{result.doc.link.split("/",3)[2]}}</p>
 									</span>
 								</a>
 							</li>
@@ -163,7 +165,7 @@
 								<li>
 									<a target="_blank" onclick="click_result(this)">
 										<span class="rs_img">
-											<img src="">
+											<img src="" />
 										</span>
 										<span class="rs_title">
 											<h4>title</h4>

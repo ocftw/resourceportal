@@ -440,15 +440,36 @@ label[for="search_submit"] {
 .result > li > a {
 	display: block;
 } 
-.rs_img {
+.result .rs_img {
 	height: 130px;
 	width: 130px;
 	margin: 18px 18px;
 	overflow: hidden;
-	background-color: rgba(0, 0, 0, 0.3);
-} 
+	background-color: rgba(0, 0, 0, 0);
+	display: -webkit-inline-flex;
+	display:         inline-flex;
+	-webkit-align-items: center;
+			align-items: center;
+	-webkit-justify-content: center;
+			justify-content: center;
+}
 .rs_img img {
 	width: 100%;
+}
+.rs_img h5 {
+	display: none;
+	font-weight: 600;
+	color: #999;
+    padding: 0;
+    word-wrap: break-word;
+    max-width: 100%;
+    line-height: 1.5;
+}
+.rs_img img[src=""] {
+	display: none;
+}
+.rs_img img[src=""] + h5 {
+	display: block;
 }
 .rs_info {
 	height: 130px;
