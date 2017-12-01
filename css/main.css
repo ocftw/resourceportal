@@ -523,6 +523,7 @@ label[for="search_submit"] {
 	margin-bottom: 10px;
 	letter-spacing: -2px;
     text-indent: -3px;
+    z-index: 1;
 }
 .result .tabs {
     position: absolute;
@@ -546,7 +547,8 @@ label[for="search_submit"] {
 	position: absolute;
 	right: 28px;
 	top: 8px;
-    color: #fff;
+    z-index: 0;
+    color: #656565;
 }
 
 .result > li:hover {
@@ -1000,7 +1002,8 @@ footer {
 footer section > div {
 	vertical-align: top;
 	width: 100%;
-    margin-bottom: 50px;
+    max-width: 380px;
+    margin: 0 auto 50px;
     text-align: center;
 }
 
