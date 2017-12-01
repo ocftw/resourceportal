@@ -417,7 +417,7 @@ label[for="search_submit"] {
 }
 .result > p.answer {
 	text-align: left;
-	line-height: 1.5;
+	line-height: 1.75;
 	margin-bottom: 30px;
 }
 .result > p.answer::after {
@@ -429,7 +429,7 @@ label[for="search_submit"] {
 	margin: 22px 0;
 }
 .result > p br {
-	line-height: 2;
+	line-height: 3;
 }
 .result > p.big {
 	font-size: 1.8rem;
@@ -476,6 +476,7 @@ label[for="search_submit"] {
     word-wrap: break-word;
     max-width: 100%;
     line-height: 1.5;
+    font-size: 2rem;
 }
 .rs_img img[src=""] {
 	display: none;
@@ -515,6 +516,7 @@ label[for="search_submit"] {
 }
 .rs_title p {
 	color: #b2b2b2;
+	line-height: 1.4;
 }
 .rs_info .rank {
 	font-size: 1.4rem;
