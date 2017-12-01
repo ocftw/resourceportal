@@ -133,3 +133,18 @@ $( document ).ready(function() {
         });
     });
 });
+
+/* scroll menu */
+window.addEventListener('scroll', function(e) {
+    let supportPageOffset = window.pageXOffset !== undefined;
+    let isCSS1Compat = ((document.compatMode || '') === 'CSS1Compat');
+    let scroll = {
+        x: supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft,
+        y: supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop
+    };
+    if(scroll.y > 50){
+        $('header').eq(0).addClass("active");
+    }else{
+        $('header').eq(0).removeClass("active");
+    }
+});
