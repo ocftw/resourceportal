@@ -54,6 +54,7 @@ header {
 .logo img {
 	height: 100%;
 	width: auto;
+	max-width: 360px;
 }
 
 .menu ul {
@@ -89,7 +90,7 @@ header {
 }
 
 .top_banner {
-	max-width: 400px;
+	text-align: center;
 }
 
 .top_banner h2 {
@@ -104,7 +105,11 @@ header {
 	font-size: 1.2em;
 }
 .top_banner .logo {
-	width: 90%;
+	width: 100%;
+}
+.top_banner .logo img {
+	width: 100%;
+	height: auto;
 }
 .cs_red {
 	color: #e95513;
@@ -116,13 +121,13 @@ header {
 /* curated question */
 .curated {
 	border-radius: 10px;
-	width: 50%;
 	max-width: 600px;
 	min-height: 210px;
-	position: absolute;
-	top: 50px;
-	right: 20px;
 	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.4);
+	position: relative;
+    width: 100%;
+    margin: 40px auto;
+    display: block;
 }
 .curated::after {
 	border: 20px solid transparent;
@@ -212,9 +217,9 @@ button:active, .btn:active {
 	box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1) inset;
 }
 .crt_dots {
-	position: absolute;
-	left: 12px;
-	top: 307px;
+	position: relative;
+    left: 12px;
+    top: 55px;
 }
 .crt_dots li {
 	display: inline-block;
