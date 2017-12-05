@@ -107,7 +107,6 @@ header.active {
 
 .top_banner {
 	text-align: center;
-	display: inline-block;
 }
 
 .top_banner h2 {
@@ -917,6 +916,8 @@ label[for="search_submit"] {
 			align-items: center;
 	-webkit-justify-content: center;
 			justify-content: center;
+	overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .popup {
@@ -932,7 +933,11 @@ label[for="search_submit"] {
 .popup.active {
 	display: block;
 }
-
+.summon {
+	margin: 5% auto;
+	top: 0;
+    position: absolute;
+}
 .popup_head {
 	height: 37px;
 	background-color: #56b8cf;
@@ -946,6 +951,7 @@ label[for="search_submit"] {
 .feedback .popup_head {
 	background-color: #8cc11f;
 }
+
 .summon .popup_head {
 	background-color: #e95513;
 }
@@ -982,7 +988,7 @@ label[for="search_submit"] {
 
 .popup_body .rank {
 	font-size: 2.6rem;
-	letter-spacing: 5px;
+	letter-spacing: -4px;
 }
 .rank.enable {
 	cursor: pointer;
@@ -999,6 +1005,9 @@ input[name="rank"] {
 	border-bottom-right-radius: 10px;
 	position: relative;
 	text-align: left;
+}
+.popup_foot a {
+	word-wrap: break-word;
 }
 .popup_foot.emergency {
 	background-color: #FBDDD0;

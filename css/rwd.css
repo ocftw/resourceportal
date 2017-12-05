@@ -6,6 +6,14 @@
 	.top_sec {
 	    padding-top: 24px;
 	}
+	.popup_body .rank {
+		letter-spacing: 5px;
+	}
+	.summon {
+		top: auto;
+	    position: inherit;
+		margin: 0 auto;
+	}
 }
 @media screen and (min-width: 768px) {
 	:root {
@@ -161,6 +169,7 @@
 	.top_banner {
 		max-width: 400px;
 		text-align: left;
+		display: inline-block;
 	}
 	.crt_body {
 		padding: 20px 30px;
