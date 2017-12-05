@@ -107,6 +107,7 @@ header.active {
 
 .top_banner {
 	text-align: center;
+	display: inline-block;
 }
 
 .top_banner h2 {
@@ -268,7 +269,7 @@ button:active, .btn:active {
 	padding-top: 50px;
 }
 .main_btns {
-	margin-bottom: 20px;
+	margin-bottom: 90px;
 	padding: 0;
 }
 .main_btns > button {
@@ -276,21 +277,29 @@ button:active, .btn:active {
 	border: none;
 	width: 100%;
 	text-align: left;
-    padding: 0 20px;
+    padding: 0 20px 0 170px;
     transition: width 0.4s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: auto 121%;
+    background-position: 10px -13px;
+    min-height: 90px;
+    margin-bottom: 10px;
 }
 .main_btns > button.active {
 	position: absolute;
-    bottom: -80px;
+    bottom: -100px;
     left: 0;
 }
 .main_btns > button:active {
 	box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1) inset;
 }
 
-#find_btn {background-color: #56B8CF;}
-#wizard_btn {background-color: #8CC11F;}
-#library_btn {background-color: #EB9F00;}
+#find_btn    {background-color: #56B8CF;
+			  background-image: url('../img/btns-01.png')}
+#wizard_btn  {background-color: #8CC11F;
+			  background-image: url('../img/btns-02.png')}
+#library_btn {background-color: #EB9F00;
+			  background-image: url('../img/btns-03.png')}
 
 .main_btns h3 {
 	color: #fff;
@@ -303,15 +312,6 @@ button:active, .btn:active {
 	vertical-align: middle;
 }
 
-.main_btns > button img {
-	position: relative;
-	height: 80px;
-	width: auto;
-	display: inline-block;
-	vertical-align: middle;
-	top: -5px;
-	margin-right: 20px;
-}
 
 /* main_conts */
 .main_conts {
@@ -319,7 +319,7 @@ button:active, .btn:active {
 	max-height: 0;
 	transition: max-height 2s ease-in-out;
 	overflow: hidden;
-	padding-top: 50px;
+	padding-top: 47px;
 }
 .main_conts.active {
 	max-height: 9999px;
@@ -339,6 +339,7 @@ button:active, .btn:active {
 	border: 30px solid transparent;
 	border-bottom-color: #CCC;
 	width: 0;
+	content: "";
 }
 .main_conts > div.active{
 	display: block;
@@ -352,9 +353,9 @@ button:active, .btn:active {
 #wizard_cont {background-color: #8CC11F;}
 #library_cont {background-color: #EB9F00;}
 
-#find_cont::before {border-bottom-color: #56B8CF; right: 45%;}
+#find_cont::before {border-bottom-color: #56B8CF;}
 #wizard_cont::before {border-bottom-color: #8CC11F;}
-#library_cont::before {border-bottom-color: #EB9F00; left: 45%;}
+#library_cont::before {border-bottom-color: #EB9F00;}
 
 .main_conts .red_btn {
 	margin: 0 auto;

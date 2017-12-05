@@ -24,11 +24,14 @@
 	}
 	.main_btns {
 		padding: 0 20px;
+		margin-bottom: 7px;
 	}
 	.main_btns > button {
 		width: 25%;
 		padding: 25% 0 0;
 		text-align: center;
+		background-position: 50%;
+		background-size: auto 100%;
 	}
 	.main_btns > button + button {
 		margin-left: 1%;
@@ -45,20 +48,8 @@
 		padding: 20px 0;
 		display: block;
 	}
-
-	.main_btns > button img {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 100%;
-		display: block;
-		margin: auto;
-	}
-	.main_conts > div::before {
-		content: "";
-	}
+	#find_cont::before {right: 45%;}
+	#library_cont::before {left: 45%;}
 
 	/* result */
 	.result > li > a > span {
@@ -184,7 +175,7 @@
 	.crt_dots {
 		position: absolute;
 		left: 12px;
-		top: 346px;
+		top: 325px;
 	}
 	footer section > div {
 		display: inline-block;
