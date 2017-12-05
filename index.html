@@ -7,10 +7,11 @@
 	<title>Resource Portal - Civil Society Cyber Shield</title>
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	
 	<link href="css/reset.css" rel="stylesheet">
-	<link href="css/main.css?v=20171201-4" rel="stylesheet">
-	<link href="css/rwd.css?v=20171201-4" rel="stylesheet">
+	<link href="css/main.css?v=20171206" rel="stylesheet">
+	<link href="css/rwd.css?v=20171206" rel="stylesheet">
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js" defer></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
@@ -95,11 +96,11 @@
 										<p>{{ result.doc.tagline }}</p>
 									</span>
 									<span class="rs_info">
-										<span class="rank"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
+										<span class="rank material-icons"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
 										<ul class="tabs">
 											<li v-for="tag in result.doc.tags.split(',')" v-if="tag">{{tag}}</li>
 										</ul>
-										<p class="from">{{result.doc.link.split("/")[2]}}</p>
+										<span class="from">{{result.doc.link.split("/")[2]}}</span>
 									</span>
 								</a>
 							</li>
@@ -119,11 +120,11 @@
 										<p>{{ result.doc.tagline }}</p>
 									</span>
 									<span class="rs_info">
-										<span class="rank"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
+										<span class="rank material-icons"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
 										<ul class="tabs">
 											<li v-for="tag in result.doc.tags.split(',')" v-if="tag">{{tag}}</li>
 										</ul>
-										<p class="from">{{result.doc.link.split("/",3)[2]}}</p>
+										<span class="from">{{result.doc.link.split("/",3)[2]}}</span>
 									</span>
 								</a>
 							</li>
@@ -137,7 +138,7 @@
 					<div class="container">
 						<form class="wizard active" id="wizard_form">
 							<p>Choose your path...</p>
-							<p>What is your concern about digital security?</p>
+							<p>1. What is your concern about digital security?</p>
 							<input type="checkbox" name="theme" id="Communications" value="Communications">
 							<label for="Communications">Communications (chat, emails, calls)</label>
 							<input type="checkbox" name="theme" id="Surveillance" value="Surveillance">
@@ -154,7 +155,7 @@
 							<label for="Physical Security">Physical Security</label>
 							<input type="checkbox" name="theme" id="Security Strategy" value="Security Strategy">
 							<label for="Security Strategy">Security Strategy</label>
-							<p>What platform(s) are you using?</p>
+							<p>2. What platform(s) are you using?</p>
 							<input type="checkbox" name="platform" id="Windows" value="Windows">
 							<label for="Windows">Windows</label>
 							<input type="checkbox" name="platform" id="MacOS" value="MacOS">
@@ -186,12 +187,12 @@
 											<p>description</p>
 										</span>
 										<span class="rs_info">
-											<span class="rank"><span class="stars" data-rank="3"></span></span>
+											<span class="rank material-icons"><span class="stars" data-rank="3"></span></span>
 											<ul class="tabs">
 												<li>tab1 test</li>
 												<li>tab2</li>
 											</ul>
-											<p class="from">web.com</p>
+											<span class="from">web.com</span>
 										</span>
 									</a>
 								</li>
@@ -219,7 +220,7 @@
 									<span>{{material.series}} - {{material.title}}</span>
 									<span>{{material.theme}}</span>
 									<span><i class="material-icons" v-bind:data-icon="format_icon(material.format)"></i>{{material.format}}</span>
-									<span><span class="difficulty"><span class="stars" v-bind:data-diff="material.difficulty"></span></span></span>
+									<span><span class="difficulty material-icons"><span class="stars" v-bind:data-diff="material.difficulty"></span></span></span>
 								</a>
 							</div>
 						</div>

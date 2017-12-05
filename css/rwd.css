@@ -1,7 +1,23 @@
+@media screen and (min-width: 576px) {
+	:root {
+		--mid-font-size: 1.2rem;
+		--big-font-size: 1.8rem;
+	}
+	.top_sec {
+	    padding-top: 24px;
+	}
+}
 @media screen and (min-width: 768px) {
+	:root {
+		--mid-font-size: 1.4rem;
+		--big-font-size: 2rem;
+	}
 	header {
 		height: 60px;
 		line-height: 60px;
+	}
+	.top_sec {
+	    padding-top: 37px;
 	}
 	.menu .logo {
 		height: 80%;
@@ -14,8 +30,11 @@
 		padding: 25% 0 0;
 		text-align: center;
 	}
+	.main_btns > button + button {
+		margin-left: 1%;
+	}
 	.main_btns > button.active {
-		width: calc(50% - 12px);
+		width: calc(48% - 10px);
 		bottom: auto;
 		position: relative;
 	}
@@ -97,6 +116,9 @@
 	.rs_img h5 {
 		font-size: inherit;
 	}
+	.rs_img img[src=""] + h5 {
+		padding: 0;
+	}
 
 	/* Library */
 	.lib_table {
@@ -123,21 +145,24 @@
 	.lib_thead .lib_tr > span {
 		vertical-align: bottom;
 	}
+	.lib_thead .lib_tr > span:first-child {
+		border-left-width: 15px;
+	}
 
 	.lib_tbody .lib_tr:first-child > span {
-		border-top-width: 15px;
+		border-top-width: 11px;
 	}
 	.lib_tbody .lib_tr:last-child > span {
-		border-bottom-width: 15px;
+		border-bottom-width: 11px;
 	}
 	.lib_tbody .lib_tr > span:nth-of-type(2) {
 		border-left-width: 10px;
-		font-size: 1em;
 	}
 	.lib_tbody .lib_tr > span:nth-of-type(3) {
 		font-size: 0.8em;
 	}
 	.lib_tbody .lib_tr > span:first-child {
+		border-left-width: 15px;
 		color: #333;
 	}
 }
@@ -145,6 +170,9 @@
 	.top_banner {
 		max-width: 400px;
 		text-align: left;
+	}
+	.crt_body {
+		padding: 20px 30px;
 	}
 	.curated {
 		width: 50%;
@@ -156,7 +184,7 @@
 	.crt_dots {
 		position: absolute;
 		left: 12px;
-		top: 325px;
+		top: 346px;
 	}
 	footer section > div {
 		display: inline-block;
