@@ -51,8 +51,13 @@ var vm = new Vue({
 		showanswer: function(question, answer) {
 			this.search_isanswer = true;
 			this.searchterm = question;
+			$('#find_cont').find('p.answer:first').html(this.questions[this.active_question].answer);
 			$('#find_btn').click();
-			this.$refs.main_conts.scrollIntoView({block:'nearest',behavior: 'smooth'})
+			window.scroll({
+	          top: $('.main_conts:first').offset().top - 50, 
+	          left: 0, 
+	          behavior: 'smooth' 
+	        });
 		},
 		clearsearch: function() {
 			if ( this.search_isanswer ) {
