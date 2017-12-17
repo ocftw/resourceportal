@@ -1061,8 +1061,6 @@ label[for="search_submit"] {
 .popup_body .rank_enable {
 	font-size: 2.6rem;
 	letter-spacing: -4px;
-}
-.rank.enable {
 	cursor: pointer;
 }
 .popup_body .result {
