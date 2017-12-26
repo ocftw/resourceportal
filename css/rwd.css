@@ -37,7 +37,6 @@
 	}
 	.main_btns > button {
 		width: 32%;
-		text-align: center;
 		background-position: 50%;
 		background-size: auto 100%;
 		display: inline-block;
@@ -178,12 +177,12 @@
 		margin-bottom: 6px;
 	}
 	.result > p.answer {
-		padding: 40px 80px;
+		padding: 40px 80px 60px;
 	}
 }
 @media screen and (min-width: 960px) {
 	.result > p.answer {
-		padding: 40px 130px;
+		padding: 40px 130px 60px;
 	}
 	footer section > div {
 		margin: 0 auto var(--m-margin);

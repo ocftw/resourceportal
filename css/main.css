@@ -323,7 +323,7 @@ button, .btn {
 	position: relative;
 	border: none;
 	width: 100%;
-	text-align: left;
+	text-align: center;
     transition: width 0.4s ease-in-out;
     min-height: 90px;
     margin-bottom: 10px;
@@ -339,6 +339,7 @@ button, .btn {
 	position: absolute;
     bottom: -100px;
     left: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 #find_btn.active {color: #315b9f;}
 #wizard_btn.active {color: #7c4aa2;}
@@ -519,26 +520,32 @@ label[for="search_submit"] {
 	color: #fff;
 }
 /* result list */
-.result {
-	margin-top: 15px;
-}
 .result > p {
 	text-align: center;
 	margin-bottom: 15px;
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
 }
-.result > p[data-length="0"] {
+.result .result_length[data-length="0"] {
 	display: none;
 }
 .result > p.answer {
 	text-align: left;
     line-height: 1.5;
     margin-bottom: 30px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,1);
     color: #333;
-    padding: 40px 30px;
-    margin: 40px auto;
+    padding: 40px 30px 60px;
+    margin: 20px auto;
+    border-radius: 25px;
+}
+.result > p.answer::before {
+	content: "Answer";
+	font-size: 1.8em;
+	font-size: var(--big-font-size);
+	color: #4a92e1;
+	display: block;
+	margin-bottom: 1em;
 }
 .result > p.answer::after {
 	width: 100%;
@@ -556,15 +563,51 @@ label[for="search_submit"] {
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
-.result .taggroup {
+.tag_line, .sort_line {
 	text-align: left;
+	padding: 15px 20px 15px 15px;
+	font-size: 1.25rem;
+	font-size: var(--mid-font-size);
 }
-.result .taggroup a {
-	margin-left: 0.8em;
-	transition: opacity 0.2s ease-in-out;
+.sort_line {
+	margin-bottom: 20px;
 }
-.result .taggroup a:hover {
-	opacity: 0.7;
+.tag_line i.material-icons, .sort_line i.material-icons {
+	margin-right: 10px;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+.tag_line span:first-of-type,
+.sort_line span:first-of-type {
+	min-width: 112px;
+    display: inline-block;
+}
+.sort_line span:first-of-type {
+	color: #ffd33b;
+}
+.tag_line {
+	background-color: #4a92e1;
+}
+.tag_line a, .sort_line a {
+	margin-left: 1.5em;
+	transition: all 0.2s ease-in-out;
+}
+.sort_line a {
+	opacity: 0.5;
+}
+.sort_line a.active {
+	color: #ffd33b;
+	opacity: 1;
+	pointer-events: none;
+}
+.sort_line a:hover,
+.tag_line a:hover {
+	color: #ffd33b;
+	opacity: 1;
+}
+.result_length {
+	float: right;
+	opacity: 0.5;
 }
 .result > li {
 	display: block;
@@ -762,7 +805,6 @@ label[for="search_submit"] {
 .tcenter {
 	text-align: center;
 }
-
 .select-hidden {
 	display: none;
 	visibility: hidden;

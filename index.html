@@ -10,8 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	
 	<link href="css/reset.css" rel="stylesheet">
-	<link href="css/main.css?v=20171217" rel="stylesheet">
-	<link href="css/rwd.css?v=20171217" rel="stylesheet">
+	<link href="css/main.css?v=20171227" rel="stylesheet">
+	<link href="css/rwd.css?v=20171227" rel="stylesheet">
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js" defer></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
@@ -94,10 +94,16 @@
 							<input id="search_submit" value="" type="submit">
 							<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
 						</form>
-
+						<div class="tag_line">
+							<span><i class="material-icons">label</i>Tags</span>
+							<a>SMS</a><a>camera</a><a>device encryption</a>
+						</div>
 						<ul v-show="!search_isanswer" class="result">
-							<p v-bind:data-length="searchresults.length">{{searchresults.length}} results</p>
-							<p class="taggroup">Tags: <a>#SMS</a><a>#camera</a><a>#device encryption</a></p>
+							<div class="sort_line">
+								<span><i class="material-icons">sort</i>Sort by</span>
+								<a class="active">Format</a><a>Theme</a><a>Difficulty</a><a>Rank</a>
+								<span class="result_length" v-bind:data-length="searchresults.length">{{searchresults.length}} results</span>
+							</div>
 							<li v-for="result in searchresults">
 								<a v-bind:data-href="result.doc.link" onclick="click_result(this)">
 									<span class="rs_img">
@@ -121,6 +127,10 @@
 							<button class="btn main_btn summon_btn" v-show="searchterm != ''">Summon Elves</button>
 						</ul>
 						<ul v-show="search_isanswer" class="result">
+							<div class="sort_line">
+								<span><i class="material-icons">sort</i>Sort by</span>
+								<a class="active">Format</a><a>Theme</a><a>Difficulty</a><a>Rank</a>
+							</div>
 							<p class="answer"></p><!-- 這裡的內容會被選定的問題的答案取代 -->
 							<li v-for="result in searchresults">
 								<a v-bind:data-href="result.doc.link" onclick="click_result(this)">
