@@ -50,8 +50,12 @@
 			</div>
 		</section>
 		<section id="crt_sec">
-			<div class="top_banner">
+			<div class="topic">
+				<h3>Curated Question</h3>
 				<p>About curated question</p>
+			</div>
+			<div class="curated_img">
+				<img src="img/props/magic_props-04.svg">
 			</div>
 			<div class="curated">
 				<div class="crt_head">
@@ -61,13 +65,14 @@
 				<div id="crt_body" class="crt_body">
 					<div v-for="(question,index) in questions" :class="{ 'active': index === active_question }">
 						<h4>{{question.question}}</h4>
-						<button @click="showanswer(question.question)" class="red_btn answer">Answer</button>
+						<button @click="showanswer(question.question)" class="btn main_btn blue answer">Answer</button>
 					</div>
 				</div>
+				<ul id="crt_dots" class="crt_dots">
+					<li v-for="(question,index) in questions" @click="active_question = index"><a :class="{ 'active': index === active_question }"></a></li>
+				</ul>
 			</div>
-			<ul id="crt_dots" class="crt_dots">
-				<li v-for="(question,index) in questions" @click="active_question = index"><a :class="{ 'active': index === active_question }"></a></li>
-			</ul>
+			
 		</section>
 		<section class="main_sec">
 			<div class="main_btns container">
@@ -109,7 +114,7 @@
 								</a>
 							</li>
 							<p class="big" v-show="searchterm != ''">Can't find what you're looking for?</p>
-							<button class="btn red_btn summon_btn" v-show="searchterm != ''">Summon Elves</button>
+							<button class="btn main_btn summon_btn" v-show="searchterm != ''">Summon Elves</button>
 						</ul>
 						<ul v-show="search_isanswer" class="result">
 							<p class="answer"></p><!-- 這裡的內容會被選定的問題的答案取代 -->
@@ -133,7 +138,7 @@
 								</a>
 							</li>
 							<p class="big" v-show="searchterm != ''">Can't find what you're looking for?</p>
-							<button class="btn red_btn summon_btn" v-show="searchterm != ''">Summon Elves</button>
+							<button class="btn main_btn summon_btn" v-show="searchterm != ''">Summon Elves</button>
 						</ul>
 					</div>
 				</div>
@@ -175,7 +180,7 @@
 								<label for="Linux">Linux</label>
 							</div>
 							<div class="wizard_question">
-								<input class="btn red_btn" type="submit" value="Submit">
+								<input class="btn main_btn" type="submit" value="Submit">
 							</div>
 						</form>
 
@@ -206,7 +211,7 @@
 									</a>
 								</li>
 								<p class="big">Not what you are looking for?</p>
-								<button class="btn red_btn summon_btn">Summon Elves</button>
+								<button class="btn main_btn summon_btn">Summon Elves</button>
 							</ul>
 						</div>
 					</div>
@@ -215,7 +220,7 @@
 				<div id="library_cont" :class="{ 'active': active_module === 'library' }">
 					<div class="container">
 						<p>Here's a list of everything we collected and reviewed:</p>
-						<button class="btn red_btn">Contribute this list</button>
+						<button class="btn main_btn">Contribute this list</button>
 						<div class="lib_table">
 							<div class="lib_thead">
 								<span class="lib_tr">
@@ -272,7 +277,7 @@
 						</ul>
 						<label for="rank" class="rank rank_enable"><span class="stars"></span></label>
 						<input type="range" min="0" max="5" step="1" name="rank" id="thisrank" value="0">
-						<input class="btn red_btn" type="submit" value="Submit">
+						<input class="btn main_btn" type="submit" value="Submit">
 					</form>
 				</div>
 				<div class="popup_foot"></div>
@@ -296,7 +301,7 @@
 						</ul>
 						<label for="rank" class="rank rank_enable"><span class="stars"></span></label>
 						<input type="range" min="0" max="5" step="1" name="rank" id="thisrank" value="0">
-						<input class="btn red_btn" type="submit" value="Submit">
+						<input class="btn main_btn" type="submit" value="Submit">
 					</form>
 				</div>
 				<div class="popup_foot"></div>
@@ -312,7 +317,7 @@
 						<textarea name="question" id="question" placeholder="" rows="3"></textarea>
 						<label>Email</label>
 						<input type="text" name="email" id="se_email" placeholder="">
-						<input class="btn red_btn" type="submit" v-bind:value="question_submitted ? 'We\'ve got your question!' : 'Submit'" :disabled="question_submitted">
+						<input class="btn main_btn" type="submit" v-bind:value="question_submitted ? 'We\'ve got your question!' : 'Submit'" :disabled="question_submitted">
 					</form>
 				</div>
 				<div class="popup_foot emergency">

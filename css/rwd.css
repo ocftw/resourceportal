@@ -18,7 +18,7 @@
 }
 @media screen and (min-width: 768px) {
 	:root {
-		--mid-font-size: 1.25rem;
+		--mid-font-size: 22px;
 		--big-font-size: 2rem;
 	}
 	header {
