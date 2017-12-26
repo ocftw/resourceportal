@@ -76,9 +76,9 @@
 		</section>
 		<section class="main_sec">
 			<div class="main_btns container">
-				<button id="find_btn" :class="{ 'active': active_module === 'find' }" @click="active_module = 'find'; "><h3>Find</h3></button>
-				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard' || active_module === '' }" @click="active_module = 'wizard'; "><h3>Wizard</h3></button>
-				<button id="library_btn" :class="{ 'active': active_module === 'library' }" @click="active_module = 'library'; "><h3>Library</h3></button>
+				<button id="find_btn" :class="{ 'active': active_module === 'find' }" @click="active_module = 'find'; "><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>About find</p></button>
+				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard' }" @click="active_module = 'wizard'; "><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>About wizard</p></button>
+				<button id="library_btn" :class="{ 'active': active_module === 'library' }" @click="active_module = 'library'; "><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>About library</p></button>
 			</div>
 			<!-- contents -->
 			<div ref="main_conts" class="main_conts" :class="{ 'active': active_module !== '' }">

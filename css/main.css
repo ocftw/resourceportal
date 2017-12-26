@@ -313,7 +313,6 @@ button, .btn {
 }
 /* main_sec*/
 .main_sec {
-	background-color: #F1F1F1;
 	padding-top: 50px;
 }
 .main_btns {
@@ -321,36 +320,38 @@ button, .btn {
 	padding: 0;
 }
 .main_btns > button {
+	color: #1a1a1a;
 	position: relative;
 	border: none;
 	width: 100%;
 	text-align: left;
-    padding: 0 20px 0 170px;
     transition: width 0.4s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: auto 121%;
-    background-position: 10px -13px;
     min-height: 90px;
     margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.main_btns > button > img {
+	width: 100%;
+	height: auto;
 }
 .main_btns > button.active {
 	position: absolute;
     bottom: -100px;
     left: 0;
 }
+#find_btn.active {color: #315b9f;}
+#wizard_btn.active {color: #7c4aa2;}
+#library_btn.active {color: #904939;}
+.main_btns > button:hover {
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
 .main_btns > button:active {
-	box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-#find_btn    {background-color: #56B8CF;
-			  background-image: url('../img/btns-01.png')}
-#wizard_btn  {background-color: #8CC11F;
-			  background-image: url('../img/btns-02.png')}
-#library_btn {background-color: #EB9F00;
-			  background-image: url('../img/btns-03.png')}
-
 .main_btns h3 {
-	color: #fff;
 	font-size: 1.8em;
 	font-size: var(--big-font-size);
 	font-weight: 700;
@@ -358,6 +359,10 @@ button, .btn {
 	display: inline-block;
 	vertical-align: -webkit-baseline-middle;
 	vertical-align: middle;
+}
+.main_btns p {
+	font-size: 1.25rem;
+	font-size: var(--mid-font-size);
 }
 
 
@@ -397,12 +402,12 @@ button, .btn {
 	max-width: 1000px;
 }
 
-#find_cont {background-color: #56B8CF;}
-#wizard_cont {background-color: #8CC11F;}
+#find_cont {background-color: #315b9f;}
+#wizard_cont {background-color: #7c4aa2;}
 #library_cont {background-color: #EB9F00;}
 
-#find_cont::before {border-bottom-color: #56B8CF;}
-#wizard_cont::before {border-bottom-color: #8CC11F;}
+#find_cont::before {border-bottom-color: #315b9f;}
+#wizard_cont::before {border-bottom-color: #7c4aa2;}
 #library_cont::before {border-bottom-color: #EB9F00;}
 
 .main_conts .main_btn {

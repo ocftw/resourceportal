@@ -32,30 +32,25 @@
 		height: 80%;
 	}
 	.main_btns {
-		padding: 0 20px;
 		margin-bottom: 7px;
+		text-align: center;
 	}
 	.main_btns > button {
-		width: 25%;
-		padding: 25% 0 0;
+		width: 32%;
 		text-align: center;
 		background-position: 50%;
 		background-size: auto 100%;
+		display: inline-block;
 	}
 	.main_btns > button + button {
 		margin-left: 1%;
 	}
 	.main_btns > button.active {
-		width: calc(48% - 10px);
 		bottom: auto;
 		position: relative;
 	}
 	.main_btns h3 {
-		position: absolute;
-		top: 0;
-		width: 100%;
-		padding: 20px 0;
-		display: block;
+		padding: 15px 0;
 	}
 	#find_cont::before {right: 45%;}
 	#library_cont::before {left: 45%;}
