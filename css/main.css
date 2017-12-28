@@ -918,7 +918,8 @@ label[for="search_submit"] {
 }
 #wizard_result .row {
 	border-bottom: 1px solid #fff;
-	padding-bottom: 10px;
+	padding-bottom: 12px;
+    margin-top: 15px;
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
 }
