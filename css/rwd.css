@@ -149,7 +149,8 @@
 	.lib_thead .lib_tr > span {
 		position: relative;
 	}
-	.lib_tbody .lib_tr:first-child > span {
+	.lib_thead .lib_tr > span:nth-of-type(n + 3) {
+		margin-left: -1px;
 	}
 	.lib_tbody .lib_tr:last-child > span {
 	}
@@ -165,10 +166,14 @@
 		margin-right: 20px;
 	}
 	.lib_table .lib_tr > span:nth-of-type(4){
+		width: 80px;
+		margin-right: 20px;
+	}
+	.lib_table .lib_tr > span:nth-of-type(5){
 		width: 65px;
 	}
 	.lib_table .lib_tr > span:first-child{
-		width: calc(100% - 310px);
+		width: calc(100% - 410px);
 	}
 	.lib_tbody .lib_tr > span:first-child {
 		color: #333;

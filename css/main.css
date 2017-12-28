@@ -1008,6 +1008,7 @@ label[for="search_submit"] {
 	font-size: 0.8em;
 }
 .lib_tbody .lib_tr > span:nth-of-type(4) {
+	margin-right: 10px;
 	margin-top: 2px;
 }
 .lib_tbody .lib_tr > span:first-child {
@@ -1027,7 +1028,11 @@ label[for="search_submit"] {
 }
 .difficulty {
 	letter-spacing: -3px;
-	vertical-align: middle;
+	top: 4px;
+}
+.rank {
+	letter-spacing: -2px;
+	top: 2px;
 }
 .difficulty::after {	
 	content: 'flash_onflash_onflash_onflash_onflash_on';

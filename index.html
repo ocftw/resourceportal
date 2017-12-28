@@ -254,6 +254,7 @@
 									<span><a>Title<i class="material-icons">arrow_drop_down</i></a></span>
 									<span><a>Theme<i class="material-icons">arrow_drop_down</i></a></span>
 									<span><a>Format<i class="material-icons">arrow_drop_down</i></a></span>
+									<span><a>Rank<i class="material-icons">arrow_drop_down</i></a></span>
 									<span><a>Difficulty<i class="material-icons">arrow_drop_down</i></a></span>
 								</span>
 							</div>
@@ -262,6 +263,7 @@
 									<span>{{material.series}} - {{material.title}}</span>
 									<span>{{material.theme}}</span>
 									<span><i class="material-icons" v-bind:data-icon="format_icon(material.format)"></i>{{material.format}}</span>
+									<span><span class="rank material-icons"><span class="stars" v-bind:data-rank="material.difficulty"></span></span></span>
 									<span><span class="difficulty material-icons"><span class="stars" v-bind:data-diff="material.difficulty"></span></span></span>
 								</a>
 							</div>
