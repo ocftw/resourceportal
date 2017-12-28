@@ -69,6 +69,8 @@
 	.rs_title {
 		width: calc(100% - 331px);
 		padding: 0;
+		max-height: 100px;
+    	overflow-y: hidden;
 	}
 	.rs_img::after {
 		display: none;
@@ -77,7 +79,7 @@
 		height: 130px;
 		width: 136px;
 		color: #b2b2b2;
-		position: inherit;
+		position: relative;
 	    top: 0px;
 	    overflow: hidden;
 	}
@@ -98,26 +100,26 @@
 		color: inherit;
 		white-space: nowrap;
 		font-size: 0.9rem;
-		color: #666;
+		color: #808080;
 	}
 	.tabs li:hover {
 		color: #e95513;
 		border-color: #e95513;
 	}
-	.result .tabs li:nth-of-type(3)::after {
+	.result .tabs li:nth-of-type(4)::after {
 	    content: "...";
 	    display: block;
 	    width: 100%;
 	    position: absolute;
 	    background: #fff;
 	    left: 0;
-	    top: 56px;
+	    top: 84px;
 	    height: 60px;
 	}
 	.rs_img h5 {
 		font-size: inherit;
 	}
-	.rs_img img[src=""] + h5 {
+	.rs_img img[src=""] + .from {
 		padding: 0;
 		font-size: 1rem;
 	}

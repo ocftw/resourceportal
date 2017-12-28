@@ -108,18 +108,21 @@
 								<a v-bind:data-href="result.doc.link" onclick="click_result(this)">
 									<span class="rs_img">
 										<img v-bind:src="result.doc.image" />
-										<h5>{{result.doc.link.split("/")[2]}}</h5>
+										<span class="from">{{result.doc.link.split("/")[2]}}</span>
 									</span>
 									<span class="rs_title">
 										<h4>{{ result.doc.series }} - {{ result.doc.title }}</h4>
 										<p>{{ result.doc.tagline }}</p>
+										<span class="rs_info_bottom">
+											Rank<span class="rank material-icons"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
+											Difficulty<span class="difficulty material-icons"><span class="stars" v-bind:data-diff="result.doc.difficulty"></span></span>
+										</span>
 									</span>
 									<span class="rs_info">
-										<span class="rank material-icons"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
 										<ul class="tabs">
 											<li v-for="tag in result.doc.tags.split(',')" v-if="tag">{{tag}}</li>
 										</ul>
-										<span class="from">{{result.doc.link.split("/")[2]}}</span>
+										<span class="format"><i class="material-icons" v-bind:data-icon="format_icon(result.doc.format)"></i>{{result.doc.format}}</span>
 									</span>
 								</a>
 							</li>
