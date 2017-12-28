@@ -228,4 +228,6 @@ $('#crt_sec').hover(function(){
     clearTimeout(crt_auto);
 },function(){
     crt_setTime();
-})
+});
+
+    $(".parallaxer").parallaxer();
