@@ -119,8 +119,8 @@
 										</span>
 									</span>
 									<span class="rs_info">
-										<ul class="tabs">
-											<li v-for="tag in result.doc.tags.split(',')" v-if="tag">{{tag}}</li>
+										<ul class="tags">
+											<li v-for="tag in result.doc.tags.split(',')" v-if="tag" @click="tag_click(tag)">{{tag}}</li>
 										</ul>
 										<span class="format"><i class="material-icons" v-bind:data-icon="format_icon(result.doc.format)"></i>{{result.doc.format}}</span>
 									</span>
@@ -139,18 +139,21 @@
 								<a v-bind:data-href="result.doc.link" onclick="click_result(this)">
 									<span class="rs_img">
 										<img v-bind:src="result.doc.image" />
-										<h5>{{result.doc.link.split("/",3)[2]}}</h5>
+										<span class="from">{{result.doc.link.split("/")[2]}}</span>
 									</span>
 									<span class="rs_title">
 										<h4>{{ result.doc.series }} - {{ result.doc.title }}</h4>
 										<p>{{ result.doc.tagline }}</p>
+										<span class="rs_info_bottom">
+											Rank<span class="rank material-icons"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
+											Difficulty<span class="difficulty material-icons"><span class="stars" v-bind:data-diff="result.doc.difficulty"></span></span>
+										</span>
 									</span>
 									<span class="rs_info">
-										<span class="rank material-icons"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
-										<ul class="tabs">
-											<li v-for="tag in result.doc.tags.split(',')" v-if="tag">{{tag}}</li>
+										<ul class="tags">
+											<li v-for="tag in result.doc.tags.split(',')" v-if="tag" @click="tag_click(tag)">{{tag}}</li>
 										</ul>
-										<span class="from">{{result.doc.link.split("/",3)[2]}}</span>
+										<span class="format"><i class="material-icons" v-bind:data-icon="format_icon(result.doc.format)"></i>{{result.doc.format}}</span>
 									</span>
 								</a>
 							</li>
@@ -219,7 +222,7 @@
 										</span>
 										<span class="rs_info">
 											<span class="rank material-icons"><span class="stars" data-rank="3"></span></span>
-											<ul class="tabs">
+											<ul class="tags">
 												<li>tab1 test</li>
 												<li>tab2</li>
 											</ul>
@@ -285,7 +288,7 @@
 									</span>
 									<span class="rs_info">
 										<span class="rank material-icons"><span class="stars" data-rank=""></span></span>
-										<ul class="tabs">
+										<ul class="tags">
 										</ul>
 										<span class="from"></span>
 									</span>

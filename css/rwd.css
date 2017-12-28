@@ -89,12 +89,12 @@
 		color: inherit;
 		font-size: 0.9rem;
 	}
-	.result .tabs {
+	.result .tags {
 	    top: auto;
 	    left: auto;
 	    position: relative;
 	}
-	.tabs li {
+	.tags li {
 		border: 1px solid #b2b2b2;
 		background-color: rgba(0, 0, 0, 0);
 		color: inherit;
@@ -102,11 +102,11 @@
 		font-size: 0.9rem;
 		color: #808080;
 	}
-	.tabs li:hover {
+	.tags li:hover {
 		color: #e95513;
 		border-color: #e95513;
 	}
-	.result .tabs li:nth-of-type(4)::after {
+	.result .tags li:nth-of-type(4)::after {
 	    content: "...";
 	    display: block;
 	    width: 100%;

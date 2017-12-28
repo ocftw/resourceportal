@@ -669,6 +669,7 @@ label[for="search_submit"] {
     font-size: 1.8em;
     font-size: var(--big-font-size);
     padding: 15px 20px;
+    text-shadow: none;
 }
 
 .rs_img::after {
@@ -723,12 +724,12 @@ label[for="search_submit"] {
 .rs_info_bottom > span {
 	margin: 0 2em 0 0.5em;
 }
-.result .tabs {
+.result .tags {
     position: absolute;
     top: -98px;
     left: -18px;
 }
-.tabs li {
+.tags li {
 	display: inline-block;
 	padding: 4px 6px;
 	margin-right: 5px;
@@ -737,7 +738,7 @@ label[for="search_submit"] {
 	color: #fff;
 }
 
-.tabs::after {
+.tags::after {
 	font-size: 18px;
 	vertical-align: top;
 }

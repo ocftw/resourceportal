@@ -75,6 +75,18 @@ var vm = new Vue({
 		},
 		question_submit: function() {
 			this.question_submitted = true;
+		},
+		tag_click: function(tag_name) {
+			this.searchterm = tag_name;
+			if ( this.search_isanswer ) {
+				this.search_isanswer = false;
+			}
+			$('#find_btn').click();
+			window.scroll({
+	          top: $('.main_conts:first').offset().top - 50, 
+	          left: 0, 
+	          behavior: 'smooth' 
+	        });
 		}
 	}
 });
