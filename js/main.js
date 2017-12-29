@@ -113,22 +113,26 @@ function click_result(e) {
 
     /* get data */
     var feedback = $('#result_feedback');
-    feedback.find('.tabs:first').empty();
+    feedback.find('.tags:first').empty();
 
     var name = e.find('h4:first').text();
     var img = e.find('img:first').attr('src');
-    var rank = e.find('.stars:first').attr('data-rank');
+    var rank = e.find('.rank:first').children('.stars:first').attr('data-rank');
+    var diff = e.find('.difficulty:first').children('.stars:first').attr('data-diff');
     var from = e.find('.from:first').html();
-    e.find('.tabs:first').children('li').each(function(){
-        var tab = $(this).html();
-        feedback.find('.tabs:first').append('<li>'+tab+'</li>');
+    var format = e.find('.format:first').html();
+    var dataFormat = e.find('.format:first').children('i:first').attr('data-icon');
+    e.find('.tags:first').children('li').each(function(){
+        var tag = $(this).html();
+        feedback.find('.tags:first').append('<li>'+tag+'</li>');
     });
     feedback.find('h4:first').html(name);
     feedback.find('img:first').attr('src',img);
-    feedback.find('.stars:first').attr('data-rank',rank);
+    feedback.find('.rank:first').children('.stars:first').attr('data-rank',rank);
+    feedback.find('.difficulty:first').children('.stars:first').attr('data-diff',diff);
     feedback.find('.from:first').html(from);
-    feedback.find('h5:first').html(from);
-    
+    feedback.find('.format:first').html(format);
+    feedback.find('.format:first').children('i:first').attr('data-icon',dataFormat); 
 };
 function click_library(e) {
     $('#popup_wrap').addClass('active');
@@ -170,6 +174,15 @@ $('#wizard_form').find('input').each((function(){
 $('#backtop_btn').click(function backToTop(){
     window.scroll({
       top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
+})
+
+$('.goto').click(function(){
+    var target = $(this).attr('data-href');
+    window.scroll({
+      top: $(target).offset().top - 50, 
       left: 0, 
       behavior: 'smooth' 
     });

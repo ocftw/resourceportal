@@ -155,7 +155,7 @@ header.active {
 	color: #8cc11f;
 }
 .topic {
-	color: #1a1a1a;
+	color: #333;
 	text-align: center;
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
@@ -320,7 +320,7 @@ button, .btn {
 	padding: 0;
 }
 .main_btns > button {
-	color: #1a1a1a;
+	color: #333;
 	position: relative;
 	border: none;
 	width: 100%;
@@ -684,7 +684,7 @@ label[for="search_submit"] {
 .rs_info {
 	margin: 18px 0 18px 18px;;
 	color: #b2b2b2;
-	font-size: 0.9em;
+	font-size: 0.9rem;
 	position: absolute;
     top: 80px;
     height: 70px;
@@ -1309,7 +1309,7 @@ input[name="rank"] {
 }
 #about .row p,
 #about .row ul li {
-	color: #1a1a1a;
+	color: #333;
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
 	margin-bottom: 0;
