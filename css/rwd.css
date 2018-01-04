@@ -10,11 +10,6 @@
 	.popup_body .rank_enable {
 		letter-spacing: 5px;
 	}
-	.summon {
-		top: auto;
-	    position: inherit;
-		margin: 0 auto;
-	}
 }
 @media screen and (min-width: 768px) {
 	:root {
