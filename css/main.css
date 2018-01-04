@@ -171,10 +171,9 @@ header.active {
     background-size: 100% calc(100% - 90px);
     background-position: 0px 90px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 80px auto;
     text-align: center;
     min-height: 500px;
-    margin-bottom: 80px;
     position: relative;
 }
 .curated {
@@ -1396,8 +1395,9 @@ input[name="rank"] {
 }
 /* footer */
 footer {
-	background-color: #4d4d4d;
-	color: #fff;
+	background: url('../img/bg/footer_bg.jpg') no-repeat 50% 0;
+	background-size: cover;
+	color: #333;
 	line-height: 1.5;
 	font-size: 1rem;
 	padding: 65px 0 40px;
@@ -1427,11 +1427,12 @@ footer address {
 }
 
 footer a {
-	color: #fff;
+	color: #000;
+	opacity: 0.75;
 	transition: opacity 0.2s ease;
 }
 footer a:hover {
-	opacity: 0.7;
+	opacity: 1;
 }
 footer a[href="https://ocf.tw/"] {
 	margin-right: 30px;
@@ -1440,13 +1441,14 @@ footer a.logo[href="https://ocf.tw/"] {
 	margin-right: 0;
 }
 footer h5 {
-	color: #cbcbcb;
+	color: #4d4d4d;
 	font-size: var(--mid-font-size);
 }
 
 footer .logo {
 	display: block;
 	margin-bottom: 10px;
+	opacity: 0.75;
 }
 
 footer p {
