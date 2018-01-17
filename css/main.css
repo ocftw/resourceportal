@@ -527,32 +527,44 @@ label[for="search_submit"] {
 .result .result_length[data-length="0"] {
 	display: none;
 }
-.result > p.answer {
+.result .answer_block {
 	text-align: left;
-    line-height: 1.5;
     margin-bottom: 30px;
     background: rgba(255,255,255,1);
-    color: #333;
     padding: 40px 30px 60px;
     margin: 20px auto;
     border-radius: 25px;
 }
-.result > p.answer::before {
-	content: "Answer";
+.result .answer_block h3 {
 	font-size: 1.8em;
 	font-size: var(--big-font-size);
 	color: #4a92e1;
 	display: block;
 	margin-bottom: 1em;
+	margin-left: -2px;
 }
-.result > p.answer::after {
-	width: 100%;
-	height: 1px;
-	background-color: #fff;
-	display: block;
-	margin: 22px 0;
+.result .answer_block p {
+	color: #333;
+	line-height: 1.5;
+	margin-bottom: 40px;
+	font-size: 1.25rem;
+	font-size: var(--mid-font-size);
 }
-.result > p br {
+.result .answer_block .answer_by {
+	color: #808080;
+	text-align: right;
+	margin-bottom: 10px;
+}
+.custom_icon {
+	height: 1em;
+	width: auto;
+	margin-bottom: -3px;
+}
+.result .answer_block .answer_by .custom_icon {
+	height: 1.5em;
+	margin-left: 10px;
+}
+.result p br {
 	line-height: 3;
 }
 .result > p.big {

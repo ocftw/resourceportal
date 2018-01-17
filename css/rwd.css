@@ -178,12 +178,12 @@
 	.lib_tbody .material-icons {
 		margin-bottom: 6px;
 	}
-	.result > p.answer {
+	.result .answer_block {
 		padding: 40px 80px 60px;
 	}
 }
 @media screen and (min-width: 960px) {
-	.result > p.answer {
+	.result .answer_block {
 		padding: 40px 130px 60px;
 	}
 	footer section > div {
