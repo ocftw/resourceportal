@@ -1317,7 +1317,10 @@ input[name="rank"] {
 	list-style-type: disc;
 	margin-left: 1.5em;
 }
-
+#about .row img {
+	width: 100%;
+	height: auto;
+}
 /* parallaxer */
 .parallaxer {
 	display:  block;
