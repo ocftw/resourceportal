@@ -152,7 +152,7 @@ $('.summon_btn').each(function (){
 		$('#popup_wrap').addClass('active');
 		$('#popup_summon').addClass('active');
         var question = $('input[name^="search"]').val();
-        $('#question').val(question);
+        $('#question').val(question).focus();
 	})
 })
 

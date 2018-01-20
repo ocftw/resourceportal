@@ -83,7 +83,7 @@
 					<div v-for="(question,index) in questions" :class="{ 'active': index === active_question }">
 						<h4>{{question.question}}</h4>
 						<button @click="showanswer(question.question)" class="btn main_btn blue">Get Answer</button>
-						<button @click="showanswer(question.question)" class="btn main_btn summon_btn">Ask</button>
+						<button class="btn main_btn summon_btn">Ask</button>
 					</div>
 				</div>
 				<ul id="crt_dots" class="crt_dots">
@@ -420,7 +420,8 @@
 			</div>
 			<div id="popup_summon" class="popup summon">
 				<div class="popup_head">
-					<h5>Ask us questions</h5>
+					<img src="img/props/magic_props-11.svg">
+					<h4>Ask us questions</h4>
 					<a class="popup_close"><i class="material-icons">close</i></a>
 				</div>
 				<div class="popup_body">
