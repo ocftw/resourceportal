@@ -358,37 +358,40 @@
 		<section id="popup_wrap">
 			<div id="popup_feedback" class="popup feedback">
 				<div class="popup_head">
-					<h5>Feedback</h5>
+					<h4>Feedback</h4>
 					<a class="popup_close"><i class="material-icons">close</i></a>
 				</div>
+				<ul class="result">
+					<li id="result_feedback">
+						<a>
+							<span class="rs_img">
+								<img src="" />
+								<span class="from"></span>
+							</span>
+							<span class="rs_title">
+								<h4></h4>
+								<p></p>
+								<span class="rs_info_bottom">
+									Rank<span class="rank material-icons"><span class="stars" data-rank=""></span></span>
+									Difficulty<span class="difficulty material-icons"><span class="stars" data-diff=""></span></span>
+								</span>
+							</span>
+							<span class="rs_info">
+								<ul class="tags">
+								</ul>
+								<span class="format"><i class="material-icons" data-icon=""></i>format</span>
+							</span>
+						</a>
+					</li>
+				</ul>
 				<div class="popup_body">
 					<form action="">
-						<p>What you think of this article?</p>
-						<ul class="result">
-							<li id="result_feedback">
-								<a>
-									<span class="rs_img">
-										<img src="" />
-										<span class="from"></span>
-									</span>
-									<span class="rs_title">
-										<h4></h4>
-										<p></p>
-										<span class="rs_info_bottom">
-											Rank<span class="rank material-icons"><span class="stars" data-rank=""></span></span>
-											Difficulty<span class="difficulty material-icons"><span class="stars" data-diff=""></span></span>
-										</span>
-									</span>
-									<span class="rs_info">
-										<ul class="tags">
-										</ul>
-										<span class="format"><i class="material-icons" data-icon=""></i>format</span>
-									</span>
-								</a>
-							</li>
-						</ul>
-						<label for="rank" class="rank rank_enable"><span class="stars"></span></label>
-						<input type="range" min="0" max="5" step="1" name="rank" id="thisrank" value="0">
+						<div class="input_block">
+							<img src="img/props/magic_props-12.svg">
+							<p>What you think of this article?</p>
+							<label for="rank" class="rank rank_enable"><span class="stars"></span></label>
+							<input type="range" min="0" max="5" step="1" name="rank" id="thisrank" value="0">
+						</div>
 						<input class="btn main_btn" type="submit" value="Submit">
 					</form>
 				</div>
@@ -396,23 +399,26 @@
 			</div>
 			<div id="popup_feedback_library" class="popup feedback">
 				<div class="popup_head">
-					<h5>Feedback</h5>
+					<h4>Feedback</h4>
 					<a class="popup_close"><i class="material-icons">close</i></a>
 				</div>
+				<ul class="result">
+					<li id="library_feedback">
+						<a>
+							<span class="rs_title">
+								<h4></h4>
+							</span>
+						</a>
+					</li>
+				</ul>
 				<div class="popup_body">
 					<form action="">
-						<p>What you think of this article?</p>
-						<ul class="result">
-							<li id="library_feedback">
-								<a>
-									<span class="rs_title">
-										<h4></h4>
-									</span>
-								</a>
-							</li>
-						</ul>
-						<label for="rank" class="rank rank_enable"><span class="stars"></span></label>
-						<input type="range" min="0" max="5" step="1" name="rank" id="thisrank" value="0">
+						<div class="input_block">
+							<img src="img/props/magic_props-12.svg">
+							<p>What you think of this article?</p>
+							<label for="rank" class="rank rank_enable"><span class="stars"></span></label>
+							<input type="range" min="0" max="5" step="1" name="rank" id="thisrank" value="0">
+						</div>
 						<input class="btn main_btn" type="submit" value="Submit">
 					</form>
 				</div>
