@@ -243,7 +243,7 @@ header.active {
 	padding: 20px 30px 0px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	text-align: left;
+	text-align: center;
 }
 .crt_body > div {
 	display: none;
@@ -256,11 +256,14 @@ header.active {
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
 	line-height: 1.5;
+	min-height: 132px;
+	text-align: left;
 }
 
 .crt_body button {
-	width: 120px;
-	margin: 30px auto 5px;
+	min-width: 120px;
+	margin: 30px 15px 5px;
+	display: inline-block;
 }
 
 .main_btn {
