@@ -123,15 +123,12 @@
 	.lib_table {
 		display: table;
 	}
-
 	.lib_thead {
 		display: block;
 	}
-
 	.lib_tbody {
 		line-height: 1.4;
 	}
-	
 	.lib_table .lib_tr > span {
 		display: inline-block;
 	}

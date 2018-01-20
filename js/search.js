@@ -58,11 +58,16 @@ var vm = new Vue({
 	          left: 0, 
 	          behavior: 'smooth' 
 	        });
+			var textarea = $("#search");
+			textarea.attr('rows', 1);
+	        var rows = Math.ceil((textarea.prop("scrollHeight") - textarea.height()) / 47);
+	        textarea.attr('rows', rows);
 		},
 		clearsearch: function() {
 			if ( this.search_isanswer ) {
 				this.searchterm = '';
 				this.search_isanswer = false;
+				$("#search").attr('rows', 1);
 			}
 		},
 		format_icon: function(format_str) {

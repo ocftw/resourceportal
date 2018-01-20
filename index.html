@@ -108,7 +108,7 @@
 				<div id="find_cont" :class="{ 'active': active_module === 'find' }">
 					<div class="container">
 						<form action="" autocomplete="on">
-							<input v-model="searchterm" name="search" type="text" placeholder="What are you looking for?" @click="clearsearch()">
+							<textarea v-model="searchterm" name="search" id="search" class="autoExpand" rows="1" data-min-rows="1" placeholder="What are you looking for?" @click="clearsearch()"></textarea>
 							<input id="search_submit" value="" type="submit">
 							<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
 						</form>
