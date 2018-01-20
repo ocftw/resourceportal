@@ -131,13 +131,7 @@
 	.lib_tbody {
 		line-height: 1.4;
 	}
-
-	.lib_table .lib_tr {
-		min-height: 74px;
-    	display: flex;
-    	align-items: center;
-	}
-
+	
 	.lib_table .lib_tr > span {
 		display: inline-block;
 	}
@@ -149,6 +143,11 @@
 	}
 	.lib_thead .lib_tr > span:nth-of-type(n + 3) {
 		margin-left: -1px;
+	}
+	.lib_tbody .lib_tr {
+		min-height: 74px;
+    	display: flex;
+    	align-items: center;
 	}
 	.lib_tbody .lib_tr:last-child > span {
 	}
