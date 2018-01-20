@@ -119,7 +119,7 @@
 						<ul v-show="!search_isanswer" class="result">
 							<div class="sort_line">
 								<span><i class="material-icons">sort</i>Sort by</span>
-								<a class="active">Format</a><a>Theme</a><a>Difficulty</a><a>Rank</a>
+								<a class="active">Format</a><a>Theme</a><a>Difficulty</a>
 								<span class="result_length" v-bind:data-length="searchresults.length">{{searchresults.length}} results</span>
 							</div>
 							<li v-for="result in searchresults">
@@ -132,7 +132,6 @@
 										<h4>{{ result.doc.series }} - {{ result.doc.title }}</h4>
 										<p>{{ result.doc.tagline }}</p>
 										<span class="rs_info_bottom">
-											Rank<span class="rank material-icons"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
 											Difficulty<span class="difficulty material-icons"><span class="stars" v-bind:data-diff="result.doc.difficulty"></span></span>
 										</span>
 									</span>
@@ -150,7 +149,7 @@
 						<ul v-show="search_isanswer" class="result">
 							<div class="sort_line">
 								<span><i class="material-icons">sort</i>Sort by</span>
-								<a class="active">Format</a><a>Theme</a><a>Difficulty</a><a>Rank</a>
+								<a class="active">Format</a><a>Theme</a><a>Difficulty</a>
 							</div>
 							<div class="answer_block">
 								<h3><img class="custom_icon" src="img/custom_icon/answer.svg" />Answer</h3>
@@ -167,7 +166,6 @@
 										<h4>{{ result.doc.series }} - {{ result.doc.title }}</h4>
 										<p>{{ result.doc.tagline }}</p>
 										<span class="rs_info_bottom">
-											Rank<span class="rank material-icons"><span class="stars" v-bind:data-rank="result.doc.difficulty"></span></span>
 											Difficulty<span class="difficulty material-icons"><span class="stars" v-bind:data-diff="result.doc.difficulty"></span></span>
 										</span>
 									</span>
@@ -247,7 +245,6 @@
 											<h4>series - title</h4>
 											<p>description</p>
 											<span class="rs_info_bottom">
-												Rank<span class="rank material-icons"><span class="stars" data-rank=""></span></span>
 												Difficulty<span class="difficulty material-icons"><span class="stars" data-diff=""></span></span>
 											</span>
 										</span>
@@ -276,7 +273,6 @@
 									<span><a>Title<i class="material-icons">arrow_drop_down</i></a></span>
 									<span><a>Theme<i class="material-icons">arrow_drop_down</i></a></span>
 									<span><a>Format<i class="material-icons">arrow_drop_down</i></a></span>
-									<span><a>Rank<i class="material-icons">arrow_drop_down</i></a></span>
 									<span><a>Difficulty<i class="material-icons">arrow_drop_down</i></a></span>
 								</span>
 							</div>
@@ -285,7 +281,6 @@
 									<span>{{material.series}} - {{material.title}}</span>
 									<span>{{material.theme}}</span>
 									<span><i class="material-icons" v-bind:data-icon="format_icon(material.format)"></i>{{material.format}}</span>
-									<span><span class="rank material-icons"><span class="stars" v-bind:data-rank="material.difficulty"></span></span></span>
 									<span><span class="difficulty material-icons"><span class="stars" v-bind:data-diff="material.difficulty"></span></span></span>
 								</a>
 							</div>
@@ -372,7 +367,6 @@
 								<h4></h4>
 								<p></p>
 								<span class="rs_info_bottom">
-									Rank<span class="rank material-icons"><span class="stars" data-rank=""></span></span>
 									Difficulty<span class="difficulty material-icons"><span class="stars" data-diff=""></span></span>
 								</span>
 							</span>
