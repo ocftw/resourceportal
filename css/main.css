@@ -389,7 +389,7 @@ button[disabled], .btn[disabled] {
 	max-height: 9999px;
 }
 .main_conts > div {
-	padding: 50px 0 70px;
+	padding: 30px 0 70px;
 	display: none;
 	position: relative;
 }
@@ -540,7 +540,8 @@ label[for="search_submit"] {
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
 }
-.result .result_length[data-length="0"] {
+.result .result_length[data-length="0"],
+.result .format_length[data-length="0"] {
 	display: none;
 }
 .result .answer_block {
@@ -589,34 +590,34 @@ label[for="search_submit"] {
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
-.tag_line, .sort_line {
-	text-align: left;
-	padding: 15px 20px 15px 15px;
+.tag_line, .sort_line, .format_length {
+	padding: 15px 5px 15px 5px;
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
 }
 .sort_line {
-	margin-bottom: 20px;
+	margin-top: 20px;
+	display:flex;
+	justify-content:space-between;
 }
+.sort_line span {
+    display: inline-block;
+}
+
 .tag_line i.material-icons, .sort_line i.material-icons {
 	margin-right: 10px;
 	vertical-align: middle;
 	margin-top: -4px;
 }
-.tag_line span:first-of-type,
-.sort_line span:first-of-type {
-	min-width: 112px;
-    display: inline-block;
-}
-.sort_line span:first-of-type {
-	color: #ffd33b;
-}
+
 .tag_line {
-	background-color: #4a92e1;
+	margin-bottom: 10px;
+	font-weight: 300;
 }
 .tag_line a, .sort_line a {
-	margin-left: 1.5em;
-	transition: all 0.2s ease-in-out;
+	margin: 0 0.8em 0 0.7em;
+	color: #fff1b3;
+	transition: all 0.12s ease-in-out;
 }
 .sort_line a {
 	opacity: 0.5;
@@ -631,10 +632,12 @@ label[for="search_submit"] {
 	color: #ffd33b;
 	opacity: 1;
 }
-.result_length {
-	float: right;
-	opacity: 0.5;
+.format_length {
+	text-align: right;
+	border-bottom: 2px solid #fff;
+	margin-bottom: 30px;
 }
+
 .result > li {
 	display: block;
 	background-color: #fff;
@@ -1274,11 +1277,12 @@ input[name="rank"] {
 	color: #fff;
 }
 .popup_foot a {
-	color: #fff;
+	color: #fff1b3;
 	word-wrap: break-word;
+	transition: color 0.12s ease-in-out;
 }
 .popup_foot a:hover {
-	opacity: 0.7;
+	color: #ffd33b;
 }
 .popup_foot.emergency {
 }
