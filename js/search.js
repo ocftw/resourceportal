@@ -35,6 +35,7 @@ var vm = new Vue({
 	el: 'main',
 	data: {
 		searchterm: '',
+		search_rows: 1,
 		search_isanswer: false,
 		questions: questions,
 		active_question: 0,
@@ -58,16 +59,12 @@ var vm = new Vue({
 	          left: 0, 
 	          behavior: 'smooth' 
 	        });
-			var textarea = $("#search");
-			textarea.attr('rows', 1);
-	        var rows = Math.ceil((textarea.prop("scrollHeight") - textarea.height()) / 47);
-	        textarea.attr('rows', rows);
 		},
 		clearsearch: function() {
 			if ( this.search_isanswer ) {
 				this.searchterm = '';
 				this.search_isanswer = false;
-				$("#search").attr('rows', 1);
+		    	this.search_rows = 1;
 			}
 		},
 		format_icon: function(format_str) {
@@ -92,6 +89,26 @@ var vm = new Vue({
 	          left: 0, 
 	          behavior: 'smooth' 
 	        });
+		},
+		autoExpand: function() {
+			
+		}
+	},
+	watch: {
+		searchterm: function (val) {
+			if (val) {
+				var textArea = this.$refs.search;
+				var baseHeight = 74, rows;
+				var self = this;
+				setTimeout(function () {
+				    rows = Math.ceil((textArea.scrollHeight - baseHeight) / 47);
+			 		if (rows > 0) {
+				        self.search_rows = rows;
+				    }
+				}, 10);
+			}else {
+				this.search_rows = 1;
+			}
 		}
 	}
 });

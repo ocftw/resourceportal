@@ -509,7 +509,7 @@ button[disabled], .btn[disabled] {
 label[for="search_submit"] {
 	color: #f6921e;
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     right: 13px;
 	z-index: 2;
 	pointer-events: none;
