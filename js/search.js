@@ -55,7 +55,7 @@ var vm = new Vue({
 			$('#find_cont').find('p.answer:first').html(this.questions[this.active_question].answer);
 			$('#find_btn').click();
 			window.scroll({
-	          top: $('.main_conts:first').offset().top - 50, 
+	          top: $('.main_conts:first').offset().top + 60, 
 	          left: 0, 
 	          behavior: 'smooth' 
 	        });

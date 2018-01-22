@@ -3,7 +3,7 @@
 $('.main_btns').children('button').each(function () {
 	$(this).click(function mainBtnClick (){
         window.scroll({
-          top: $('.main_conts:first').offset().top - $('#find_btn').innerHeight() - 50, 
+          top: $('.main_conts:first').offset().top, 
           left: 0, 
           behavior: 'smooth' 
         });
