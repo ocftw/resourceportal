@@ -89,9 +89,6 @@ var vm = new Vue({
 	          left: 0, 
 	          behavior: 'smooth' 
 	        });
-		},
-		autoExpand: function() {
-			
 		}
 	},
 	watch: {

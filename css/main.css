@@ -541,7 +541,8 @@ label[for="search_submit"] {
 	font-size: var(--mid-font-size);
 }
 .result .result_length[data-length="0"],
-.result .format_length[data-length="0"] {
+.result .format_length[data-length="0"],
+.result .sort_line[data-length="0"] {
 	display: none;
 }
 .result .answer_block {

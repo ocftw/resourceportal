@@ -118,7 +118,7 @@
 							<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
 						</form>
 						<ul v-show="!search_isanswer" class="result">
-							<div class="sort_line">
+							<div class="sort_line" v-bind:data-length="searchresults.length">
 								<span class="sort">
 									<span><i class="material-icons">sort</i>Sort by</span>
 									<a class="active">Format</a><a>Theme</a><a>Difficulty</a>
