@@ -163,9 +163,16 @@
 								<p class="answer"></p><!-- 這裡的內容會被選定的問題的答案取代 -->
 								<p class="answer_by">Answer by OCF<img class="custom_icon" src="img/custom_icon/ocf_logo.svg" /></p>
 							</div>
-							<div class="sort_line">
-								<span><i class="material-icons">sort</i>Sort by</span>
-								<a class="active">Format</a><a>Theme</a><a>Difficulty</a>
+							<div class="sort_line" v-bind:data-length="searchresults.length">
+								<span class="sort">
+									<span><i class="material-icons">sort</i>Sort by</span>
+									<a class="active">Format</a><a>Theme</a><a>Difficulty</a>
+								</span>
+								<span class="result_length" v-bind:data-length="searchresults.length">{{searchresults.length}} results</span>
+							</div>
+							
+							<div class="format_length" v-bind:data-length="searchresults.length">
+								{{searchresults.length}} article
 							</div>
 							<li v-for="result in searchresults">
 								<a v-bind:data-href="result.doc.link" onclick="click_result(this)">
