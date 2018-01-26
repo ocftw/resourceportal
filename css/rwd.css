@@ -49,6 +49,28 @@
 	.backtop_btn.active {
 		opacity: 1;
 	}
+	#popup_wrap.active {
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	.popup_body {
+		padding: 30px 35px;
+	}
+	.feedback .popup_body .input_block {
+		padding: 20px;
+	}
+	.feedback .popup_body .input_block img {
+		display: inline-block;
+	}
+	.popup_body .share {
+		right: 33px;
+		bottom: 30px;
+		left: auto;
+	}
+	.popup_body .main_btn {
+		margin-top: 30px;
+		margin-right: auto;
+	}
 }
 @media screen and (min-width: 768px) {
 	:root {
@@ -166,6 +188,7 @@
 	}
 	.result > li > a > span {
 		display: inline-block;
+		margin-bottom: 18px;
 	}
 	.result .rs_img {
 		width: 130px;
@@ -195,9 +218,11 @@
 	}
 	.rs_info .from {
 		top: auto;
+		left: 0;
 		bottom: 18px;
 		color: inherit;
 		font-size: 0.9rem;
+		max-width: 130px;
 	}
 	.rs_info_bottom {
 		bottom: 21px;

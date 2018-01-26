@@ -665,6 +665,7 @@ span.result_length {
 .result > li > a > span {
 	display: block;
 	vertical-align: top;
+	margin-bottom: 0;
 }
 .result > li > a {
 	display: block;
@@ -688,12 +689,12 @@ span.result_length {
 .from {
 	text-align: left;
     position: absolute;
-    left: 0px;
+    left: 12px;
     padding-left: 8px;
     bottom: 13px;
     word-break: break-word;
     font-size: 12px;
-    max-width: 130px;
+    max-width: none;
     z-index: 1;
     color: #fff;
     text-shadow: 0 0 12px rgba(0, 0, 0, 1);
@@ -792,7 +793,7 @@ span.result_length {
     position: absolute;
     right: 21px;
     top: 22px;
-    z-index: 0;
+    z-index: 1;
     color: #fff;
 }
 
@@ -1171,12 +1172,13 @@ span.result_length {
 #popup_wrap.active {
 	display: -webkit-flex;
 	display:         flex;
-	-webkit-align-items: center;
-			align-items: center;
+	-webkit-align-items: start;
+			align-items: start;
 	-webkit-justify-content: center;
 			justify-content: center;
 	overflow-y: auto;
     overflow-x: hidden;
+    padding: 30px 0;
 }
 .popup {
 	max-width: 600px;
@@ -1223,13 +1225,14 @@ span.result_length {
 	background: #fff;
     border-radius: 15px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     min-height: 135px;
 }
 .feedback .popup_body .input_block img {
 	float: left;
     width: 80px;
 	margin-right: -80px;
+	display: none;
 }
 .feedback .popup_body .input_block p {
 	margin: 0.4em 0 0.5em;
@@ -1262,7 +1265,7 @@ span.result_length {
     font-size: var(--big-font-size);
 }
 .popup_body {
-	padding: 30px 35px;
+	padding: 15px 15px;
 	background-color: #e2ded7;
 	text-align: center;
 	font-size: 1.25rem;
@@ -1273,8 +1276,8 @@ span.result_length {
 }
 .popup_body .share {
 	position: absolute;
-	right: 33px;
-	bottom: 30px;
+	left: 16px;
+	bottom: 16px;
 	color: #000;
 	opacity: 0.4;
 	font-size: var(--sm-font-size);
@@ -1293,7 +1296,8 @@ span.result_length {
 }
 
 .popup_body .main_btn {
-	margin-top: 30px;
+	margin-top: 15px;
+    margin-right: 0;
 }
 input[name="rank"] {
 	display: none;
