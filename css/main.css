@@ -327,8 +327,6 @@ button[disabled], .btn[disabled] {
 	cursor: default;
 }
 /* main_sec*/
-.main_sec {
-}
 .main_btns {
 	margin-bottom: 7px;
 	padding: 0;
@@ -415,7 +413,7 @@ button[disabled], .btn[disabled] {
 	padding-top: 47px;
 }
 .main_conts.active {
-	max-height: 9999px;
+	max-height: none;
 }
 .main_conts > div {
 	padding: 30px 0 70px;
@@ -443,37 +441,14 @@ button[disabled], .btn[disabled] {
 
 #find_cont {
 	background-color: #315b9f;
-	background-repeat: repeat-y;
-	background-image: url(../img/bg/find_bg_l.png),url(../img/bg/find_bg_r.png);
-	background-size: auto 2960px,auto 2960px;
-    background-position: 0 0,100% 0;
 }
 
 #wizard_cont {
 	background-color: #7c4aa2;
-	background-repeat: no-repeat;
-	background-image: url(../img/bg/wizard_bg_tl.png),url(../img/bg/wizard_bg_tr.png);
-	background-size: auto 740px,auto 740px;
-    background-position: 0 0,100% 0;
 }
-#wizard_cont:after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 740px;
-	pointer-events: none;
-	background-repeat: repeat-y;
-	background-image: url(../img/bg/wizard_bg_l.png),url(../img/bg/wizard_bg_r.png);
-	background-size: auto 1480px,auto 1480px;
-    background-position: 0 0,100% 0;
-}
+
 #library_cont {
 	background-color: #904939;
-	background-repeat: repeat-y;
-	background-image: url(../img/bg/library_bg_l.png),url(../img/bg/library_bg_r.png);
-	background-size: auto 1480px,auto 1480px;
-    background-position: 0 0,100% 0;
 }
 
 #find_cont::before {border-bottom-color: #315b9f;}
@@ -538,7 +513,7 @@ button[disabled], .btn[disabled] {
 label[for="search_submit"] {
 	color: #f6921e;
     position: absolute;
-    bottom: 5px;
+    bottom: 1px;
     right: 13px;
 	z-index: 2;
 	pointer-events: none;
@@ -626,12 +601,18 @@ label[for="search_submit"] {
 	font-size: var(--mid-font-size);
 }
 .sort_line {
-	margin-top: 20px;
-	display:flex;
-	justify-content:space-between;
+	margin-top: 10px;
+	display: block;
 }
 .sort_line span {
     display: inline-block;
+    line-height: 1.5;
+    margin-right: 0.7em;
+}
+span.result_length {
+    display: block;
+    padding-top: 20px;
+    margin-bottom: -20px;
 }
 
 .tag_line i.material-icons, .sort_line i.material-icons {
@@ -643,6 +624,7 @@ label[for="search_submit"] {
 .tag_line {
 	margin-bottom: 10px;
 	font-weight: 300;
+	line-height: 1.5;
 }
 .tag_line a, .sort_line a {
 	margin: 0 0.8em 0 0.7em;
@@ -651,6 +633,9 @@ label[for="search_submit"] {
 }
 .sort_line a {
 	opacity: 0.5;
+}
+.sort_line a:first-of-type {
+	margin-left: 0;
 }
 .sort_line a.active {
 	color: #ffd33b;
@@ -663,7 +648,6 @@ label[for="search_submit"] {
 	opacity: 1;
 }
 .format_length {
-	text-align: right;
 	border-bottom: 2px solid #fff;
 	margin-bottom: 30px;
 }
@@ -710,9 +694,10 @@ label[for="search_submit"] {
     word-break: break-word;
     font-size: 12px;
     max-width: 130px;
-    z-index: 0;
-    color: #fafafa;
+    z-index: 1;
+    color: #fff;
     text-shadow: 0 0 12px rgba(0, 0, 0, 1);
+    opacity: 0.5;
 }
 .rs_img img[src=""] {
 	display: none;
@@ -729,6 +714,7 @@ label[for="search_submit"] {
     font-size: var(--big-font-size);
     padding: 15px 20px;
     text-shadow: none;
+    opacity: 1;
 }
 
 .rs_img::after {
@@ -740,13 +726,13 @@ label[for="search_submit"] {
     background: linear-gradient(to top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.15) 28%,rgba(0,0,0,0) 45%);
 }
 .rs_info {
-	margin: 18px 0 18px 18px;;
 	color: #b2b2b2;
 	font-size: 0.9rem;
 	position: absolute;
     top: 80px;
     height: 70px;
     width: 100%;
+    margin: 0;
 }
 .rs_title {
 	width: 100%;
@@ -774,8 +760,8 @@ label[for="search_submit"] {
 }
 .rs_info_bottom {
 	position: absolute;
-	bottom: 21px;
-	left: 170px;
+    bottom: 14px;
+    right: -9px;
     display: block;
     font-size: 0.9rem;
     color: #808080;
@@ -785,8 +771,8 @@ label[for="search_submit"] {
 }
 .result .tags {
     position: absolute;
-    top: -98px;
-    left: -18px;
+    top: -80px;
+    left: 0;
 }
 .tags li {
 	display: inline-block;
@@ -802,12 +788,12 @@ label[for="search_submit"] {
 	vertical-align: top;
 }
 .rs_info .format {
-	text-align: left;
-	position: absolute;
-	left: 0;
-	bottom: 4px;
+	text-align: right;
+    position: absolute;
+    right: 21px;
+    top: 22px;
     z-index: 0;
-    color: #808080;
+    color: #fff;
 }
 
 .result > li:hover {
