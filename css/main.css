@@ -188,31 +188,31 @@ header.active {
     position: relative;
 }
 .curated {
-	max-width: 600px;
-    min-height: 250px;
     position: relative;
-    width: 60%;
-    margin: 80px auto 50px 20%;
+    width: 100%;
+    margin: 0 auto;
     display: inline-block;
 }
 .curated_img {
-	width: 20%;
-	vertical-align: top;
-	top: 90px;
-	bottom: 0;
-	left: 10%;
-	max-height: 240px;
-	margin: auto; 
-	position: absolute;
+    width: 60%;
+    max-width: 250px;
+    vertical-align: top;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: relative;
 }
-
 .crt_head {
-	position: absolute;
-	top: 0;
-	bottom: 90px;
-	height: 0;
-	margin: auto;
-	width: 100%;
+    position: absolute;
+    top: -130px;
+    bottom: auto;
+    height: 0;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    right: 0;
+    left: 0;
 }
 .crt_head a {
 	opacity: 0.7;
@@ -224,10 +224,10 @@ header.active {
 	position: absolute;
 }
 .crt_next {
-	right: -60px;
+	right: 0;
 }
 .crt_prev {
-	left: -60px;
+	left: 0;
 }
 .crt_prev::before, .crt_next::before {
 	border: 22px solid transparent;
@@ -260,7 +260,6 @@ header.active {
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
 	line-height: 1.5;
-	min-height: 132px;
 	text-align: left;
 }
 
@@ -269,7 +268,9 @@ header.active {
 	margin: 30px 15px 5px;
 	display: inline-block;
 }
-
+.crt_body .summon_btn {
+    margin-top: 10px;
+}
 .main_btn {
 	background-color: #f6921e;
 	color: #fff;
@@ -310,10 +311,11 @@ button[disabled], .btn[disabled] {
     right: 0;
     text-align: center;
     margin: 30px auto;
+    top: -36px;
 }
 .crt_dots li {
 	display: inline-block;
-	margin-right: 10px;
+	margin: 0 5px;
 }
 .crt_dots li a {
 	width: 10px;

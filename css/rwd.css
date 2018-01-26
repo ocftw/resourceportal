@@ -87,6 +87,41 @@
 	.menu .logo {
 		height: 80%;
 	}
+	.curated {
+		max-width: 600px;
+	    min-height: 250px;
+	    width: 60%;
+	    margin: 80px auto 50px 20%;
+	}
+	.curated_img {
+		width: 20%;
+		top: 90px;
+		bottom: 0;
+		left: 10%;
+		max-height: 240px;
+		max-width: none;
+		position: absolute;
+	}
+	.crt_head {
+		top: 0;
+		bottom: 90px;
+		width: 100%;
+		right: auto;
+    	left: auto;
+    	max-width: none;
+	}
+	.crt_next {
+		right: -60px;
+	}
+	.crt_prev {
+		left: -60px;
+	}
+	.crt_body h4 {
+		min-height: 132px;
+	}
+	.crt_dots {
+		top: auto;
+	}
 	.main_btns {
 		text-align: center;
 	}
