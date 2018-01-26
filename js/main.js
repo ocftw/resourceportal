@@ -9,6 +9,7 @@ $('.main_btns').children('button').each(function () {
         });
 	})
 })
+$('#wizard_btn').click();
 
 
 /*

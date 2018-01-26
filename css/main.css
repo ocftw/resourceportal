@@ -330,35 +330,56 @@ button[disabled], .btn[disabled] {
 .main_sec {
 }
 .main_btns {
-	margin-bottom: 90px;
+	margin-bottom: 7px;
 	padding: 0;
 }
 .main_btns > button {
 	color: #333;
-	position: relative;
-	border: none;
-	width: 100%;
-	text-align: center;
-    transition: width 0.4s ease-in-out;
-    min-height: 90px;
-    margin-bottom: 10px;
-    background-color: #fff;
+    border: none;
+    width: 70%;
+    text-align: center;
     border-radius: 10px;
-    transition: box-shadow 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    z-index: 0;
+    opacity: 0.6;
+    transform: scale(0.9);
+    background: #fafafa;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    padding-bottom: 1.5em;
+    max-width: 330px;
 }
 .main_btns > button > img {
 	width: 100%;
 	height: auto;
 }
 .main_btns > button.active {
-	position: absolute;
-    bottom: -100px;
-    left: 0;
+    z-index: 10;
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    opacity: 1;
+    transform: scale(1);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    right: auto;
+    padding-bottom: 0;
+}
+
+#library_btn,
+#wizard_btn {
+	right: auto;
+	left: 50%;
+}
+#find_btn.active ~ #wizard_btn {
+	right: 50%;
+	left: auto;
 }
 #find_btn.active {color: #315b9f;}
-#wizard_btn.active {color: #7c4aa2;}
-#library_btn.active {color: #904939;}
+#wizard_btn.active {color: #7c4aa2; left: auto;}
+#library_btn.active {color: #904939; left: auto;}
 .main_btns > button:hover {
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
@@ -378,6 +399,10 @@ button[disabled], .btn[disabled] {
 .main_btns p {
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
+	display: none;
+}
+.main_btns > button.active p {
+	display: block;
 }
 
 

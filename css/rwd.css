@@ -66,14 +66,28 @@
 		height: 80%;
 	}
 	.main_btns {
-		margin-bottom: 7px;
 		text-align: center;
 	}
 	.main_btns > button {
 		width: 32%;
 		background-position: 50%;
 		background-size: auto 100%;
+		position: relative;
 		display: inline-block;
+		padding-bottom: 0;
+		right: auto;
+		opacity: 1;
+		background-color: #fff;
+		box-shadow: none;
+		max-width: auto;
+		transition: box-shadow 0.2s ease-in-out;
+	}
+	#library_btn,
+	#wizard_btn {
+		left: auto;
+	}
+	#find_btn.active ~ #wizard_btn {
+		right: auto;
 	}
 	.main_btns > button + button {
 		margin-left: 1%;
@@ -84,6 +98,9 @@
 	}
 	.main_btns h3 {
 		padding: 15px 0;
+	}
+	.main_btns p {
+		display: block;
 	}
 	#find_cont::before {right: 45%;}
 	#library_cont::before {left: 45%;}
