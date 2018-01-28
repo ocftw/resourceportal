@@ -39,7 +39,7 @@ var vm = new Vue({
 		search_isanswer: false,
 		questions: questions,
 		active_question: 0,
-		active_module: '',
+		active_module: 'wizard',
 		materials: materials,
 		question_submitted: false
 	},
