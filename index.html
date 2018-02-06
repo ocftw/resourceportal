@@ -98,13 +98,13 @@
 		</section>
 		<section class="main_sec">
 			<div class="topic">
-				<h3>Choose a magic props</h3>
-				<p>About magic props</p>
+				<h3>Choose a magic prop</h3>
+				<p></p>
 			</div>
 			<div class="main_btns container">
-				<button id="find_btn" :class="{ 'active': active_module === 'find' }" @click="active_module = 'find'; "><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>About find</p></button>
-				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard' }" @click="active_module = 'wizard'; "><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>About wizard</p></button>
-				<button id="library_btn" :class="{ 'active': active_module === 'library' }" @click="active_module = 'library'; "><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>About library</p></button>
+				<button id="find_btn" :class="{ 'active': active_module === 'find' }" @click="active_module = 'find'; "><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></button>
+				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard' }" @click="active_module = 'wizard'; "><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></button>
+				<button id="library_btn" :class="{ 'active': active_module === 'library' }" @click="active_module = 'library'; "><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></button>
 			</div>
 			<!-- contents -->
 			<div ref="main_conts" class="main_conts" :class="{ 'active': active_module !== '' }">
@@ -362,9 +362,8 @@
 		<section class="parallaxer">
 			<img src="img/bg/03.jpg" alt="books">
 			<div class="content">
-				<h3>Tagline for resource portal</h3>
-				<p>CSCS Resource Portal is an aggregator for Digital Security training materials that is categorized according to topic, form and difficulty, to allow activists to easily search for materials that suit their needs.</p>
 				<h3>About this project</h3>
+				<p>CSCS Resource Portal is an aggregator for Digital Security training materials that is categorized according to topic, form and difficulty, to allow activists to easily search for materials that suit their needs.</p>
 				<p>This website is created by Open Culture Foundation (OCF), under the Civil Society Cyber Shield project. OCF is a non-profit registered in Taiwan aimed to advocate the use of open technologies in broader sectors, including open source software, open hardware, and open data. The Civil Society Cyber Shield project is funded by Taiwan Foudation for Democracy.</p>
 			</div>
 		</section>
