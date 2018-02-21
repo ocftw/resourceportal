@@ -116,6 +116,7 @@ function click_result(e) {
     feedback.find('.tags:first').empty();
 
     var name = e.find('h4:first').text();
+    var desc = e.find('p:first').text();
     var img = e.find('img:first').attr('src');
     var rank = e.find('.rank:first').children('.stars:first').attr('data-rank');
     var diff = e.find('.difficulty:first').children('.stars:first').attr('data-diff');
@@ -127,6 +128,7 @@ function click_result(e) {
         feedback.find('.tags:first').append('<li>'+tag+'</li>');
     });
     feedback.find('h4:first').html(name);
+    feedback.find('p:first').html(desc);
     feedback.find('img:first').attr('src',img);
     feedback.find('.rank:first').children('.stars:first').attr('data-rank',rank);
     feedback.find('.difficulty:first').children('.stars:first').attr('data-diff',diff);

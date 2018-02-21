@@ -1200,12 +1200,14 @@ span.result_length {
     position: absolute;
 }
 .popup_head {
-	padding: 0 0 24px;
-	color: #fff;
-	position: relative;
-	text-align: center;
-	font-size: 1.5rem;
-	font-size: var(--big-font-size);
+	padding: 24px 0 20px;
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    font-size: var(--big-font-size);
+    background-color: #e2ded7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .feedback .result > li {
 	margin-bottom: 0;
@@ -1253,9 +1255,7 @@ span.result_length {
 	height: auto;
 	max-width: 360px;
 }
-.popup_head a {
-	color: #fff;
-}
+
 .popup_head a:hover {
 	opacity: 0.7;
 }

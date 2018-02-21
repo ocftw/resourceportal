@@ -239,6 +239,16 @@
 		max-height: 100px;
     	overflow-y: hidden;
 	}
+	.rs_title::after {
+		content: "";
+		display: block;
+		height: 15px;
+		position: absolute;
+		z-index: 1;
+		bottom: 47px;
+		width: calc(100% - 331px);
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8))
+	}
 	.rs_img::after {
 		display: none;
 	}
