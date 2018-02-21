@@ -1221,10 +1221,6 @@ span.result_length {
     -webkit-transform: none;
     transform: none;
 }
-.feedback .popup_body {
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-}
 .feedback .popup_body .input_block {
 	background: #fff;
     border-radius: 15px;
@@ -1247,6 +1243,7 @@ span.result_length {
     resize: none;
     display: inline-block;
     padding: 6px;
+    line-height: 1.5;
 }
 #popup_feedback {
 	max-width: 720px;
@@ -1256,12 +1253,13 @@ span.result_length {
 	padding: 0 27px;
 	margin-bottom: 3px;
 }
-.popup_head img {
-	width: 80%;
-	height: auto;
-	max-width: 360px;
+#popup_summon img {
+    width: 80%;
+    height: auto;
+    max-width: 360px;
+    margin: 0px auto 20px;
+    display: block;
 }
-
 .popup_head a:hover {
 	opacity: 0.7;
 }
@@ -1278,7 +1276,8 @@ span.result_length {
 	text-align: center;
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
-	border-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 	position: relative;
 }
