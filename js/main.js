@@ -134,7 +134,9 @@ function click_result(e) {
     feedback.find('.difficulty:first').children('.stars:first').attr('data-diff',diff);
     feedback.find('.from:first').html(from);
     feedback.find('.format:first').html(format);
-    feedback.find('.format:first').children('i:first').attr('data-icon',dataFormat); 
+    feedback.find('.format:first').children('i:first').attr('data-icon',dataFormat);
+    
+    $('#feedback_text').val('');
 };
 function click_library(e) {
     $('#popup_wrap').addClass('active');

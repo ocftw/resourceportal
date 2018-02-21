@@ -316,6 +316,11 @@
 		padding: 0;
 		font-size: 1rem;
 	}
+	
+	/* popup */
+	.feedback textarea {
+	    max-width: 520px;
+	}
 
 	/* Library */
 	.lib_table {
