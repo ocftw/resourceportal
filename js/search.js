@@ -31,15 +31,17 @@ materials.forEach(function(row, index, arr) {
 	row['id'] = index;
 	db.addDoc(row);
 });
+
+var url_searchterm = (new URL(location)).searchParams.get('q');
 var vm = new Vue({
 	el: 'main',
 	data: {
-		searchterm: '',
+		searchterm: (new URL(location)).searchParams.get('q'),
 		search_rows: 1,
 		search_isanswer: false,
 		questions: questions,
 		active_question: 0,
-		active_module: 'wizard',
+		active_module: location.hash.slice(1),
 		materials: materials,
 		question_submitted: false
 	},
