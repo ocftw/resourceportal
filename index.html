@@ -102,14 +102,14 @@
 				<p></p>
 			</div>
 			<div class="main_btns container">
-				<button id="find_btn" :class="{ 'active': active_module === 'find' }" @click="active_module = 'find'; "><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></button>
-				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard' }" @click="active_module = 'wizard'; "><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></button>
-				<button id="library_btn" :class="{ 'active': active_module === 'library' }" @click="active_module = 'library'; "><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></button>
+				<button id="find_btn" :class="{ 'active': active_module === 'find_cont' }" @click="active_module = 'find_cont'; "><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></button>
+				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard_cont' }" @click="active_module = 'wizard_cont'; "><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></button>
+				<button id="library_btn" :class="{ 'active': active_module === 'library_cont' }" @click="active_module = 'library_cont'; "><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></button>
 			</div>
 			<!-- contents -->
 			<div ref="main_conts" class="main_conts" :class="{ 'active': active_module !== '' }">
 
-				<div id="find_cont" :class="{ 'active': active_module === 'find' }">
+				<div id="find_cont" :class="{ 'active': active_module === 'find_cont' }">
 					<div class="container">
 						<div class="tag_line">
 							<span>Popular Search :</span>
@@ -201,7 +201,7 @@
 					</div>
 				</div>
 
-				<div id="wizard_cont" :class="{ 'active': active_module === 'wizard' }">
+				<div id="wizard_cont" :class="{ 'active': active_module === 'wizard_cont' }">
 					<div class="container">
 						<form class="wizard active" id="wizard_form">
 							<p>Choose your path...</p>
@@ -281,7 +281,7 @@
 					</div>
 				</div>
 
-				<div id="library_cont" :class="{ 'active': active_module === 'library' }">
+				<div id="library_cont" :class="{ 'active': active_module === 'library_cont' }">
 					<div class="container">
 						<p>Here's a list of everything we collected and reviewed:</p>
 						<button class="btn main_btn">Contribute this list</button>
