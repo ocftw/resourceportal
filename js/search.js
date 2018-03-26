@@ -72,7 +72,7 @@ var vm = new Vue({
 		format_icon: function(format_str) {
 			var iconstr = {
 				"Article": 'article',
-				"Article with pictures": 'pic',
+				"Guides": 'pic',
 				"Video": 'video'
 			}
 			return iconstr[format_str] || 'article';
