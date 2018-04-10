@@ -467,8 +467,9 @@ button[disabled], .btn[disabled] {
 	font-size: 1.25rem;
 	font-size: var(--mid-font-size);
 }
-#library_cont .main_btn{
-	margin: 30px 0;
+#library_cont .main_btn {
+	margin: 0;
+	display: inline-block;
 }
 
 .big {
@@ -989,7 +990,7 @@ span.result_length {
 
 /* Library content */
 #library_cont p {
-	margin: 10px 0px 40px 0px;
+	margin: 10px 0px 15px 0px;
 	font-size: 1.8em;
 	font-size: var(--big-font-size);
 }
@@ -999,7 +1000,7 @@ span.result_length {
 	background-color: #fff;
 	text-align: left;
 	display: block;
-	margin-top: 40px;
+	margin-top: 10px;
 }
 
 .lib_thead {

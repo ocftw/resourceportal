@@ -102,9 +102,9 @@
 				<p></p>
 			</div>
 			<div class="main_btns container">
-				<button id="find_btn" :class="{ 'active': active_module === 'find_cont' }" @click="active_module = 'find_cont'; "><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></button>
-				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard_cont' }" @click="active_module = 'wizard_cont'; "><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></button>
-				<button id="library_btn" :class="{ 'active': active_module === 'library_cont' }" @click="active_module = 'library_cont'; "><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></button>
+				<button id="find_btn" href="#find_cont" :class="{ 'active': active_module === 'find_cont' }" @click="main_btn_click('find_cont')"><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></button>
+				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard_cont' }" @click="main_btn_click('wizard_cont')"><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></button>
+				<button id="library_btn" :class="{ 'active': active_module === 'library_cont' }" @click="main_btn_click('library_cont')"><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></button>
 			</div>
 			<!-- contents -->
 			<div ref="main_conts" class="main_conts" :class="{ 'active': active_module !== '' }">
@@ -284,7 +284,7 @@
 				<div id="library_cont" :class="{ 'active': active_module === 'library_cont' }">
 					<div class="container">
 						<p>Here's a list of everything we collected and reviewed:</p>
-						<button class="btn main_btn">Contribute this list</button>
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLSd_Ju1200zFoqiIzQsK9otLkI1NLlEA069tScOst_fiSa9QBA/viewform?usp=sf_link" target="_blank" class="btn main_btn">Contribute this list</a>
 						<div class="lib_table">
 							<div class="lib_thead">
 								<span class="lib_tr">
