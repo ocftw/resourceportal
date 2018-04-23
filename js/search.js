@@ -91,6 +91,10 @@ var vm = new Vue({
 	          left: 0, 
 	          behavior: 'smooth' 
 	        });
+		},
+		main_btn_click: function(mod) {
+			this.active_module = mod;
+			window.history.pushState(null, '', '#'+mod);
 		}
 	},
 	watch: {
