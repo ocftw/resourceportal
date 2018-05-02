@@ -86,9 +86,19 @@ Vue.component('wizard-cont', {
 	}
 });
 Vue.component('library-cont', {
+	methods: {
+		format_icon: function(format_str) {//FIXME remove duplicate in component
+			var iconstr = {
+				"Article": 'article',
+				"Guides": 'pic',
+				"Video": 'video'
+			}
+			return iconstr[format_str] || 'article';
+		},
+	},
 	data: function () {
 		return {
-			asd: true
+			materials: materials,
 		}
 	}
 });
