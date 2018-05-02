@@ -41,7 +41,6 @@
 	<script type="text/javascript" src="js/main.js?v=20170127" defer></script>
 </head>
 <body>
-<router-view>
 	<header>
 		<nav class="menu container">
 			<h1 class="logo">
@@ -104,13 +103,13 @@
 				<p></p>
 			</div>
 			<div class="main_btns container">
-				<router-link id="find_btn" tag="button" to="/find" active-class="active"><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></router-link>
-				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard_cont' }" @click="main_btn_click('wizard_cont')"><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></button>
-				<button id="library_btn" :class="{ 'active': active_module === 'library_cont' }" @click="main_btn_click('library_cont')"><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></button>
+				<router-link id="find_btn" tag="button" to="/find" active-class="active"><a><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></a></router-link>
+				<router-link id="wizard_btn" tag="button" to="/wizard" active-class="active"><a><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></a></router-link>
+				<router-link id="library_btn" tag="button" to="/library" active-class="active"><a><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></a></router-link>
 			</div>
 			<!-- contents -->
 			<div ref="main_conts" class="main_conts active">
-				<find-cont inline-template>
+				<find-cont inline-template v-show="this.$route.path == '/find'">
 				<div id="find_cont">
 					<div class="container">
 						<div class="tag_line">
@@ -204,7 +203,8 @@
 				</div>
 				</find-cont>
 
-				<div id="wizard_cont" :class="{ 'active': active_module === 'wizard_cont' }">
+				<wizard-cont inline-template v-show="this.$route.path == '/wizard'">
+				<div id="wizard_cont">
 					<div class="container">
 						<form class="wizard active" id="wizard_form">
 							<p>Choose your path...</p>
@@ -283,8 +283,10 @@
 						</div>
 					</div>
 				</div>
+				</wizard-cont>
 
-				<div id="library_cont" :class="{ 'active': active_module === 'library_cont' }">
+				<library-cont inline-template v-show="this.$route.path == '/library'">
+				<div id="library_cont">
 					<div class="container">
 						<p>Here's a list of everything we collected and reviewed:</p>
 						<a href="https://docs.google.com/forms/d/e/1FAIpQLSd_Ju1200zFoqiIzQsK9otLkI1NLlEA069tScOst_fiSa9QBA/viewform?usp=sf_link" target="_blank" class="btn main_btn">Contribute this list</a>
@@ -298,16 +300,18 @@
 								</span>
 							</div>
 							<div class="lib_tbody">
+								<!--
 								<a v-for="material in materials.filter(material => material.title != '' && material.link != '')" class="lib_tr" v-bind:href="material.link" target="_blank" onclick="click_library(this)">
 									<span>{{material.series}} - {{material.title}}</span>
 									<span>{{material.theme}}</span>
 									<span><i class="material-icons" v-bind:data-icon="format_icon(material.format)"></i>{{material.format}}</span>
 									<span><span class="difficulty material-icons"><span class="stars" v-bind:data-diff="material.difficulty"></span></span></span>
-								</a>
+								</a>-->
 							</div>
 						</div>
 					</div>
 				</div>
+				</library-cont>
 			</div>
 
 			<a id="backtop_btn" class="backtop_btn"><i class="material-icons">arrow_drop_up</i></a>
@@ -485,6 +489,5 @@
 			
 		</section>
 	</footer>
-</router-view>
 </body>
 </html>

@@ -1,5 +1,4 @@
 /* main btn scroll */
-
 $('.main_btns').children('button').each(function () {
 	$(this).click(function mainBtnClick (){
         window.scroll({
@@ -9,7 +8,6 @@ $('.main_btns').children('button').each(function () {
         });
 	})
 })
-
 
 /*
 --select custom style--

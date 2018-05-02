@@ -333,8 +333,10 @@ button[disabled], .btn[disabled] {
 	margin-bottom: 7px;
 	padding: 0;
 }
-.main_btns > button {
+.main_btns > button > a {
 	color: #333;
+}
+.main_btns > button {
     border: none;
     width: 70%;
     text-align: center;
@@ -377,9 +379,11 @@ button[disabled], .btn[disabled] {
 	right: 50%;
 	left: auto;
 }
-#find_btn.active {color: #315b9f;}
+#find_btn.active a {color: #315b9f;}
 #wizard_btn.active {color: #7c4aa2; left: auto;}
+#wizard_btn.active a {color: #7c4aa2;}
 #library_btn.active {color: #904939; left: auto;}
+#library_btn.active a {color: #904939;}
 .main_btns > button:hover {
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }

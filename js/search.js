@@ -64,9 +64,27 @@ Vue.component('find-cont', {
 		}
 	}
 });
+Vue.component('wizard-cont', {
+	data: function () {
+		return {
+			asd: true
+		}
+	}
+});
+Vue.component('library-cont', {
+	data: function () {
+		return {
+			asd: true
+		}
+	}
+});
+
 const router = new VueRouter({
 	routes: [
-	{ path: '/find', component: 'find-cont' }]
+	{ path: '/find', component: 'find-cont' },
+	{ path: '/wizard', component: 'wizard-cont' },
+	{ path: '/library', component: 'library-cont' },
+	]
 })
 
 //var url_searchterm = (new URL(location)).searchParams.get('q');
