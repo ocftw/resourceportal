@@ -33,14 +33,13 @@ materials.forEach(function(row, index, arr) {
 });
 
 Vue.component('find-cont', {
-	props: ['searchterm', 'search_rows'],
-	computed: {
-		searchresults: function () {
-			return db.search(this.searchterm, {expand: true});
-		}
-	},
+	props: ['searchterm_prop', 'search_rows'],
 	data: function() {
-		return {search_isanswer: false}
+		return {
+			search_isanswer: false,
+			searchresults: [],
+			searchterm: this.searchterm_prop,
+		}
 	},
 	methods: {
 		clearsearch: function() {
@@ -50,6 +49,19 @@ Vue.component('find-cont', {
 		    	this.search_rows = 1;
 			}
 		},
+		format_icon: function(format_str) {
+			var iconstr = {
+				"Article": 'article',
+				"Guides": 'pic',
+				"Video": 'video'
+			}
+			return iconstr[format_str] || 'article';
+		},
+	},
+	watch: {
+		searchterm: function(val, oldval) {
+			this.searchresults = db.search(val, {expand: true});
+		}
 	}
 });
 const router = new VueRouter({
@@ -81,14 +93,7 @@ var vm = new Vue({
 	          behavior: 'smooth' 
 	        });
 		},
-		clearsearch: function() {
-			if ( this.search_isanswer ) {
-				this.searchterm = '';
-				this.search_isanswer = false;
-		    	this.search_rows = 1;
-			}
-		},
-		format_icon: function(format_str) {
+		format_icon: function(format_str) {//FIXME remove duplicate in component
 			var iconstr = {
 				"Article": 'article',
 				"Guides": 'pic',
