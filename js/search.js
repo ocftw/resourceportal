@@ -41,6 +41,15 @@ Vue.component('find-cont', {
 	},
 	data: function() {
 		return {search_isanswer: false}
+	},
+	methods: {
+		clearsearch: function() {
+			if ( this.search_isanswer ) {
+				this.searchterm = '';
+				this.search_isanswer = false;
+		    	this.search_rows = 1;
+			}
+		},
 	}
 });
 const router = new VueRouter({
