@@ -32,23 +32,33 @@ materials.forEach(function(row, index, arr) {
 	db.addDoc(row);
 });
 
-var url_searchterm = (new URL(location)).searchParams.get('q');
+Vue.component('find-cont', {
+	props: ['searchterm', 'search_rows'],
+	computed: {
+		searchresults: function () {
+			return db.search(this.searchterm, {expand: true});
+		}
+	},
+	data: function() {
+		return {search_isanswer: false}
+	}
+});
+const router = new VueRouter({
+	routes: [
+	{ path: '/find', component: 'find-cont' }]
+})
+
+//var url_searchterm = (new URL(location)).searchParams.get('q');
 var vm = new Vue({
+	router,
 	el: 'main',
 	data: {
-		searchterm: (new URL(location)).searchParams.get('q'),
-		search_rows: 1,
 		search_isanswer: false,
 		questions: questions,
 		active_question: 0,
 		active_module: location.hash.slice(1),
 		materials: materials,
 		question_submitted: false
-	},
-	computed: {
-		searchresults: function () {
-			return db.search(this.searchterm, {expand: true});
-		}
 	},
 	methods: {
 		showanswer: function(question, answer) {

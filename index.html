@@ -33,6 +33,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js" defer></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js" defer></script>
+	<script type="text/javascript" src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js" defer></script>
 	<script type="text/javascript" src="data/materials.js" defer></script>
 	<script type="text/javascript" src="data/questions.js" defer></script>
 	<script type="text/javascript" src="js/jquery.parallaxer.js" defer></script>
@@ -40,6 +41,7 @@
 	<script type="text/javascript" src="js/main.js?v=20170127" defer></script>
 </head>
 <body>
+<router-view>
 	<header>
 		<nav class="menu container">
 			<h1 class="logo">
@@ -102,14 +104,14 @@
 				<p></p>
 			</div>
 			<div class="main_btns container">
-				<button id="find_btn" href="#find_cont" :class="{ 'active': active_module === 'find_cont' }" @click="main_btn_click('find_cont')"><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></button>
+				<button id="find_btn" :class="{ 'active': active_module === 'find_cont' }" ><router-link to="/find"><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></router-link></button>
 				<button id="wizard_btn" :class="{ 'active': active_module === 'wizard_cont' }" @click="main_btn_click('wizard_cont')"><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></button>
 				<button id="library_btn" :class="{ 'active': active_module === 'library_cont' }" @click="main_btn_click('library_cont')"><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></button>
 			</div>
 			<!-- contents -->
-			<div ref="main_conts" class="main_conts" :class="{ 'active': active_module !== '' }">
-
-				<div id="find_cont" :class="{ 'active': active_module === 'find_cont' }">
+			<div ref="main_conts" class="main_conts active">
+				<find-cont inline-template>
+				<div id="find_cont">
 					<div class="container">
 						<div class="tag_line">
 							<span>Popular Search :</span>
@@ -121,7 +123,7 @@
 							<input id="search_submit" value="" type="submit">
 							<label for="search_submit"><i class="material-icons">&#xE8B6;</i></label>
 						</form>
-						<ul v-show="!search_isanswer" class="result">
+						<ul class="result">
 							<div class="sort_line" v-bind:data-length="searchresults.length">
 								<span class="sort">
 									<span><i class="material-icons">sort</i>Sort by</span>
@@ -200,6 +202,7 @@
 						</ul>
 					</div>
 				</div>
+				</find-cont>
 
 				<div id="wizard_cont" :class="{ 'active': active_module === 'wizard_cont' }">
 					<div class="container">
@@ -482,5 +485,6 @@
 			
 		</section>
 	</footer>
+</router-view>
 </body>
 </html>

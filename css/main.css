@@ -415,11 +415,10 @@ button[disabled], .btn[disabled] {
 	padding-top: 47px;
 }
 .main_conts.active {
-	max-height: none;
+	max-height: none;//FIXME
 }
 .main_conts > div {
 	padding: 30px 0 70px;
-	display: none;
 	position: relative;
 }
 .main_conts > div::before {
