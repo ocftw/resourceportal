@@ -33,12 +33,13 @@ materials.forEach(function(row, index, arr) {
 });
 
 Vue.component('find-cont', {
-	props: ['searchterm_prop', 'search_rows'],
+	props: ['searchterm_prop'],
 	data: function() {
 		return {
 			search_isanswer: false,
 			searchresults: [],
 			searchterm: this.searchterm_prop,
+			search_rows: 1,
 		}
 	},
 	methods: {
@@ -61,6 +62,19 @@ Vue.component('find-cont', {
 	watch: {
 		searchterm: function(val, oldval) {
 			this.searchresults = db.search(val, {expand: true});
+			if (val) {
+				var textArea = this.$refs.search;
+				var baseHeight = 74, rows;
+				var self = this;
+				setTimeout(function () {
+				    rows = Math.ceil((textArea.scrollHeight - baseHeight) / 47);
+			 		if (rows > 0) {
+				        self.search_rows = rows;
+				    }
+				}, 10);
+			}else {
+				this.search_rows = 1;
+			}
 		}
 	}
 });
@@ -139,21 +153,4 @@ var vm = new Vue({
 			window.history.pushState(null, '', '#'+mod);
 		}
 	},
-	watch: {
-		searchterm: function (val) {
-			if (val) {
-				var textArea = this.$refs.search;
-				var baseHeight = 74, rows;
-				var self = this;
-				setTimeout(function () {
-				    rows = Math.ceil((textArea.scrollHeight - baseHeight) / 47);
-			 		if (rows > 0) {
-				        self.search_rows = rows;
-				    }
-				}, 10);
-			}else {
-				this.search_rows = 1;
-			}
-		}
-	}
 });
