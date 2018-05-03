@@ -33,12 +33,12 @@ materials.forEach(function(row, index, arr) {
 });
 
 Vue.component('find-cont', {
-	props: ['searchterm_prop'],
+	template: '#find-template',
 	data: function() {
 		return {
 			search_isanswer: false,
 			searchresults: [],
-			searchterm: this.searchterm_prop,
+			searchterm: '',
 			search_rows: 1,
 		}
 	},
@@ -79,6 +79,7 @@ Vue.component('find-cont', {
 	}
 });
 Vue.component('wizard-cont', {
+	template: '#wizard-template',
 	data: function () {
 		return {
 			asd: true
@@ -86,6 +87,7 @@ Vue.component('wizard-cont', {
 	}
 });
 Vue.component('library-cont', {
+	template: '#library-template',
 	methods: {
 		format_icon: function(format_str) {//FIXME remove duplicate in component
 			var iconstr = {
@@ -105,9 +107,11 @@ Vue.component('library-cont', {
 
 const router = new VueRouter({
 	routes: [
-	{ path: '/find', component: 'find-cont' },
-	{ path: '/wizard', component: 'wizard-cont' },
-	{ path: '/library', component: 'library-cont' },
+		{ path: '/', component: { template: '' } },
+		//{ path: '/find/:q/:item', component: 'find-cont', props: true},
+		{ path: '/find/', component: 'find-cont'},
+		{ path: '/wizard', component: 'wizard-cont' },
+		{ path: '/library', component: 'library-cont' },
 	]
 })
 

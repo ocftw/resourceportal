@@ -37,79 +37,8 @@
 	<script type="text/javascript" src="data/materials.js" defer></script>
 	<script type="text/javascript" src="data/questions.js" defer></script>
 	<script type="text/javascript" src="js/jquery.parallaxer.js" defer></script>
-	<script type="text/javascript" src="js/search.js?v=20170127" defer></script>
 	<script type="text/javascript" src="js/main.js?v=20170127" defer></script>
-</head>
-<body>
-	<header>
-		<nav class="menu container">
-			<h1 class="logo">
-				<a href="/"><img src="img/logo_s.svg"></a>
-			</h1>
-			<ul>
-				<li><a class="goto" data-href="#about_topic">About</a></li>
-				<li>
-					<a href=""><span class="icomoon-facebook"></span>Share</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-	<main>
-		<section class="top_sec">
-			<div class="top_banner">
-				<div>
-					<h1 class="logo">
-					<img src="img/logo.svg">
-					</h1>
-					<h2>
-						Defend for Defenders
-					</h2>
-					<p>
-					Easy access to reliable digital security resources for activists
-					</p>
-				</div>
-			</div>
-		</section>
-		<section id="crt_sec">
-			<div class="topic">
-				<h3>Common Questions</h3>
-				<p>Questions we often receive</p>
-			</div>
-			<div class="curated_img">
-				<img src="img/props/magic_props-04.svg">
-			</div>
-			<div class="curated">
-				<div class="crt_head">
-					<a id="crt_prev" class="crt_prev" @click="active_question = (active_question - 1) % questions.length"></a>
-					<a id="crt_next" class="crt_next" @click="active_question = (active_question + 1) % questions.length"></a>
-				</div>
-				<div id="crt_body" class="crt_body">
-					<div v-for="(question,index) in questions" :class="{ 'active': index === active_question }">
-						<h4>{{question.question}}</h4>
-						<button @click="showanswer(question.question)" class="btn main_btn blue">Get Answer</button>
-						<button class="btn main_btn summon_btn">Ask</button>
-					</div>
-				</div>
-				<ul id="crt_dots" class="crt_dots">
-					<li v-for="(question,index) in questions" @click="active_question = index"><a :class="{ 'active': index === active_question }"></a></li>
-				</ul>
-			</div>
-			
-		</section>
-		<section class="main_sec">
-			<div class="topic">
-				<h3>Choose a magic prop</h3>
-				<p></p>
-			</div>
-			<div class="main_btns container">
-				<router-link id="find_btn" tag="button" to="/find" active-class="active"><a><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></a></router-link>
-				<router-link id="wizard_btn" tag="button" to="/wizard" active-class="active"><a><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></a></router-link>
-				<router-link id="library_btn" tag="button" to="/library" active-class="active"><a><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></a></router-link>
-			</div>
-			<!-- contents -->
-			<div ref="main_conts" class="main_conts active">
-				<find-cont inline-template v-show="this.$route.path == '/find'">
+	<script type="text/x-template" id="find-template">
 				<div id="find_cont">
 					<div class="container">
 						<div class="tag_line">
@@ -201,9 +130,8 @@
 						</ul>
 					</div>
 				</div>
-				</find-cont>
-
-				<wizard-cont inline-template v-show="this.$route.path == '/wizard'">
+	</script>
+	<script type="text/x-template" id="wizard-template">
 				<div id="wizard_cont">
 					<div class="container">
 						<form class="wizard active" id="wizard_form">
@@ -283,9 +211,8 @@
 						</div>
 					</div>
 				</div>
-				</wizard-cont>
-
-				<library-cont inline-template v-show="this.$route.path == '/library'">
+	</script>
+	<script type="text/x-template" id="library-template">
 				<div id="library_cont">
 					<div class="container">
 						<p>Here's a list of everything we collected and reviewed:</p>
@@ -310,7 +237,79 @@
 						</div>
 					</div>
 				</div>
-				</library-cont>
+	</script>
+	<script type="text/javascript" src="js/search.js?v=20170127" defer></script>
+</head>
+<body>
+	<header>
+		<nav class="menu container">
+			<h1 class="logo">
+				<a href="/"><img src="img/logo_s.svg"></a>
+			</h1>
+			<ul>
+				<li><a class="goto" data-href="#about_topic">About</a></li>
+				<li>
+					<a href=""><span class="icomoon-facebook"></span>Share</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="top_sec">
+			<div class="top_banner">
+				<div>
+					<h1 class="logo">
+					<img src="img/logo.svg">
+					</h1>
+					<h2>
+						Defend for Defenders
+					</h2>
+					<p>
+					Easy access to reliable digital security resources for activists
+					</p>
+				</div>
+			</div>
+		</section>
+		<section id="crt_sec">
+			<div class="topic">
+				<h3>Common Questions</h3>
+				<p>Questions we often receive</p>
+			</div>
+			<div class="curated_img">
+				<img src="img/props/magic_props-04.svg">
+			</div>
+			<div class="curated">
+				<div class="crt_head">
+					<a id="crt_prev" class="crt_prev" @click="active_question = (active_question - 1) % questions.length"></a>
+					<a id="crt_next" class="crt_next" @click="active_question = (active_question + 1) % questions.length"></a>
+				</div>
+				<div id="crt_body" class="crt_body">
+					<div v-for="(question,index) in questions" :class="{ 'active': index === active_question }">
+						<h4>{{question.question}}</h4>
+						<button @click="showanswer(question.question)" class="btn main_btn blue">Get Answer</button>
+						<button class="btn main_btn summon_btn">Ask</button>
+					</div>
+				</div>
+				<ul id="crt_dots" class="crt_dots">
+					<li v-for="(question,index) in questions" @click="active_question = index"><a :class="{ 'active': index === active_question }"></a></li>
+				</ul>
+			</div>
+			
+		</section>
+		<section class="main_sec">
+			<div class="topic">
+				<h3>Choose a magic prop</h3>
+				<p></p>
+			</div>
+			<div class="main_btns container">
+				<router-link id="find_btn" tag="button" to="/find" active-class="active"><a><img src="img/props/magic_props-01.svg"><h3>Find</h3><p>Search keywords</p></a></router-link>
+				<router-link id="wizard_btn" tag="button" to="/wizard" active-class="active"><a><img src="img/props/magic_props-02.svg"><h3>Wizard</h3><p>Guided questions</p></a></router-link>
+				<router-link id="library_btn" tag="button" to="/library" active-class="active"><a><img src="img/props/magic_props-03.svg"><h3>Library</h3><p>Show everything</p></a></router-link>
+			</div>
+			<!-- contents -->
+			<div ref="main_conts" class="main_conts active">
+				<router-view></router-view>
 			</div>
 
 			<a id="backtop_btn" class="backtop_btn"><i class="material-icons">arrow_drop_up</i></a>
