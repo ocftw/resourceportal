@@ -58,6 +58,9 @@ Vue.component('find-cont', {
 			}
 			return iconstr[format_str] || 'article';
 		},
+		feedback_popup: function(doc) {
+			this.$root.feedback_popup(doc);
+		}
 	},
 	watch: {
 		searchterm: function(val, oldval) {
@@ -125,7 +128,9 @@ var vm = new Vue({
 		active_question: 0,
 		active_module: location.hash.slice(1),
 		materials: materials,
-		question_submitted: false
+		question_submitted: false,
+		feedbackActive: false,
+		popup_doc: {},
 	},
 	methods: {
 		showanswer: function(question, answer) {
@@ -162,9 +167,9 @@ var vm = new Vue({
 	          behavior: 'smooth' 
 	        });
 		},
-		main_btn_click: function(mod) {
-			this.active_module = mod;
-			window.history.pushState(null, '', '#'+mod);
+		feedback_popup: function(doc) {
+			this.feedbackActive = !this.feedbackActive;
+			this.popup_doc = doc;
 		}
 	},
 });

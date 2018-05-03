@@ -88,7 +88,7 @@ $('#popup_wrap').click(function(){
 });
 
 /* result click pop */
-function click_result(e) {
+function click_result(e) {//FIXME should be removed
 
     var e = $(e);
 

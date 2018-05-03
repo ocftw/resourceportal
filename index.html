@@ -64,7 +64,7 @@
 								{{searchresults.length}} article
 							</div>
 							<li v-for="result in searchresults">
-								<a v-bind:data-href="result.doc.link" onclick="click_result(this)">
+								<a v-bind:data-href="result.doc.link" @click="feedback_popup(result.doc)">
 									<span class="rs_img">
 										<img v-bind:src="result.doc.image" />
 										<span class="from">{{result.doc.link.split("/")[2]}}</span>
@@ -372,30 +372,31 @@
 				<p>This website is created by Open Culture Foundation (OCF), under the Civil Society Cyber Shield project. OCF is a non-profit registered in Taiwan aimed to advocate the use of open technologies in broader sectors, including open source software, open hardware, and open data. The Civil Society Cyber Shield project is funded by Taiwan Foudation for Democracy.</p>
 			</div>
 		</section>
-		<section id="popup_wrap">
-			<div id="popup_feedback" class="popup feedback">
+		<section id="popup_wrap" v-bind:class="{active: feedbackActive}">
+			<div id="popup_feedback" class="popup feedback" v-bind:class="{active: feedbackActive}">
 				<div class="popup_head">
 					<h4>Feedback</h4>
-					<a class="popup_close"><i class="material-icons">close</i></a>
+					<a class="popup_close"><i class="material-icons">close</i></a><!-- TODO -->
 				</div>
 				<ul class="result">
 					<li id="result_feedback">
 						<a>
-							<span class="rs_img">
-								<img src="" />
-								<span class="from"></span>
+							<span class="rs_img" v-if="popup_doc.link">
+								<img v-bind:src="popup_doc.image" />
+								<span class="from">{{popup_doc.link.split("/")[2]}}</span>
 							</span>
 							<span class="rs_title">
-								<h4></h4>
-								<p></p>
+								<h4>{{ popup_doc.series }} - {{ popup_doc.title }}</h4>
+								<p>{{ popup_doc.tagline }}</p>
 								<span class="rs_info_bottom">
-									Difficulty<span class="difficulty material-icons"><span class="stars" data-diff=""></span></span>
+									Difficulty<span class="difficulty material-icons"><span class="stars" v-bind:data-diff="popup_doc.difficulty"></span></span>
 								</span>
 							</span>
 							<span class="rs_info">
-								<ul class="tags">
+								<ul class="tags" v-if="popup_doc.tags">
+									<li v-for="tag in popup_doc.tags.split(',')" v-if="tag" @click="tag_click(tag)">{{tag}}</li>
 								</ul>
-								<span class="format"><i class="material-icons" data-icon=""></i>format</span>
+								<span class="format"><i class="material-icons" v-bind:data-icon="format_icon(popup_doc.format)"></i>{{popup_doc.format}}</span>
 							</span>
 						</a>
 					</li>
